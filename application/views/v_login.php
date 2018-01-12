@@ -3,6 +3,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <title>Login</title>
+    <LINK REL="SHORTCUT ICON" href="<?php base_url()?>assets/image/lmd.ico" />
 <style>
 body {
 padding-top: 15px;

@@ -5,10 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="utf-8">
     <title>Lintas Media Danawa</title>
-
+    <LINK REL="SHORTCUT ICON" href="<?php base_url();?>assets/image/lmd.ico" />
     <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>/assets/bootstrap/css/bootstrap.min.css" />
     <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>/assets/font-awesome/css/font-awesome.min.css" />
     <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>/assets/css/local.css" />
+
 <!--    <link rel="stylesheet" type="text/css" href="--><?php //echo base_url(); ?><!--/assets/css/bootstrap.css" />-->
 
 
@@ -56,21 +57,6 @@
         }
     </style>
 </head>
-<script>
-    $(document).ready(function() {
-
-        $("#myform").validate({
-            rules: {
-                npwp: "required"
-            },
-            messages: {
-                npwp: "Please specify your name"
-
-            }
-        })
-
-    });
-</script>
 <body>
 <div id="wrapper">
     <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
@@ -231,6 +217,7 @@
 
 
         function save() {
+            //sebelum disave, melakukan form validation terlebih dahulu
             var url;
             var company_number=form.npwp;
             var company_name=form.company;
@@ -248,17 +235,17 @@
             if (save_method == 'add') { //jika save_method = add, menambah data baru
 
                 if (company_number.value==="") {
-                    alert("Mohon Isi NPWP");
+                    alert("Mohon Isi Form Secara Lengkap");
                     company_number.focus();
                     return false;
                 }
                 else if (company_name.value==="") {
-                    alert("Mohon Isi Nama Company");
+                    alert("Mohon Isi Form Secara Lengkap");
                     company_name.focus();
                     return false;
                 }
                 else if (company_parent.value==="") {
-                    alert("Mohon Isi Company Parent");
+                    alert("Mohon Isi Form Secara Lengkap");
                     company_parent.focus();
                     return false;
                 }
@@ -324,18 +311,18 @@
             //kalau update, update data
             else {
                 if (company_number.value==="") {
-                    alert("Mohon Isi NPWP");
+                    alert("Mohon Isi Form Secara Lengkap");
                     company_number.focus();
                     return false;
                 }
 
                 else if (company_name.value==="") {
-                    alert("Mohon Isi Nama Company");
+                    alert("Mohon Isi Form Secara Lengkap");
                     company_name.focus();
                     return false;
                 }
                 else if (company_parent.value==="") {
-                    alert("Mohon Isi Company Parent");
+                    alert("Mohon Isi Form Secara Lengkap");
                     company_parent.focus();
                     return false;
                 }
