@@ -80,11 +80,11 @@ font-size: 18px;
            <form class="form-horizontal well" method="POST" action="c_login/cek_login">
            <div>
             <label>Username :</label>
-            <input placeholder="username" name="username" type="text" class="input" id="input01" >
+            <input placeholder="Insert your Username" required name="username" type="text" class="input" id="input01" >
           </div>
            <div style="margin-top: 10px">
             <label>Password :</label>
-            <input placeholder="password" name="password" type="password" class="input" id="input01" >
+            <input placeholder="Type your Password" required name="password" type="password" class="input" id="input01" >
            </div>
            <div class="control-group">
             <div class="controls">
