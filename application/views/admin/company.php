@@ -27,8 +27,8 @@
 <!--    <link rel="stylesheet" type="text/css" href="http://www.shieldui.com/shared/components/latest/css/light-bootstrap/all.min.css" />-->
 <!--    <link id="gridcss" rel="stylesheet" type="text/css" href="http://www.shieldui.com/shared/components/latest/css/dark-bootstrap/all.min.css" />-->
 
-    <script type="text/javascript" src="http://www.shieldui.com/shared/components/latest/js/shieldui-all.min.js"></script>
-    <script type="text/javascript" src="http://www.prepbootstrap.com/Content/js/gridData.js"></script>
+<!--    <script type="text/javascript" src="http://www.shieldui.com/shared/components/latest/js/shieldui-all.min.js"></script>-->
+<!--    <script type="text/javascript" src="http://www.prepbootstrap.com/Content/js/gridData.js"></script>-->
 <!--    <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/1.12.4/jquery.min.js"></script>-->
 
     <!-- /#wrapper -->
@@ -67,7 +67,9 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
+
             <a class="navbar-brand" >Admin Panel</a>
+<!--            <img src="--><?php //echo base_url();?><!--assets/image/logo.png" align="center" width="30" height="20">-->
         </div>
         <div class="collapse navbar-collapse navbar-ex1-collapse">
             <ul id="active" class="nav navbar-nav side-nav">
@@ -162,8 +164,6 @@
         } );
         var save_method; //for save method string
         var table;
-
-
         function add_company()
         {
             save_method = 'add';
@@ -186,7 +186,7 @@
                 dataType: "JSON",
                 success: function(data)
                 {
-
+                    //mengambil data dalam bentuk json
                     $('[name="no_company"]').val(data.no_company);
                     $('[name="npwp"]').val(data.npwp);
                     $('[name="company"]').val(data.company);
@@ -405,6 +405,15 @@
                 }
             });
         }
+        $(document).ready(function () {
+            $('.datepicker').datepicker({
+                //merubah format tanggal datepicker ke dd-mm-yyyy
+                format: "dd-mm-yyyy",
+                //aktifkan kode dibawah untuk melihat perbedaanya, disable baris perintah diatasa
+                //format: "dd-mm-yyyy",
+                autoclose: true
+            });
+        });
 
 //        function delete_obat(barcode)
 //        {
@@ -539,7 +548,7 @@
                             <div class="form-group">
                                 <label class="control-label col-md-3" for="join_date">Join Date</label>
                                 <div class="col-md-9">
-                                    <input name="join_date" placeholder="Join Date" style="color: black" required class="form-control" type="date">
+                                    <input name="join_date" data-date-format="dd/mm/yyyy" id="tanggal" placeholder="Join Date" style="color: black" required class="form-control" type="date">
 
                                 </div>
                             </div>

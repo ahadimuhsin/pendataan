@@ -14,6 +14,10 @@ class c_company extends CI_Controller{
         parent::__construct();
         $this->load->helper('url');
         $this->load->model('company_model');
+        $this->load->helper('tanggal_helper');
+        $this->load->library('form_validation');
+
+
     }
 
     public function add_company()
@@ -21,10 +25,21 @@ class c_company extends CI_Controller{
         $this->load->view('admin/add_company');
     }
 
-
+    function checkDateFormat($date) {
+        if (preg_match("/[0-31]{2}\/[0-12]{2}\/[0-9]{4}/", $date)) {
+            if(checkdate(substr($date, 3, 2), substr($date, 0, 2), substr($date, 6, 4)))
+                return true;
+            else
+                return false;
+        } else {
+            return false;
+        }
+    }
 
     public function company_add()
     {
+        $this->form_validation->set_rules('join_date','DOB','callback_checkDateFormat');
+
         $data = array(
             'npwp' => $this->input->post('npwp'),
             'no_company' => $this->input->post('no_company'),
