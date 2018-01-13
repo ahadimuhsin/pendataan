@@ -128,6 +128,11 @@ button[disabled],
 html input[disabled] {
   cursor: default;
 }
+
+.span6 {
+   width: 460px;
+ }
+
 button::-moz-focus-inner,
 input::-moz-focus-inner {
   border: 0;
@@ -388,6 +393,12 @@ input::-moz-focus-inner {
   display: inline-block;
 }
 
+input.span6,
+textarea.span6,
+.uneditable-input.span6 {
+  width: 446px;
+}
+
 input {
   line-height: normal;
 }
@@ -432,6 +443,13 @@ table {
 td,
 th {
   padding: 0;
+}
+
+.table td.span6,
+.table th.span6 {
+  float: none;
+  width: 444px;
+  margin-left: 0;
 }
 @media print {
   * {

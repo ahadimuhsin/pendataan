@@ -7,6 +7,15 @@
     <title>Lintas Media Danawa</title>
     <LINK REL="SHORTCUT ICON" href="<?php base_url();?>/assets/image/lmd.ico" />
     <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>/assets/bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>/assets/bootstrap/css/DT_bootstrap.css" />
+    <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>/assets/datatables/css/dataTables.bootstrap.css" />
+<!--    <link rel="stylesheet" type="text/css" href="--><?php //echo base_url(); ?><!--/assets/datatables/css/jquery.dataTables.min.css" />-->
+    <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>/assets/datatables/js/dataTables.bootstrap.js" />
+    <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>/assets/datatables/js/jquery.dataTables.min.js" />
+
+
+
+
     <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>/assets/font-awesome/css/font-awesome.min.css" />
     <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>/assets/css/local.css" />
 
@@ -93,11 +102,10 @@
 <!--                <button class="btn btn-danger printoff" onclick="window.print()"><i class="glyphicon glyphicon-print"></i>Print</button>-->
                 <a href="<?php echo base_url("index.php/c_company/export");?>" class="btn btn-info" role="button"><i class ="glyphicon glyphicon-save"></i>Save as Excel file</a>
             </div></br> </br>
-<!--                <div class="row-fluid">-->
-<!---->
-<!--                        <div class="container">-->
-                            <br>
-                            <table cellpadding="0" cellspacing="0" border="1" width="100%" class="table table-striped table-bordered print" id="example">
+                <div class="row-fluid">
+
+                            <br><br>
+                            <table cellpadding="0" cellspacing="0" border="0" width="100%" class="table table-striped table-bordered" id="example">
                                 <thead>
                     <tr>
                         <th width="200px">NPWP</th>
@@ -151,12 +159,10 @@
                 </table>
 
                         </div>
-
+                        </div>
 
                 </div>
-<!--            </div>-->
-<!---->
-<!--    </div>-->
+
 
     <script type="text/javascript">
         $(document).ready( function () {
