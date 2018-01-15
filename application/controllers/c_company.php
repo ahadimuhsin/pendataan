@@ -177,7 +177,7 @@ class c_company extends CI_Controller{
         $excel->setActiveSheetIndex(0)->setCellValue('J3', "Phone"); // Set kolom E3 dengan tulisan "ALAMAT"
         $excel->setActiveSheetIndex(0)->setCellValue('K3', "Mobile"); // Set kolom E3 dengan tulisan "ALAMAT"
         $excel->setActiveSheetIndex(0)->setCellValue('L3', "Business Consultant"); // Set kolom E3 dengan tulisan "ALAMAT"
-        $excel->setActiveSheetIndex(0)->setCellValue('M3', "Join Start Date"); // Set kolom E3 dengan tulisan "ALAMAT"
+        $excel->setActiveSheetIndex(0)->setCellValue('M3', "Join Start Date (Y-M-D)"); // Set kolom E3 dengan tulisan "ALAMAT"
         $excel->setActiveSheetIndex(0)->setCellValue('N3', "Assignment"); // Set kolom E3 dengan tulisan "ALAMAT"
 
         // Apply style header yang telah kita buat tadi ke masing-masing kolom header
@@ -260,8 +260,10 @@ class c_company extends CI_Controller{
         $excel->getActiveSheet(0)->setTitle("Laporan Data Perusahaan");
         $excel->setActiveSheetIndex(0);
         // Proses file excel
+
+        //mengatur tipe dan nama file
         header('Content-Type: application/vnd.openxmlformats-officedocument.spreadsheetml.sheet');
-        header('Content-Disposition: attachment; filename="Data Perusahaan.xlsx"'); // Set nama file excel nya
+        header('Content-Disposition: attachment; filename="Data Perusahaan"'.date("d-F-Y").'".xlsx'); // Set nama file excel nya
 
         header('Cache-Control: max-age=0');
         $write = PHPExcel_IOFactory::createWriter($excel, 'Excel2007');

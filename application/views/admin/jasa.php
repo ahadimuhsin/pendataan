@@ -7,6 +7,8 @@
     <title>Lintas Media Danawa</title>
     <LINK REL="SHORTCUT ICON" href="<?php base_url();?>/assets/image/lmd.ico" />
     <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>/assets/bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>/assets/bootstrap/css/bootstrap.css" />
+
     <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>/assets/bootstrap/css/DT_bootstrap.css" />
     <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>/assets/datatables/css/dataTables.bootstrap.css" />
     <!--    <link rel="stylesheet" type="text/css" href="--><?php //echo base_url(); ?><!--/assets/datatables/css/jquery.dataTables.min.css" />-->
@@ -87,7 +89,7 @@
                 <!--                    <li><a href="--><?php //base_url()?><!--karyawan"><i class="fa fa-tasks"></i> Karyawan</a></li>-->
                 <!--                    <li><a href="--><?php //base_url()?><!--supplier"><i class="fa fa-tasks"></i> Supplier</a></li>-->
                 <!--                    <li><a href="--><?php //base_url()?><!--obat_masuk"><i class="fa fa-tasks"></i> Obat Masuk</a></li>-->
-                <li><a href="<?php base_url()?>company"><i class="fa fa-tasks"></i> Company</a></li>
+                <li><a href="<?php base_url()?>company"><i class="fa fa-building-o"></i> Company</a></li>
                 <li><a href="<?php base_url()?>jasa"><i class="fa fa-handshake-o"></i> Pelayanan Jasa</a></li>
                 <li><a href="<?php base_url()?>logout"><i class="glyphicon glyphicon-log-out
 "></i> Log Out</a></li>
@@ -178,7 +180,7 @@
     } );
     var save_method; //for save method string
     var table;
-    function add_company()
+    function add_jasa()
     {
         save_method = 'add';
         $('#form')[0].reset(); // reset form on modals
@@ -187,7 +189,7 @@
         //$('.modal-title').text('Add Person'); // Set Title to Bootstrap modal title
     }
 
-    function edit_company(no_company)
+    function edit_jasa(no_jaringan)
     {
         save_method = 'update';
         $('#form')[0].reset(); // reset form on modals
