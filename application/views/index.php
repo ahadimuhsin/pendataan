@@ -50,12 +50,12 @@
             </div>
             <div class="collapse navbar-collapse navbar-ex1-collapse">
                 <ul id="active" class="nav navbar-nav side-nav" >
-                    <li class="selected"><a href="<?php base_url()?>welcome"><i class="fa fa-bullseye"></i> Dashboard</a></li>
-<!--                    <li><a href="--><?php //base_url()?><!--obat"><i class="fa fa-tasks"></i> Obat</a></li>-->
+                    <li class="selected"><a href="<?php base_url()?>welcome"><i class="fa fa-home"></i> Dashboard</a></li>
 <!--                    <li><a href="--><?php //base_url()?><!--karyawan"><i class="fa fa-tasks"></i> Karyawan</a></li>-->
 <!--                    <li><a href="--><?php //base_url()?><!--supplier"><i class="fa fa-tasks"></i> Supplier</a></li>-->
 <!--                    <li><a href="--><?php //base_url()?><!--obat_masuk"><i class="fa fa-tasks"></i> Obat Masuk</a></li>-->
-                    <li><a href="<?php base_url()?>company"><i class="fa fa-tasks"></i> Company</a></li>
+                    <li><a href="<?php base_url()?>company"><i class="fa fa-building-o"></i> Company</a></li>
+                    <li><a href="<?php base_url()?>jasa"><i class="fa fa-handshake-o"></i> Pelayanan Jasa</a></li>
                     <li><a href="<?php base_url()?>logout"><i class="glyphicon glyphicon-log-out"></i> Log Out</a></li>
                 </ul>
                 </ul>

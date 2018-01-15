@@ -3,12 +3,11 @@
 /**
  * Created by PhpStorm.
  * User: Muhsin Ahadi
- * Date: 1/9/2018
- * Time: 10:16 PM
+ * Date: 1/15/2018
+ * Time: 10:28 AM
  */
-
-class c_company extends CI_Controller{
-
+class c_jasa extends CI_Controller
+{
     public function __construct()
     {
         parent::__construct();
@@ -19,7 +18,7 @@ class c_company extends CI_Controller{
 
     }
 
-    public function add_company()
+    public function add_jasa()
     {
         $this->load->view('admin/add_company');
     }
@@ -35,9 +34,8 @@ class c_company extends CI_Controller{
         }
     }
 
-    public function company_add()
+    public function jasa_add()
     {
-        $this->form_validation->set_rules('join_date','DOB','callback_checkDateFormat');
 
         $data = array(
             'npwp' => $this->input->post('npwp'),
@@ -62,7 +60,7 @@ class c_company extends CI_Controller{
     }
     public function ajax_edit($id)
     {
-        $data = $this->company_model->get_by_id($id);
+        $data = $this->jasa_model->get_by_id($id);
 
 
 
@@ -91,7 +89,7 @@ class c_company extends CI_Controller{
             $this->company_model->company_update(array('no_company' => $this->input->post('no_company')), $data);
             echo json_encode(array("status" => TRUE));
         }
-        }
+    }
 
 //    public function obat_delete($barcode)
 //    {
@@ -233,7 +231,7 @@ class c_company extends CI_Controller{
             $excel->getActiveSheet()->getStyle('M' . $numrow)->applyFromArray($style_row,$date);
             $excel->getActiveSheet()->getStyle('N' . $numrow)->applyFromArray($style_row);
 
-             // Tambah 1 setiap kali looping
+            // Tambah 1 setiap kali looping
             $numrow++; // Tambah 1 setiap kali looping
         }
         // Set width kolom
@@ -267,5 +265,4 @@ class c_company extends CI_Controller{
         $write = PHPExcel_IOFactory::createWriter($excel, 'Excel2007');
         $write->save('php://output');
     }
-
 }

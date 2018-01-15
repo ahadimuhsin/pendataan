@@ -82,12 +82,13 @@
         </div>
         <div class="collapse navbar-collapse navbar-ex1-collapse">
             <ul id="active" class="nav navbar-nav side-nav">
-                <li><a href="<?php base_url()?>welcome"><i class="fa fa-bullseye"></i> Dashboard</a></li>
+                <li><a href="<?php base_url()?>welcome"><i class="fa fa-home"></i> Dashboard</a></li>
                 <!--                    <li><a href="--><?php //base_url()?><!--obat"><i class="fa fa-tasks"></i> Obat</a></li>-->
                 <!--                    <li><a href="--><?php //base_url()?><!--karyawan"><i class="fa fa-tasks"></i> Karyawan</a></li>-->
                 <!--                    <li><a href="--><?php //base_url()?><!--supplier"><i class="fa fa-tasks"></i> Supplier</a></li>-->
                 <!--                    <li><a href="--><?php //base_url()?><!--obat_masuk"><i class="fa fa-tasks"></i> Obat Masuk</a></li>-->
                 <li><a href="<?php base_url()?>company"><i class="fa fa-tasks"></i> Company</a></li>
+                <li><a href="<?php base_url()?>jasa"><i class="fa fa-handshake-o"></i> Pelayanan Jasa</a></li>
                 <li><a href="<?php base_url()?>logout"><i class="glyphicon glyphicon-log-out
 "></i> Log Out</a></li>
             </ul>
@@ -100,7 +101,7 @@
             <div class="col-lg-12 span">
                 <a class="btn btn-success printoff"  onclick="add_company()"  class="btn btn-info" role="button" ><i class="glyphicon glyphicon-plus"></i> Add Company</a>
 <!--                <button class="btn btn-danger printoff" onclick="window.print()"><i class="glyphicon glyphicon-print"></i>Print</button>-->
-                <a href="<?php echo base_url("index.php/c_company/export");?>" class="btn btn-info" role="button"><i class ="glyphicon glyphicon-save"></i>Save as Excel file</a>
+                <a href="<?php echo base_url("index.php/c_company/export");?>" class="btn btn-info" role="button"><i class ="fa fa-file-excel-o"></i> Save as Excel file</a>
             </div></br> </br>
                 <div class="row-fluid">
 
