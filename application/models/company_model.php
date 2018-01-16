@@ -11,7 +11,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 class company_model extends CI_Model
 {
 
-    var $table = 'company';
+    var $table = 'company'; //mendefinisikan nama tabel
 
 
     public function __construct()//meload database
@@ -29,23 +29,23 @@ class company_model extends CI_Model
     }
 
 
-    public function get_by_id($npwp) //mengambil data berdasarkan ID
+    public function get_by_id($no_company) //mengambil data berdasarkan ID
     {
         $this->db->from($this->table);
-        $this->db->where('no_company',$npwp);
+        $this->db->where('no_company',$no_company);
         $query = $this->db->get();
 
         return $query->row();
     }
 
-    public function company_add($data)
+    public function company_add($data) //menambahkan data company
     {
         $this->db->insert($this->table, $data);
         return $this->db->insert_id();
     }
 
 
-    public function company_update($where, $data)
+    public function company_update($where, $data) //mengupdate data company
     {
         $this->db->update($this->table, $data, $where);
         return $this->db->affected_rows();

@@ -6,25 +6,23 @@
     <meta charset="utf-8">
     <title>Lintas Media Danawa</title>
     <LINK REL="SHORTCUT ICON" href="<?php base_url();?>/assets/image/lmd.ico" />
+<!--  bagian css  -->
     <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>/assets/bootstrap/css/bootstrap.min.css" />
     <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>/assets/bootstrap/css/bootstrap.css" />
-
     <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>/assets/bootstrap/css/DT_bootstrap.css" />
     <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>/assets/datatables/css/dataTables.bootstrap.css" />
-    <!--    <link rel="stylesheet" type="text/css" href="--><?php //echo base_url(); ?><!--/assets/datatables/css/jquery.dataTables.min.css" />-->
-    <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>/assets/datatables/js/dataTables.bootstrap.js" />
-    <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>/assets/datatables/js/jquery.dataTables.min.js" />
-
-
-
-
     <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>/assets/font-awesome/css/font-awesome.min.css" />
     <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>/assets/css/local.css" />
 
+<!--    file javascript -->
+    <!--    <link rel="stylesheet" type="text/css" href="--><?php //echo base_url(); ?><!--/assets/datatables/css/jquery.dataTables.min.css" />-->
+    <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>/assets/datatables/js/dataTables.bootstrap.js" />
+    <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>/assets/datatables/js/jquery.dataTables.min.js" />
     <!--    <link rel="stylesheet" type="text/css" href="--><?php //echo base_url(); ?><!--/assets/css/bootstrap.css" />-->
 
-
     <script type="text/javascript" src="<?php echo base_url(); ?>/assets/js/jquery-1.10.2.min.js"></script>
+    <script type="text/javascript" src="<?php echo base_url(); ?>/assets/js/myscript.js"></script>
+    <script type="text/javascript" src="<?php echo base_url(); ?>/assets/js/jquery-1.10.1.js"></script>
     <script type="text/javascript" src="<?php echo base_url(); ?>/assets/js/form-validation-company.js"></script>
     <script type="text/javascript" src="<?php echo base_url(); ?>/assets/bootstrap/js/bootstrap.min.js"></script>
     <script src="<?php echo base_url()."/assets/js/jquery.js"?>" type="text/javascript"></script>
@@ -34,19 +32,15 @@
     <script type="text/javascript" charset="utf-8" language="javascript" src="<?php echo base_url()."/assets/js/jquery.dataTables.js"?>"></script>
     <script type="text/javascript" charset="utf-8" language="javascript" src="<?php echo base_url()."/assets/js/DT_bootstrap.js"?>"></script>
 
-    <!-- you need to include the shieldui css and js assets in order for the charts to work -->
-    <!--    <link rel="stylesheet" type="text/css" href="http://www.shieldui.com/shared/components/latest/css/light-bootstrap/all.min.css" />-->
-    <!--    <link id="gridcss" rel="stylesheet" type="text/css" href="http://www.shieldui.com/shared/components/latest/css/dark-bootstrap/all.min.css" />-->
-
-    <!--    <script type="text/javascript" src="http://www.shieldui.com/shared/components/latest/js/shieldui-all.min.js"></script>-->
-    <!--    <script type="text/javascript" src="http://www.prepbootstrap.com/Content/js/gridData.js"></script>-->
-    <!--    <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/1.12.4/jquery.min.js"></script>-->
-
     <!-- /#wrapper -->
     <script src="<?php echo base_url('assests/jquery/jquery-3.1.0.min.js')?>"></script>
     <script src="<?php echo base_url('assests/bootstrap/js/bootstrap.min.js')?>"></script>
     <script src="<?php echo base_url('assests/datatables/js/jquery.dataTables.min.js')?>"></script>
     <style>
+
+        #cloud_server_product,#cloud_server_services{
+            display: none;
+        }
         @media print {
             body * {
                 visibility: hidden;
@@ -124,11 +118,11 @@
                     <th width="200px">Tanggal Akhir Kontrak (Y-M-D)</th>
                     <th width="200px">SPK/SO/Quote Number</th>
                     <th width="250px">Tanggal SPK Terbit (Y-M-D)</th>
+                    <th width="250px">Waktu Penyerahan SPK (Y-M-D)</th>
                     <th width="200px">OTC</th>
                     <th width="200px">MRC</th>
                     <th width="200px">Type</th>
                     <th width="200px">Keterangan</th>
-
                     <th style="width:125px;" class="printoff">Action
                         </p></th>
                 </tr>
@@ -204,11 +198,12 @@
             {
                 //mengambil data dalam bentuk json
                 $('[name="no_company"]').val(data.no_company);
-                $('[name="company"]').val(data.company);
-                $('[name="parent_company"]').val(data.parent_company);
                 $('[name="no_jaringan"]').val(data.no_jaringan);
-                $('[name="business_consultant"]').val(data.business_consultant);
-                $('[name="assignment"]').val(data.assignment);
+//                $('[name="company"]').val(data.company);
+//                $('[name="parent_company"]').val(data.parent_company);
+
+//                $('[name="business_consultant"]').val(data.business_consultant);
+//                $('[name="assignment"]').val(data.assignment);
                 $('[name="subservices"]').val(data.subservices);
                 $('[name="services"]').val(data.services);
                 $('[name="product_family"]').val(data.product_family);
@@ -238,171 +233,171 @@
 
     function save() {
         //sebelum disave, melakukan form validation terlebih dahulu
-        var url;
-        var company_number=form.npwp;
-        var company_name=form.company;
-        var company_parent=form.parent_company;
-        var company_address=form.address;
-        var company_city=form.city;
-        var company_cp=form.contact_person;
-        var company_title=form.title;
-        var company_email=form.email;
-        var company_phone=form.phone;
-        var company_mobile=form.mobile;
-        var company_bc=form.business_consultant;
-        var company_date=form.join_date;
-        var company_assignment=form.assignment;
+//        var url;
+//        var company_number=form.npwp;
+//        var company_name=form.company;
+//        var company_parent=form.parent_company;
+//        var company_address=form.address;
+//        var company_city=form.city;
+//        var company_cp=form.contact_person;
+//        var company_title=form.title;
+//        var company_email=form.email;
+//        var company_phone=form.phone;
+//        var company_mobile=form.mobile;
+//        var company_bc=form.business_consultant;
+//        var company_date=form.join_date;
+//        var company_assignment=form.assignment;
         if (save_method == 'add') { //jika save_method = add, menambah data baru
 
-            if (company_number.value==="") {
-                alert("Mohon Isi Form Secara Lengkap");
-                company_number.focus();
-                return false;
-            }
-            else if (company_name.value==="") {
-                alert("Mohon Isi Form Secara Lengkap");
-                company_name.focus();
-                return false;
-            }
-            else if (company_parent.value==="") {
-                alert("Mohon Isi Form Secara Lengkap");
-                company_parent.focus();
-                return false;
-            }
-//                Entah mengapa kalo ada di bawah ini gak bekerja
-            else if (company_address.value==="") {
-                alert("Mohon Isi Form Secara Lengkap");
-                company_address.focus();
-                return false;
-            }
-            else if (company_city.value==="") {
-                alert("Mohon Isi Form Secara Lengkap");
-                company_city.focus();
-                return false;
-            }
-            else if (company_cp.value==="") {
-                alert("Mohon Isi Form Secara Lengkap");
-                company_cp.focus();
-                return false;
-            }
-            else if (company_title.value==="") {
-                alert("Mohon Isi Form Secara Lengkap");
-                company_title.focus();
-                return false;
-            }
-            else if (company_email.value==="") {
-                alert("Mohon Isi Form Secara Lengkap");
-                company_email.focus();
-                return false;
-            }
-            else if (company_phone.value==="") {
-                alert("Mohon Isi Form Secara Lengkap");
-                company_phone.focus();
-                return false;
-            }
-            else if (company_mobile.value==="") {
-                alert("Mohon Isi Form Secara Lengkap");
-                company_mobile.focus();
-                return false;
-            }
-            else if (company_bc.value==="") {
-                alert("Mohon Isi Form Secara Lengkap");
-                company_bc.focus();
-                return false;
-            }
-            else if (company_date.value==="") {
-                alert("Mohon Isi Form Secara Lengkap");
-                company_date.focus();
-                return false;
-            }
-            else if (company_assignment.value==="") {
-                alert("Mohon Isi Form Secara Lengkap");
-                company_assignment.focus();
-                return false;
-            }
+//            if (company_number.value==="") {
+//                alert("Mohon Isi Form Secara Lengkap");
+//                company_number.focus();
+//                return false;
+//            }
+//            else if (company_name.value==="") {
+//                alert("Mohon Isi Form Secara Lengkap");
+//                company_name.focus();
+//                return false;
+//            }
+//            else if (company_parent.value==="") {
+//                alert("Mohon Isi Form Secara Lengkap");
+//                company_parent.focus();
+//                return false;
+//            }
+////                Entah mengapa kalo ada di bawah ini gak bekerja
+//            else if (company_address.value==="") {
+//                alert("Mohon Isi Form Secara Lengkap");
+//                company_address.focus();
+//                return false;
+//            }
+//            else if (company_city.value==="") {
+//                alert("Mohon Isi Form Secara Lengkap");
+//                company_city.focus();
+//                return false;
+//            }
+//            else if (company_cp.value==="") {
+//                alert("Mohon Isi Form Secara Lengkap");
+//                company_cp.focus();
+//                return false;
+//            }
+//            else if (company_title.value==="") {
+//                alert("Mohon Isi Form Secara Lengkap");
+//                company_title.focus();
+//                return false;
+//            }
+//            else if (company_email.value==="") {
+//                alert("Mohon Isi Form Secara Lengkap");
+//                company_email.focus();
+//                return false;
+//            }
+//            else if (company_phone.value==="") {
+//                alert("Mohon Isi Form Secara Lengkap");
+//                company_phone.focus();
+//                return false;
+//            }
+//            else if (company_mobile.value==="") {
+//                alert("Mohon Isi Form Secara Lengkap");
+//                company_mobile.focus();
+//                return false;
+//            }
+//            else if (company_bc.value==="") {
+//                alert("Mohon Isi Form Secara Lengkap");
+//                company_bc.focus();
+//                return false;
+//            }
+//            else if (company_date.value==="") {
+//                alert("Mohon Isi Form Secara Lengkap");
+//                company_date.focus();
+//                return false;
+//            }
+//            else if (company_assignment.value==="") {
+//                alert("Mohon Isi Form Secara Lengkap");
+//                company_assignment.focus();
+//                return false;
+//            }
 
 
-            else {
-                url = "<?php echo site_url('index.php/c_company/company_add')?>";
+//            else {
+                url = "<?php echo site_url('index.php/c_jasa/jasa_add')?>";
 
-            }
+//            }
 
         }
         //kalau update, update data
         else {
-            if (company_number.value==="") {
-                alert("Mohon Isi Form Secara Lengkap");
-                company_number.focus();
-                return false;
-            }
+//            if (company_number.value==="") {
+//                alert("Mohon Isi Form Secara Lengkap");
+//                company_number.focus();
+//                return false;
+//            }
+//
+//            else if (company_name.value==="") {
+//                alert("Mohon Isi Form Secara Lengkap");
+//                company_name.focus();
+//                return false;
+//            }
+//            else if (company_parent.value==="") {
+//                alert("Mohon Isi Form Secara Lengkap");
+//                company_parent.focus();
+//                return false;
+//            }
+////                Entah mengapa kalo ada di bawah ini gak bekerja
+//            else if (company_address.value==="") {
+//                alert("Mohon Isi Form Secara Lengkap");
+//                company_address.focus();
+//                return false;
+//            }
+//            else if (company_city.value==="") {
+//                alert("Mohon Isi Form Secara Lengkap");
+//                company_city.focus();
+//                return false;
+//            }
+//            else if (company_cp.value==="") {
+//                alert("Mohon Isi Form Secara Lengkap");
+//                company_cp.focus();
+//                return false;
+//            }
+//            else if (company_title.value==="") {
+//                alert("Mohon Isi Form Secara Lengkap");
+//                company_title.focus();
+//                return false;
+//            }
+//            else if (company_email.value==="") {
+//                alert("Mohon Isi Form Secara Lengkap");
+//                company_email.focus();
+//                return false;
+//            }
+//            else if (company_phone.value==="") {
+//                alert("Mohon Isi Form Secara Lengkap");
+//                company_phone.focus();
+//                return false;
+//            }
+//            else if (company_mobile.value==="") {
+//                alert("Mohon Isi Form Secara Lengkap");
+//                company_mobile.focus();
+//                return false;
+//            }
+//            else if (company_bc.value==="") {
+//                alert("Mohon Isi Form Secara Lengkap");
+//                company_bc.focus();
+//                return false;
+//            }
+//            else if (company_date.value==="") {
+//                alert("Mohon Isi Form Secara Lengkap");
+//                company_date.focus();
+//                return false;
+//            }
+//            else if (company_assignment.value==="") {
+//                alert("Mohon Isi Form Secara Lengkap");
+//                company_assignment.focus();
+//                return false;
+//            }
+//
+//
+//            else {
+                url = "<?php echo site_url('index.php/c_jasa/jasa_update')?>";
 
-            else if (company_name.value==="") {
-                alert("Mohon Isi Form Secara Lengkap");
-                company_name.focus();
-                return false;
-            }
-            else if (company_parent.value==="") {
-                alert("Mohon Isi Form Secara Lengkap");
-                company_parent.focus();
-                return false;
-            }
-//                Entah mengapa kalo ada di bawah ini gak bekerja
-            else if (company_address.value==="") {
-                alert("Mohon Isi Form Secara Lengkap");
-                company_address.focus();
-                return false;
-            }
-            else if (company_city.value==="") {
-                alert("Mohon Isi Form Secara Lengkap");
-                company_city.focus();
-                return false;
-            }
-            else if (company_cp.value==="") {
-                alert("Mohon Isi Form Secara Lengkap");
-                company_cp.focus();
-                return false;
-            }
-            else if (company_title.value==="") {
-                alert("Mohon Isi Form Secara Lengkap");
-                company_title.focus();
-                return false;
-            }
-            else if (company_email.value==="") {
-                alert("Mohon Isi Form Secara Lengkap");
-                company_email.focus();
-                return false;
-            }
-            else if (company_phone.value==="") {
-                alert("Mohon Isi Form Secara Lengkap");
-                company_phone.focus();
-                return false;
-            }
-            else if (company_mobile.value==="") {
-                alert("Mohon Isi Form Secara Lengkap");
-                company_mobile.focus();
-                return false;
-            }
-            else if (company_bc.value==="") {
-                alert("Mohon Isi Form Secara Lengkap");
-                company_bc.focus();
-                return false;
-            }
-            else if (company_date.value==="") {
-                alert("Mohon Isi Form Secara Lengkap");
-                company_date.focus();
-                return false;
-            }
-            else if (company_assignment.value==="") {
-                alert("Mohon Isi Form Secara Lengkap");
-                company_assignment.focus();
-                return false;
-            }
-
-
-            else {
-                url = "<?php echo site_url('index.php/c_company/company_update')?>";
-
-            }
+//            }
 
         }
 
@@ -459,7 +454,6 @@
     //        }
 
 
-
 </script>
 <!-- Bootstrap modal -->
 <div class="modal fade" id="modal_form" role="dialog">
@@ -470,41 +464,71 @@
                 <h3 class="modal-title">Jasa Form</h3>
             </div>
             <div class="modal-body form">
-                <form  action=""  name="myform"
+                <form action=""  name="myform"
                        id="form" class="form-horizontal" method="post" enctype="multipart/form-data">
                     <div class="form-body">
                         <div class="form-group">
                             <label class="control-label col-md-3" for="no_company">No Company</label>
                             <div class="col-md-9">
-                                <input  name="no_company" placeholder="Nomor Company" style="color: black" required class="form-control" type="number" >
+                                <input  name="no_company" placeholder="Masukkan satu, dua, atau tiga digit terakhir dari nomor company" style="color: black" required class="form-control" type="number" >
                             </div>
                         </div>
                         <div class="form-group">
                             <label class="control-label col-md-3" for="no_jaringan">No Jaringan</label>
                             <div class="col-md-9">
-                                <input name="no_jaringan" placeholder="Company" style="color: black" required class="form-control" type="number">
+                                <input name="no_jaringan" placeholder="Nomor Jaringan" style="color: black" required class="form-control" type="number">
                             </div>
                         </div>
                         <div class="form-group">
 <!--                            masih kurang -->
                             <label class="control-label col-md-3" for="subservices">Sub Services</label>
                             <div class="col-md-9">
-                                <input name="subservices" style="color: black" placeholder="Sub Services" class="form-control" type="text">
+<!--                                <input name="subservices" style="color: black" placeholder="Sub Services" class="form-control" type="text">-->
+                                <select id='subservices' style="height:40px; color: black" class="form-control" name="subservices" >
+                                    <option value="" disabled selected hidden>Please Choose...</option>
+                                    <option value="Cloud Server">Cloud Server</option>
+                                    <option value="Managed Server" >Managed Server</option>
+                                    <option value="Managed Wifi" >Managed Wifi</option>
+                                    <option value="Managed Mail" >Managed Mail</option>
+                                    <option value="Managed Web" >Managed Web</option>
+                                    <option value="Managed Antivirus" >Managed Antivirus</option>
+                                    <option value="Managed SSL" >Managed SSL</option>
+                                    <option value="Managed Cpanel" >Managed Cpanel</option>
+                                    <option value="Managed Firewall" >Managed Firewall</option>
+                                    <option value="Managed DNS" >Managed DNS</option>
+                                    <option value="IT Solution" >IT Solution</option>
+                                    <option value="Implementasi - Integrasi - Migrasi - Pengadaan" >Implementasi - Integrasi - Migrasi - Pengadaan</option>
+                                    <option value="Implementasi Salesforce" >Implementasi Salesforce</option>
+                                    <option value="License Salesforce" >License Salesforce</option>
+                                    <option value="Support & Maintenance Salesforce" >Support & Maintenance Salesforce</option>
+                                    <option value="Training Salesforce" >Training Salesforce</option>
+                                    <option value="Implementasi Microsoft" >Implementasi Microsoft</option>
+                                    <option value="License Microsoft" >License Microsoft</option>
+                                    <option value="Implementasi Cozytizen" >Implementasi Cozytizen</option>
+                                    <option value="License Cozytizen" >License Cozytizen</option>
+                                    <option value="Application Development">Application Development</option>
+                                    <option value="Staffing">Staffing</option>
+                                    <option value="SMS Corporate">SMS Corporate</option>
+                                </select>
 
                             </div>
                         </div>
-                        <div class="form-group">
+
+
+                        <div class="form-group" id="cloud_server_services">
                             <label class="control-label col-md-3" for="services">Services</label>
                             <div class="col-md-9">
-                                <input name="services" placeholder="Services" style="color: black" required class="form-control" type="text">
+                                <input name="services" placeholder="Services" value="Cloud Server" style="color: black" required class="form-control" type="text">
                             </div>
                         </div>
-                        <div class="form-group">
+
+                        <div class="form-group" id="cloud_server_product">
                             <label class="control-label col-md-3" for="product_family">Product Family</label>
                             <div class="col-md-9">
-                                <input name="product_family" placeholder="Product Familt" style="color: black" required class="form-control" type="text">
+                                <input name="product_family" placeholder="Product Family" value="Cloud Services" style="color: black" required class="form-control" type="text">
                             </div>
                         </div>
+
                         <div class="form-group">
                             <label class="control-label col-md-3" for="contract_start_date">Contract Start Date</label>
                             <div class="col-md-9">
@@ -553,11 +577,18 @@
                             <label class="control-label col-md-3" for="type">Type</label>
                             <div class="col-md-9">
                                 <!--                                    <input name="assignment" placeholder="Assignment" required class="form-control" type="text">-->
-                                <select name="type" style="color: black" class="form-control" required>
+                                <select name="type" style="height: 40px; color: black" class="form-control" required>
                                     <option value="" disabled selected hidden>Please Choose...</option>
                                     <option value="Monthly">Monthly</option>
                                     <option value="Joining Free">Joining Free</option>
                                 </select>
+
+                                </div>
+                            </div>
+                        <div class="form-group">
+                            <label class="control-label col-md-3" for="keterangan">Keterangan</label>
+                            <div class="col-md-9">
+                                <input name="keterangan" placeholder="Keterangan" style="color: black" class="form-control" type="text">
                             </div>
                         </div>
 

@@ -25,6 +25,7 @@
 
 
     <script type="text/javascript" src="<?php echo base_url(); ?>/assets/js/jquery-1.10.2.min.js"></script>
+    <script type="text/javascript" src="<?php echo base_url(); ?>/assets/js/jquery-1.10.1.js"></script>
     <script type="text/javascript" src="<?php echo base_url(); ?>/assets/js/form-validation-company.js"></script>
     <script type="text/javascript" src="<?php echo base_url(); ?>/assets/bootstrap/js/bootstrap.min.js"></script>
     <script src="<?php echo base_url()."/assets/js/jquery.js"?>" type="text/javascript"></script>
@@ -539,7 +540,7 @@
                                 <label class="control-label col-md-3" for="business_consultant">Business Consultant</label>
                                 <div class="col-md-9">
 <!--                                    //<input name="business_consultant" required placeholder="Business Consultant" class="form-control" type="text">-->
-                                    <select name="business_consultant" style="color: black" class="form-control" required>
+                                    <select name="business_consultant" style="height: 40px; color: black" class="form-control" required>
                                         <option value="" disabled selected hidden>Please Choose...</option>
                                         <option value="Fahmi Ernanto">Fahmi Ernanto</option>
                                         <option value="Hadi Fatkhul Amin">Hadi Fatkhul Amin</option>
@@ -565,7 +566,7 @@
                                 <label class="control-label col-md-3" for="assignment">Assignment</label>
                                 <div class="col-md-9">
 <!--                                    <input name="assignment" placeholder="Assignment" required class="form-control" type="text">-->
-                                    <select name="assignment" style="color: black" class="form-control" required>
+                                    <select name="assignment" style="height: 40px; color: black" class="form-control" required>
                                         <option value="" disabled selected hidden>Please Choose...</option>
                                         <option value="Full Managed">Full Managed</option>
                                         <option value="Lead Assignment">Lead Assignment</option>

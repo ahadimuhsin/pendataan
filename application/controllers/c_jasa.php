@@ -12,7 +12,7 @@ class c_jasa extends CI_Controller
     {
         parent::__construct();
         $this->load->helper('url');
-        $this->load->model('company_model');
+        $this->load->model('jasa_model');
         $this->load->library('form_validation');
 
 
@@ -38,24 +38,24 @@ class c_jasa extends CI_Controller
     {
 
         $data = array(
-            'npwp' => $this->input->post('npwp'),
+            'no_jaringan' => $this->input->post('no_jaringan'),
             'no_company' => $this->input->post('no_company'),
-            'company' => $this->input->post('company'),
-            'parent_company' => $this->input->post('parent_company'),
-            'address' => $this->input->post('address'),
-            'city' => $this->input->post('city'),
-            'contact_person' => $this->input->post('contact_person'),
-            'title' => $this->input->post('title'),
-            'email' => $this->input->post('email'),
-            'phone' => $this->input->post('phone'),
-            'mobile' => $this->input->post('mobile'),
-            'business_consultant' => $this->input->post('business_consultant'),
-            'join_date' => $this->input->post('join_date'),
-            'assignment' => $this->input->post('assignment')
+            'subservices' => $this->input->post('subservices'),
+            'services' => $this->input->post('services'),
+            'product_family' => $this->input->post('product_family'),
+            'contract_start_date' => $this->input->post('contract_start_date'),
+            'contract_end_date' => $this->input->post('contract_end_date'),
+            'spk_number' => $this->input->post('spk_number'),
+            'spk_date' => $this->input->post('spk_date'),
+            'spk_handover_date' => $this->input->post('spk_handover_date'),
+            'otc' => $this->input->post('otc'),
+            'mrc' => $this->input->post('mrc'),
+            'type' => $this->input->post('type'),
+            'keterangan' => $this->input->post('keterangan')
         );
         /*$data['namaSup']=$this->obat_model->get_supplier();
         $data['id']=$id;*/
-        $insert = $this->company_model->company_add($data);
+        $insert = $this->jasa_model->jasa_add($data);
         echo json_encode(array("status" => TRUE));
     }
     public function ajax_edit($id)
@@ -67,26 +67,26 @@ class c_jasa extends CI_Controller
         echo json_encode($data);
     }
 
-    public function company_update()
+    public function jasa_update()
     {
         {
             $data = array(
+                'no_jaringan' => $this->input->post('no_jaringan'),
                 'no_company' => $this->input->post('no_company'),
-                'npwp' => $this->input->post('npwp'),
-                'company' => $this->input->post('company'),
-                'parent_company' => $this->input->post('parent_company'),
-                'address' => $this->input->post('address'),
-                'city' => $this->input->post('city'),
-                'contact_person' => $this->input->post('contact_person'),
-                'title' => $this->input->post('title'),
-                'email' => $this->input->post('email'),
-                'phone' => $this->input->post('phone'),
-                'mobile' => $this->input->post('mobile'),
-                'business_consultant' => $this->input->post('business_consultant'),
-                'join_date' => $this->input->post('join_date'),
-                'assignment' => $this->input->post('assignment'),
+                'subservices' => $this->input->post('subservices'),
+                'services' => $this->input->post('services'),
+                'product_family' => $this->input->post('product_family'),
+                'contract_start_date' => $this->input->post('contract_start_date'),
+                'contract_end_date' => $this->input->post('contract_end_date'),
+                'spk_number' => $this->input->post('spk_number'),
+                'spk_date' => $this->input->post('spk_date'),
+                'spk_handover_date' => $this->input->post('spk_handover_date'),
+                'otc' => $this->input->post('otc'),
+                'mrc' => $this->input->post('mrc'),
+                'type' => $this->input->post('type'),
+                'keterangan' => $this->input->post('keterangan')
             );
-            $this->company_model->company_update(array('no_company' => $this->input->post('no_company')), $data);
+            $this->jasa_model->jasa_update(array('no_jaringan' => $this->input->post('no_jaringan')), $data);
             echo json_encode(array("status" => TRUE));
         }
     }
