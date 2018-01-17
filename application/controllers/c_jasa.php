@@ -14,6 +14,8 @@ class c_jasa extends CI_Controller
         $this->load->helper('url');
         $this->load->model('jasa_model');
         $this->load->library('form_validation');
+        $this->load->model('company_model');
+
 
 
     }
@@ -36,7 +38,6 @@ class c_jasa extends CI_Controller
 
     public function jasa_add()
     {
-
         $data = array(
             'no_jaringan' => $this->input->post('no_jaringan'),
             'no_company' => $this->input->post('no_company'),

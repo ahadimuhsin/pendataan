@@ -542,7 +542,7 @@ body {
   font-size: 14px;
   line-height: 1.42857143;
   color: #BDBDBD;
-  background-color: black;
+  background-color:black;
 }
 input,
 button,
@@ -6231,7 +6231,7 @@ table.tablesorter thead tr th:hover {
 	height: 100%;
 	border-radius: 0;
 	border: none;
-	background-color: grey;
+	background-color:grey;
 	overflow-y: auto;
   }
 
@@ -6550,7 +6550,3 @@ table.tablesorter thead tr th:hover {
                     right: auto;
                 }
         }
-
-#cloud_server {
-  display:none;
-}

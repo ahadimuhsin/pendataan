@@ -21,9 +21,10 @@
     <!--    <link rel="stylesheet" type="text/css" href="--><?php //echo base_url(); ?><!--/assets/css/bootstrap.css" />-->
 
     <script type="text/javascript" src="<?php echo base_url(); ?>/assets/js/jquery-1.10.2.min.js"></script>
+    <script type="text/javascript" src="<?php echo base_url(); ?>/assets/js/jquery-3.2.1.js"></script>
     <script type="text/javascript" src="<?php echo base_url(); ?>/assets/js/myscript.js"></script>
     <script type="text/javascript" src="<?php echo base_url(); ?>/assets/js/jquery-1.10.1.js"></script>
-    <script type="text/javascript" src="<?php echo base_url(); ?>/assets/js/form-validation-company.js"></script>
+    <script type="text/javascript" src="<?php echo base_url(); ?>/assets/js/form-validation-jasa.js"></script>
     <script type="text/javascript" src="<?php echo base_url(); ?>/assets/bootstrap/js/bootstrap.min.js"></script>
     <script src="<?php echo base_url()."/assets/js/jquery.js"?>" type="text/javascript"></script>
     <script src="<?php echo base_url()."/assets/js/jquery-validation/dist/jquery.validate.min.js"?>" type="text/javascript"></script>
@@ -38,7 +39,11 @@
     <script src="<?php echo base_url('assests/datatables/js/jquery.dataTables.min.js')?>"></script>
     <style>
 
-        #cloud_server_product,#cloud_server_services{
+        #cloud_server_product,#cloud_server_services,#managed_server_product,#managed_server_services,
+        #managed_wifi_services, #managed_wifi_product, #managed_mail_services,#managed_mail_product,
+        #managed_radius_services,#managed_radius_product,#it_solution_services, #it_solution_product,
+        #salesforce_product,#salesforce_services,#microsoft_services,#cozytizen_services,#application_services,
+        #sms_services{
             display: none;
         }
         @media print {
@@ -192,7 +197,7 @@
         //Ajax Load data from ajax
         $.ajax({
             url : "<?php echo site_url('index.php/c_jasa/ajax_edit/')?>/" + no_jaringan,
-            type: "GET",
+            type: "POST",
             dataType: "JSON",
             success: function(data)
             {
@@ -233,171 +238,148 @@
 
     function save() {
         //sebelum disave, melakukan form validation terlebih dahulu
-//        var url;
-//        var company_number=form.npwp;
-//        var company_name=form.company;
-//        var company_parent=form.parent_company;
-//        var company_address=form.address;
-//        var company_city=form.city;
-//        var company_cp=form.contact_person;
-//        var company_title=form.title;
-//        var company_email=form.email;
-//        var company_phone=form.phone;
-//        var company_mobile=form.mobile;
-//        var company_bc=form.business_consultant;
-//        var company_date=form.join_date;
-//        var company_assignment=form.assignment;
+            var url;
+        var jasa_number=form.no_company;
+        var jasa_network=form.no_jaringan;
+        var jasa_subservices=form.subservices;
+        var jasa_contract_start=form.contract_start_date;
+        var jasa_contract_end=form.contract_end_date;
+        var jasa_spk_number=form.spk_number;
+        var jasa_spk_date=form.spk_date;
+        var jasa_spk=form.spk_handover_date;
+        var jasa_otc=form.otc;
+        var jasa_mrc=form.mrc;
+        var jasa_type=form.type;
+
         if (save_method == 'add') { //jika save_method = add, menambah data baru
 
-//            if (company_number.value==="") {
-//                alert("Mohon Isi Form Secara Lengkap");
-//                company_number.focus();
-//                return false;
-//            }
-//            else if (company_name.value==="") {
-//                alert("Mohon Isi Form Secara Lengkap");
-//                company_name.focus();
-//                return false;
-//            }
-//            else if (company_parent.value==="") {
-//                alert("Mohon Isi Form Secara Lengkap");
-//                company_parent.focus();
-//                return false;
-//            }
-////                Entah mengapa kalo ada di bawah ini gak bekerja
-//            else if (company_address.value==="") {
-//                alert("Mohon Isi Form Secara Lengkap");
-//                company_address.focus();
-//                return false;
-//            }
-//            else if (company_city.value==="") {
-//                alert("Mohon Isi Form Secara Lengkap");
-//                company_city.focus();
-//                return false;
-//            }
-//            else if (company_cp.value==="") {
-//                alert("Mohon Isi Form Secara Lengkap");
-//                company_cp.focus();
-//                return false;
-//            }
-//            else if (company_title.value==="") {
-//                alert("Mohon Isi Form Secara Lengkap");
-//                company_title.focus();
-//                return false;
-//            }
-//            else if (company_email.value==="") {
-//                alert("Mohon Isi Form Secara Lengkap");
-//                company_email.focus();
-//                return false;
-//            }
-//            else if (company_phone.value==="") {
-//                alert("Mohon Isi Form Secara Lengkap");
-//                company_phone.focus();
-//                return false;
-//            }
-//            else if (company_mobile.value==="") {
-//                alert("Mohon Isi Form Secara Lengkap");
-//                company_mobile.focus();
-//                return false;
-//            }
-//            else if (company_bc.value==="") {
-//                alert("Mohon Isi Form Secara Lengkap");
-//                company_bc.focus();
-//                return false;
-//            }
-//            else if (company_date.value==="") {
-//                alert("Mohon Isi Form Secara Lengkap");
-//                company_date.focus();
-//                return false;
-//            }
-//            else if (company_assignment.value==="") {
-//                alert("Mohon Isi Form Secara Lengkap");
-//                company_assignment.focus();
-//                return false;
-//            }
+            if (jasa_number.value==="") {
+                alert("Mohon Isi Form Secara Lengkap");
+                company_number.focus();
+                return false;
+            }
+            else if (jasa_network.value==="") {
+                alert("Mohon Isi Form Secara Lengkap");
+                company_name.focus();
+                return false;
+            }
+            else if (jasa_subservices.value==="") {
+                alert("Mohon Isi Form Secara Lengkap");
+                company_parent.focus();
+                return false;
+            }
+//                Entah mengapa kalo ada di bawah ini gak bekerja
+            else if (jasa_contract_end.value==="") {
+                alert("Mohon Isi Form Secara Lengkap");
+                company_address.focus();
+                return false;
+            }
+            else if (jasa_contract_start.value==="") {
+                alert("Mohon Isi Form Secara Lengkap");
+                company_city.focus();
+                return false;
+            }
+            else if (jasa_spk.value==="") {
+                alert("Mohon Isi Form Secara Lengkap");
+                company_cp.focus();
+                return false;
+            }
+            else if (jasa_spk_date.value==="") {
+                alert("Mohon Isi Form Secara Lengkap");
+                company_title.focus();
+                return false;
+            }
+            else if (jasa_spk_number.value==="") {
+                alert("Mohon Isi Form Secara Lengkap");
+                company_email.focus();
+                return false;
+            }
+            else if (jasa_otc.value==="") {
+                alert("Mohon Isi Form Secara Lengkap");
+                company_phone.focus();
+                return false;
+            }
+            else if (jasa_mrc.value==="") {
+                alert("Mohon Isi Form Secara Lengkap");
+                company_mobile.focus();
+                return false;
+            }
+            else if (jasa_type.value==="") {
+                alert("Mohon Isi Form Secara Lengkap");
+                company_bc.focus();
+                return false;
+            }
 
-
-//            else {
+            else {
                 url = "<?php echo site_url('index.php/c_jasa/jasa_add')?>";
 
-//            }
+            }
 
         }
+
+
         //kalau update, update data
         else {
-//            if (company_number.value==="") {
-//                alert("Mohon Isi Form Secara Lengkap");
-//                company_number.focus();
-//                return false;
-//            }
-//
-//            else if (company_name.value==="") {
-//                alert("Mohon Isi Form Secara Lengkap");
-//                company_name.focus();
-//                return false;
-//            }
-//            else if (company_parent.value==="") {
-//                alert("Mohon Isi Form Secara Lengkap");
-//                company_parent.focus();
-//                return false;
-//            }
-////                Entah mengapa kalo ada di bawah ini gak bekerja
-//            else if (company_address.value==="") {
-//                alert("Mohon Isi Form Secara Lengkap");
-//                company_address.focus();
-//                return false;
-//            }
-//            else if (company_city.value==="") {
-//                alert("Mohon Isi Form Secara Lengkap");
-//                company_city.focus();
-//                return false;
-//            }
-//            else if (company_cp.value==="") {
-//                alert("Mohon Isi Form Secara Lengkap");
-//                company_cp.focus();
-//                return false;
-//            }
-//            else if (company_title.value==="") {
-//                alert("Mohon Isi Form Secara Lengkap");
-//                company_title.focus();
-//                return false;
-//            }
-//            else if (company_email.value==="") {
-//                alert("Mohon Isi Form Secara Lengkap");
-//                company_email.focus();
-//                return false;
-//            }
-//            else if (company_phone.value==="") {
-//                alert("Mohon Isi Form Secara Lengkap");
-//                company_phone.focus();
-//                return false;
-//            }
-//            else if (company_mobile.value==="") {
-//                alert("Mohon Isi Form Secara Lengkap");
-//                company_mobile.focus();
-//                return false;
-//            }
-//            else if (company_bc.value==="") {
-//                alert("Mohon Isi Form Secara Lengkap");
-//                company_bc.focus();
-//                return false;
-//            }
-//            else if (company_date.value==="") {
-//                alert("Mohon Isi Form Secara Lengkap");
-//                company_date.focus();
-//                return false;
-//            }
-//            else if (company_assignment.value==="") {
-//                alert("Mohon Isi Form Secara Lengkap");
-//                company_assignment.focus();
-//                return false;
-//            }
-//
-//
-//            else {
+              if (jasa_number.value==="") {
+            alert("Mohon Isi Form Secara Lengkap");
+            company_number.focus();
+            return false;
+        }
+    else if (jasa_network.value==="") {
+            alert("Mohon Isi Form Secara Lengkap");
+            company_name.focus();
+            return false;
+        }
+        else if (jasa_subservices.value==="") {
+            alert("Mohon Isi Form Secara Lengkap");
+            company_parent.focus();
+            return false;
+        }
+//                Entah mengapa kalo ada di bawah ini gak bekerja
+        else if (jasa_contract_end.value==="") {
+            alert("Mohon Isi Form Secara Lengkap");
+            company_address.focus();
+            return false;
+        }
+        else if (jasa_contract_start.value==="") {
+            alert("Mohon Isi Form Secara Lengkap");
+            company_city.focus();
+            return false;
+        }
+        else if (jasa_spk.value==="") {
+            alert("Mohon Isi Form Secara Lengkap");
+            company_cp.focus();
+            return false;
+        }
+        else if (jasa_spk_date.value==="") {
+            alert("Mohon Isi Form Secara Lengkap");
+            company_title.focus();
+            return false;
+        }
+        else if (jasa_spk_number.value==="") {
+            alert("Mohon Isi Form Secara Lengkap");
+            company_email.focus();
+            return false;
+        }
+        else if (jasa_otc.value==="") {
+            alert("Mohon Isi Form Secara Lengkap");
+            company_phone.focus();
+            return false;
+        }
+        else if (jasa_mrc.value==="") {
+            alert("Mohon Isi Form Secara Lengkap");
+            company_mobile.focus();
+            return false;
+        }
+        else if (jasa_type.value==="") {
+            alert("Mohon Isi Form Secara Lengkap");
+            company_bc.focus();
+            return false;
+        }
+            else {
                 url = "<?php echo site_url('index.php/c_jasa/jasa_update')?>";
 
-//            }
+            }
 
         }
 
@@ -454,6 +436,21 @@
     //        }
 
 
+// just for the demos, avoids form submit
+    jQuery.validator.setDefaults({
+        debug: true,
+        success: "valid"
+    });
+    $( "#myform" ).validate({
+        rules: {
+            no_company: {
+                required: true,
+                number: true
+            }
+        }
+    });
+
+
 </script>
 <!-- Bootstrap modal -->
 <div class="modal fade" id="modal_form" role="dialog">
@@ -480,20 +477,20 @@
                             </div>
                         </div>
                         <div class="form-group">
-<!--                            masih kurang -->
+
                             <label class="control-label col-md-3" for="subservices">Sub Services</label>
                             <div class="col-md-9">
-<!--                                <input name="subservices" style="color: black" placeholder="Sub Services" class="form-control" type="text">-->
                                 <select id='subservices' style="height:40px; color: black" class="form-control" name="subservices" >
                                     <option value="" disabled selected hidden>Please Choose...</option>
                                     <option value="Cloud Server">Cloud Server</option>
                                     <option value="Managed Server" >Managed Server</option>
                                     <option value="Managed Wifi" >Managed Wifi</option>
                                     <option value="Managed Mail" >Managed Mail</option>
+                                    <option value="Managed Radius">Managed Radius</option>
                                     <option value="Managed Web" >Managed Web</option>
                                     <option value="Managed Antivirus" >Managed Antivirus</option>
                                     <option value="Managed SSL" >Managed SSL</option>
-                                    <option value="Managed Cpanel" >Managed Cpanel</option>
+                                    <option value="Managed Cpanel"  >Managed Cpanel</option>
                                     <option value="Managed Firewall" >Managed Firewall</option>
                                     <option value="Managed DNS" >Managed DNS</option>
                                     <option value="IT Solution" >IT Solution</option>
@@ -514,21 +511,134 @@
                             </div>
                         </div>
 
-
-                        <div class="form-group" id="cloud_server_services">
+<!--                            Bagian Cloud Server-->
+                        <div class="form-group" id='cloud_server_services'>
                             <label class="control-label col-md-3" for="services">Services</label>
                             <div class="col-md-9">
-                                <input name="services" placeholder="Services" value="Cloud Server" style="color: black" required class="form-control" type="text">
+                                <input name="services" placeholder="Services" value="Cloud Server" style="color: black" readonly required class="form-control" type="text">
                             </div>
                         </div>
 
-                        <div class="form-group" id="cloud_server_product">
+                        <div class="form-group" id='cloud_server_product'>
                             <label class="control-label col-md-3" for="product_family">Product Family</label>
                             <div class="col-md-9">
-                                <input name="product_family" placeholder="Product Family" value="Cloud Services" style="color: black" required class="form-control" type="text">
+                                <input name="product_family" placeholder="Product Family" value="Cloud Services" readonly style="color: black" required class="form-control" type="text">
+                            </div>
+                        </div>
+<!--                    Bagian Managed Server-->
+                        <div class="form-group" id='managed_server_services'>
+                            <label class="control-label col-md-3" for="services">Services</label>
+                            <div class="col-md-9">
+                                <input name="services" placeholder="Services" value="Managed Server" style="color: black" required readonly class="form-control" type="text">
                             </div>
                         </div>
 
+                        <div class="form-group" id='managed_server_product'>
+                            <label class="control-label col-md-3" for="product_family">Product Family</label>
+                            <div class="col-md-9">
+                                <input name="product_family" placeholder="Product Family" value="Managed Services" style="color: black" required readonly class="form-control" type="text">
+                            </div>
+                        </div>
+<!--                            Bagian Managed Wifi-->
+                        <div class="form-group" id='managed_wifi_services'>
+                            <label class="control-label col-md-3" for="services">Services</label>
+                            <div class="col-md-9">
+                                <input name="services" placeholder="Services" value="Managed Wifi" style="color: black" required readonly class="form-control" type="text">
+                            </div>
+                        </div>
+
+                        <div class="form-group" id='managed_wifi_product'>
+                            <label class="control-label col-md-3" for="product_family">Product Family</label>
+                            <div class="col-md-9">
+                                <input name="product_family" placeholder="Product Family" value="Managed Services" style="color: black" required readonly class="form-control" type="text">
+                            </div>
+                        </div>
+<!--                        Bagian Managed Mail-->
+                        <div class="form-group" id='managed_mail_services'>
+                            <label class="control-label col-md-3" for="services">Services</label>
+                            <div class="col-md-9">
+                                <input name="services" placeholder="Services" value="Managed Application" style="color: black" required readonly class="form-control" type="text">
+                            </div>
+                        </div>
+
+                        <div class="form-group" id='managed_mail_product'>
+                            <label class="control-label col-md-3" for="product_family">Product Family</label>
+                            <div class="col-md-9">
+                                <input name="product_family" placeholder="Product Family" value="Managed Services" style="color: black" required readonly class="form-control" type="text">
+                            </div>
+                        </div>
+<!--                        Bagian Managed Radius-->
+                        <div class="form-group" id='managed_radius_services'>
+                            <label class="control-label col-md-3" for="services">Services</label>
+                            <div class="col-md-9">
+                                <input name="services" placeholder="Services" value="Managed Application" style="color: black" required readonly class="form-control" type="text">
+                            </div>
+                        </div>
+
+                        <div class="form-group" id='managed_radius_product'>
+                            <label class="control-label col-md-3" for="product_family">Product Family</label>
+                            <div class="col-md-9">
+                                <input name="product_family" placeholder="Product Family" value="Managed Services" style="color: black" required readonly class="form-control" type="text">
+                            </div>
+                        </div>
+
+<!--                        Bagian IT Solution-->
+                        <div class="form-group" id='it_solution_services'>
+                            <label class="control-label col-md-3" for="services">Services</label>
+                            <div class="col-md-9">
+                                <input name="services" placeholder="Services" value="Professional Services" style="color: black" required readonly class="form-control" type="text">
+                            </div>
+                        </div>
+
+                        <div class="form-group" id='it_solution_product'>
+                            <label class="control-label col-md-3" for="product_family">Product Family</label>
+                            <div class="col-md-9">
+                                <input name="product_family" placeholder="Product Family" value="Managed Services" style="color: black" required readonly class="form-control" type="text">
+                            </div>
+                        </div>
+<!--                   Bagian Salesforce -->
+                        <div class="form-group" id='salesforce_services'>
+                            <label class="control-label col-md-3" for="services">Services</label>
+                            <div class="col-md-9">
+                                <input name="services" placeholder="Services" value="CRM Salesforce.com" style="color: black" required readonly class="form-control" type="text">
+                            </div>
+                        </div>
+                        <!--                    Bagian Microsoft-->
+                        <div class="form-group" id='microsoft_services'>
+                            <label class="control-label col-md-3" for="services">Services</label>
+                            <div class="col-md-9">
+                                <input name="services" placeholder="Services" value="Microsoft" style="color: black" required readonly class="form-control" type="text">
+                            </div>
+                        </div>
+
+<!--                      Cozytizen  -->
+                        <div class="form-group" id='cozytizen_services'>
+                            <label class="control-label col-md-3" for="services">Services</label>
+                            <div class="col-md-9">
+                                <input name="services" placeholder="Services" value="Cozytizen" style="color: black" required readonly class="form-control" type="text">
+                            </div>
+                        </div>
+<!--                      Application  -->
+                        <div class="form-group" id='application_services'>
+                            <label class="control-label col-md-3" for="services">Services</label>
+                            <div class="col-md-9">
+                                <input name="services" placeholder="Services" value="Application Development" style="color: black" required readonly class="form-control" type="text">
+                            </div>
+                        </div>
+<!--                      SMS Corporate  -->
+                        <div class="form-group" id='sms_services'>
+                            <label class="control-label col-md-3" for="services">Services</label>
+                            <div class="col-md-9">
+                                <input name="services" placeholder="Services" value="SMS Corporate" style="color: black" required readonly class="form-control" type="text">
+                            </div>
+                        </div>
+                        <div class="form-group" id='salesforce_product'>
+                            <label class="control-label col-md-3" for="product_family">Product Family</label>
+                            <div class="col-md-9">
+                                <input name="product_family" placeholder="Product Family" value="SaaS" style="color: black" required readonly class="form-control" type="text">
+                            </div>
+                        </div>
+<!--                                    End-->
                         <div class="form-group">
                             <label class="control-label col-md-3" for="contract_start_date">Contract Start Date</label>
                             <div class="col-md-9">

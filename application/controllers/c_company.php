@@ -105,12 +105,12 @@ class c_company extends CI_Controller{
     {
         // Load plugin PHPExcel nya
         include APPPATH . 'third_party/PHPExcel/PHPExcel.php';
-        $today = date("m.d.y");
-        $format_date = array(
-            'numberformat' => array(
-                'code' => 'DD/MM/YYYY',
-            ),
-        );
+//        $today = date("m.d.y");
+//        $format_date = array(
+//            'numberformat' => array(
+//                'code' => 'DD/MM/YYYY',
+//            ),
+//        );
 
 
 
@@ -257,7 +257,7 @@ class c_company extends CI_Controller{
         // Set orientasi kertas jadi LANDSCAPE
         $excel->getActiveSheet()->getPageSetup()->setOrientation(PHPExcel_Worksheet_PageSetup::ORIENTATION_LANDSCAPE);
         // Set judul file excel nya
-        $excel->getActiveSheet(0)->setTitle("Laporan Data Perusahaan");
+        $excel->getActiveSheet(0)->setTitle("Laporan Data Company");
         $excel->setActiveSheetIndex(0);
         // Proses file excel
 

@@ -192,7 +192,7 @@
             //Ajax Load data from ajax
             $.ajax({
                 url : "<?php echo site_url('index.php/c_company/ajax_edit/')?>/" + no_company,
-                type: "GET",
+                type: "POST",
                 dataType: "JSON",
                 success: function(data)
                 {
