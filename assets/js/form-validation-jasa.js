@@ -36,7 +36,7 @@ $(function() {
             spk_handover_date: "Mohon masukkan tanggal penyerahan SPK",
             otc: "Mohon masukkan nomor OTC",
             mrc: "Mohon masukkan nomor MRC",
-            type: "Mohon masukkan tipe"
+            type: "Mohon masukkan tipe berlangganan"
 
         },
         // Make sure the form is submitted to the destination defined
