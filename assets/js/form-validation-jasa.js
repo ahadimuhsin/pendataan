@@ -26,7 +26,7 @@ $(function() {
         },
         // Specify validation error messages
         messages: {
-            no_company: "Mohon masukkan satu/dua/tiga digit terakhir nomor Company. Contoh nomor Company    2018001 ditulis 1",
+            no_company: "Mohon masukkan satu/dua/tiga digit terakhir nomor Company. Contoh nomor Company 2018001 ditulis 1",
             no_jaringan: "Mohon masukkan nomor jaringan",
             subservices: "Mohon masukkan Subservice",
             contract_start_date: "Mohon masukkan tanggal dimulainya kontrak",
