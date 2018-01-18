@@ -703,3 +703,32 @@ $(document).ready(function () {
 
 });
 
+
+jQuery(function ($) {
+    $('#npwp').mask("99-999-999-9-999-999");
+});
+//        $("#npwp").mask("999-99-9999", {
+//            placeholder: " "
+//        });
+
+//        $("#contract_start_date").mask("99/99/9999",{placeholder:"mm/dd/yyyy"});
+
+$("#npwp").inputmask({
+    mask: '999-99-999-9999-9'
+});
+
+$(document).ready(function() {
+// ketika input usia di isi, eksekusi bagian ini.
+    $("#npwp").keypress(function (data)
+    {
+// kalau data bukan berupa angka, tampilkan pesan error
+        if(data.which!==8 && data.which!==0 &&
+            (data.which<48 || data.which>57))
+        {
+            $("#pesan").html("Isikan Angka").show().fadeOut("slow");
+            return false;
+        }
+    });
+});
+
+

@@ -22,6 +22,8 @@
 
     <script type="text/javascript" src="<?php echo base_url(); ?>/assets/js/jquery-1.10.2.min.js"></script>
     <script type="text/javascript" src="<?php echo base_url(); ?>/assets/js/jquery-3.2.1.js"></script>
+    <script type="text/javascript" src="<?php echo base_url(); ?>/assets/js/jquery.maskedinput.js"></script>
+
     <script type="text/javascript" src="<?php echo base_url(); ?>/assets/js/myscript.js"></script>
     <script type="text/javascript" src="<?php echo base_url(); ?>/assets/js/jquery-1.10.1.js"></script>
     <script type="text/javascript" src="<?php echo base_url(); ?>/assets/js/form-validation-jasa.js"></script>
@@ -714,6 +716,7 @@
     </div><!-- /.modal-dialog -->
 </div><!-- /.modal -->
 <!-- End Bootstrap modal -->
+
 
 </body>
 </html>

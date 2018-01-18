@@ -15,9 +15,6 @@
     <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>/assets/datatables/js/dataTables.bootstrap.js" />
     <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>/assets/datatables/js/jquery.dataTables.min.js" />
 
-
-
-
     <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>/assets/font-awesome/css/font-awesome.min.css" />
     <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>/assets/css/local.css" />
 
@@ -25,9 +22,18 @@
 
 
     <script type="text/javascript" src="<?php echo base_url(); ?>/assets/js/jquery-1.10.2.min.js"></script>
+    <script type="text/javascript" src="<?php echo base_url(); ?>/assets/jasny-bootstrap/js/jasny-bootstrap.js"></script>
+    <script type="text/javascript" src="<?php echo base_url(); ?>/assets/jasny-bootstrap/js/jasny-bootstrap.min.js"></script>
+
+
+    <script type="text/javascript" src="<?php echo base_url(); ?>/assets/js/jquery.min.js"></script>
+    <script type="text/javascript" src="<?php echo base_url(); ?>/assets/js/myscript.js"></script>
+    <script type="text/javascript" src="<?php echo base_url(); ?>/assets/js/jquery-3.2.1.js"></script>
     <script type="text/javascript" src="<?php echo base_url(); ?>/assets/js/jquery-1.10.1.js"></script>
     <script type="text/javascript" src="<?php echo base_url(); ?>/assets/js/form-validation-company.js"></script>
     <script type="text/javascript" src="<?php echo base_url(); ?>/assets/bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="<?php echo base_url(); ?>/assets/js/jquery.maskedinput.js"></script>
+
     <script src="<?php echo base_url()."/assets/js/jquery.js"?>" type="text/javascript"></script>
     <script src="<?php echo base_url()."/assets/js/jquery-validation/dist/jquery.validate.min.js"?>" type="text/javascript"></script>
     <script src="<?php echo base_url()."/assets/js/bootstrap.js"?>" type="text/javascript"></script>
@@ -47,6 +53,7 @@
     <script src="<?php echo base_url('assests/jquery/jquery-3.1.0.min.js')?>"></script>
     <script src="<?php echo base_url('assests/bootstrap/js/bootstrap.min.js')?>"></script>
     <script src="<?php echo base_url('assests/datatables/js/jquery.dataTables.min.js')?>"></script>
+
     <style>
         @media print {
             body * {
@@ -95,7 +102,7 @@
                 <li><a href="<?php base_url()?>logout"><i class="glyphicon glyphicon-log-out
 "></i> Log Out</a></li>
             </ul>
-            </ul>
+
         </div>
     </nav>
 
@@ -169,6 +176,7 @@
 
 
     <script type="text/javascript">
+
         $(document).ready( function () {
             $('#table_id').DataTable();
         } );
@@ -242,7 +250,7 @@
             var company_bc=form.business_consultant;
             var company_date=form.join_date;
             var company_assignment=form.assignment;
-            if (save_method == 'add') { //jika save_method = add, menambah data baru
+            if (save_method === 'add') { //jika save_method = add, menambah data baru
 
                 if (company_number.value==="") {
                     alert("Mohon Isi Form Secara Lengkap");
@@ -416,7 +424,7 @@
             });
         }
         $(document).ready(function () {
-            $('.datepicker').datepicker({
+            $('#tanggal').datepicker({
                 //merubah format tanggal datepicker ke dd-mm-yyyy
                 format: "dd-mm-yyyy",
                 //aktifkan kode dibawah untuk melihat perbedaanya, disable baris perintah diatasa
@@ -424,6 +432,9 @@
                 autoclose: true
             });
         });
+
+
+
 
 //        function delete_obat(barcode)
 //        {
@@ -448,8 +459,6 @@
 //            }
 //        }
 
-
-
     </script>
     <!-- Bootstrap modal -->
     <div class="modal fade" id="modal_form" role="dialog">
@@ -466,7 +475,8 @@
                             <div class="form-group">
                                 <label class="control-label col-md-3" for="npwp">NPWP</label>
                                 <div class="col-md-9">
-                                    <input  name="npwp" placeholder="NPWP" style="color: black" required class="form-control" type="number" >
+                                    <input  id="npwp" name="npwp" placeholder="NPWP" style="color: black" required class="form-control" type="number" >
+                                    <span id="pesan"></span>
                                 </div>
                             </div>
                             <div class="form-group" hidden >
@@ -589,6 +599,7 @@
         </div><!-- /.modal-dialog -->
     </div><!-- /.modal -->
     <!-- End Bootstrap modal -->
+
 
 </body>
 </html>
