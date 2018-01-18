@@ -102,10 +102,10 @@
     <div id="page-wrapper">
 
         <div class="col-lg-12 span">
-            <a class="btn btn-success printoff"  onclick="add_jasa()"  class="btn btn-info" role="button" ><i class="glyphicon glyphicon-plus"></i> Add Jasa</a>
+            <a class="btn btn-success printoff"  onclick="add_jasa()"   role="button" ><i class="glyphicon glyphicon-plus"></i> Add Jasa</a>
             <!--                <button class="btn btn-danger printoff" onclick="window.print()"><i class="glyphicon glyphicon-print"></i>Print</button>-->
             <a href="<?php echo base_url("index.php/c_jasa/export");?>" class="btn btn-info" role="button"><i class ="fa fa-file-excel-o"></i> Save as Excel file</a>
-        </div></br> </br>
+        </div><br> <br>
         <div class="row-fluid">
 
             <br><br>
@@ -140,7 +140,7 @@
                         <td><?php echo date("Y").sprintf("%03s", $jasa->no_company);?></td>
                         <td><?php echo $jasa->company;?></td>
                         <td><?php echo $jasa->parent_company;?></td>
-                        <td><?php echo $jasa->no_jaringan;?></td>
+                        <td><?php echo date("Y").sprintf("%06s", $jasa->no_jaringan);?></td>
                         <td><?php echo $jasa->business_consultant;?></td>
                         <td><?php echo $jasa->assignment;?></td>
                         <td><?php echo $jasa->subservices;?></td>
@@ -157,6 +157,7 @@
                         <td><?php echo $jasa->keterangan;?></td>
                         <td class="printoff">
                             <button class="btn btn-warning printoff" onclick="edit_jasa(<?php echo $jasa->no_jaringan;?>)"><i class="glyphicon glyphicon-pencil"></i></button>
+                            <button class="btn btn-danger printoff" onclick="delete_jasa(<?php echo $jasa->no_jaringan;?>)"><i class="glyphicon glyphicon-remove"></i></button>
 
 
                         </td>
@@ -257,58 +258,58 @@
 
             if (jasa_number.value==="") {
                 alert("Mohon Isi Form Secara Lengkap");
-                company_number.focus();
+                jasa_number.focus();
                 return false;
             }
-            else if (jasa_network.value==="") {
-                alert("Mohon Isi Form Secara Lengkap");
-                company_name.focus();
-                return false;
-            }
+//            else if (jasa_network.value==="") {
+//                alert("Mohon Isi Form Secara Lengkap");
+//                company_name.focus();
+//                return false;
+//            }
             else if (jasa_subservices.value==="") {
                 alert("Mohon Isi Form Secara Lengkap");
-                company_parent.focus();
+                jasa_subservices.focus();
                 return false;
             }
 //                Entah mengapa kalo ada di bawah ini gak bekerja
             else if (jasa_contract_end.value==="") {
                 alert("Mohon Isi Form Secara Lengkap");
-                company_address.focus();
+                jasa_contract_end.focus();
                 return false;
             }
             else if (jasa_contract_start.value==="") {
                 alert("Mohon Isi Form Secara Lengkap");
-                company_city.focus();
+                jasa_contract_start.focus();
                 return false;
             }
             else if (jasa_spk.value==="") {
                 alert("Mohon Isi Form Secara Lengkap");
-                company_cp.focus();
+                jasa_spk.focus();
                 return false;
             }
             else if (jasa_spk_date.value==="") {
                 alert("Mohon Isi Form Secara Lengkap");
-                company_title.focus();
+                jasa_spk_date.focus();
                 return false;
             }
             else if (jasa_spk_number.value==="") {
                 alert("Mohon Isi Form Secara Lengkap");
-                company_email.focus();
+                jasa_spk_date.focus();
                 return false;
             }
             else if (jasa_otc.value==="") {
                 alert("Mohon Isi Form Secara Lengkap");
-                company_phone.focus();
+                jasa_otc.focus();
                 return false;
             }
             else if (jasa_mrc.value==="") {
                 alert("Mohon Isi Form Secara Lengkap");
-                company_mobile.focus();
+                jasa_mrc.focus();
                 return false;
             }
             else if (jasa_type.value==="") {
                 alert("Mohon Isi Form Secara Lengkap");
-                company_bc.focus();
+                jasa_type.focus();
                 return false;
             }
 
@@ -322,62 +323,63 @@
 
         //kalau update, update data
         else {
-              if (jasa_number.value==="") {
-            alert("Mohon Isi Form Secara Lengkap");
-            company_number.focus();
-            return false;
-        }
-    else if (jasa_network.value==="") {
-            alert("Mohon Isi Form Secara Lengkap");
-            company_name.focus();
-            return false;
-        }
-        else if (jasa_subservices.value==="") {
-            alert("Mohon Isi Form Secara Lengkap");
-            company_parent.focus();
-            return false;
-        }
+            if (jasa_number.value==="") {
+                alert("Mohon Isi Form Secara Lengkap");
+                jasa_number.focus();
+                return false;
+            }
+//            else if (jasa_network.value==="") {
+//                alert("Mohon Isi Form Secara Lengkap");
+//                company_name.focus();
+//                return false;
+//            }
+            else if (jasa_subservices.value==="") {
+                alert("Mohon Isi Form Secara Lengkap");
+                jasa_subservices.focus();
+                return false;
+            }
 //                Entah mengapa kalo ada di bawah ini gak bekerja
-        else if (jasa_contract_end.value==="") {
-            alert("Mohon Isi Form Secara Lengkap");
-            company_address.focus();
-            return false;
-        }
-        else if (jasa_contract_start.value==="") {
-            alert("Mohon Isi Form Secara Lengkap");
-            company_city.focus();
-            return false;
-        }
-        else if (jasa_spk.value==="") {
-            alert("Mohon Isi Form Secara Lengkap");
-            company_cp.focus();
-            return false;
-        }
-        else if (jasa_spk_date.value==="") {
-            alert("Mohon Isi Form Secara Lengkap");
-            company_title.focus();
-            return false;
-        }
-        else if (jasa_spk_number.value==="") {
-            alert("Mohon Isi Form Secara Lengkap");
-            company_email.focus();
-            return false;
-        }
-        else if (jasa_otc.value==="") {
-            alert("Mohon Isi Form Secara Lengkap");
-            company_phone.focus();
-            return false;
-        }
-        else if (jasa_mrc.value==="") {
-            alert("Mohon Isi Form Secara Lengkap");
-            company_mobile.focus();
-            return false;
-        }
-        else if (jasa_type.value==="") {
-            alert("Mohon Isi Form Secara Lengkap");
-            company_bc.focus();
-            return false;
-        }
+            else if (jasa_contract_end.value==="") {
+                alert("Mohon Isi Form Secara Lengkap");
+                jasa_contract_end.focus();
+                return false;
+            }
+            else if (jasa_contract_start.value==="") {
+                alert("Mohon Isi Form Secara Lengkap");
+                jasa_contract_start.focus();
+                return false;
+            }
+            else if (jasa_spk.value==="") {
+                alert("Mohon Isi Form Secara Lengkap");
+                jasa_spk.focus();
+                return false;
+            }
+            else if (jasa_spk_date.value==="") {
+                alert("Mohon Isi Form Secara Lengkap");
+                jasa_spk_date.focus();
+                return false;
+            }
+            else if (jasa_spk_number.value==="") {
+                alert("Mohon Isi Form Secara Lengkap");
+                jasa_spk_date.focus();
+                return false;
+            }
+            else if (jasa_otc.value==="") {
+                alert("Mohon Isi Form Secara Lengkap");
+                jasa_otc.focus();
+                return false;
+            }
+            else if (jasa_mrc.value==="") {
+                alert("Mohon Isi Form Secara Lengkap");
+                jasa_mrc.focus();
+                return false;
+            }
+            else if (jasa_type.value==="") {
+                alert("Mohon Isi Form Secara Lengkap");
+                jasa_type.focus();
+                return false;
+            }
+
             else {
                 url = "<?php echo site_url('index.php/c_jasa/jasa_update')?>";
 
@@ -405,7 +407,7 @@
         });
     }
     $(document).ready(function () {
-        $('.datepicker').datepicker({
+        $('#join_date').datepicker({
             //merubah format tanggal datepicker ke dd-mm-yyyy
             format: "dd-mm-yyyy",
             //aktifkan kode dibawah untuk melihat perbedaanya, disable baris perintah diatasa
@@ -414,28 +416,28 @@
         });
     });
 
-    //        function delete_obat(barcode)
-    //        {
-    //            if(confirm('Are you sure delete this data?'))
-    //            {
-    //                // ajax delete data from database
-    //                $.ajax({
-    //                    url : "<?php //echo site_url('index.php/c_obat/obat_delete')?>///"+barcode,
-    //                    type: "POST",
-    //                    dataType: "JSON",
-    //                    success: function(data)
-    //                    {
-    //
-    //                        location.reload();
-    //                    },
-    //                    error: function (jqXHR, textStatus, errorThrown)
-    //                    {
-    //                        alert('Error deleting data');
-    //                    }
-    //                });
-    //
-    //            }
-    //        }
+            function delete_jasa(no_jaringan)
+            {
+                if(confirm('Are you sure delete this data?'))
+                {
+                    // ajax delete data from database
+                    $.ajax({
+                        url : "<?php echo site_url('index.php/c_jasa/jasa_delete')?>/"+no_jaringan,
+                        type: "POST",
+                        dataType: "JSON",
+                        success: function(data)
+                        {
+
+                            location.reload();
+                        },
+                        error: function (jqXHR, textStatus, errorThrown)
+                        {
+                            alert('Error deleting data');
+                        }
+                    });
+
+                }
+            }
 
 
 // just for the demos, avoids form submit
@@ -469,13 +471,13 @@
                         <div class="form-group">
                             <label class="control-label col-md-3" for="no_company">No Company</label>
                             <div class="col-md-9">
-                                <input  name="no_company" title="Contoh inputan: nomor company 2018001 ditulis 1" placeholder="Masukkan satu, dua, atau tiga digit terakhir dari nomor company" style="color: black" required class="form-control" type="number" >
+                                <input  name="no_company" id="no_company" title="Contoh inputan: nomor company 2018001 ditulis 1" placeholder="<?php echo date("Y");?>XXX (3 digit terakhir Nomor Company)" style="color: black" required class="form-control" type="number" >
                             </div>
                         </div>
-                        <div class="form-group">
+                        <div class="form-group" hidden>
                             <label class="control-label col-md-3" for="no_jaringan">No Jaringan</label>
                             <div class="col-md-9">
-                                <input name="no_jaringan" placeholder="Nomor Jaringan" style="color: black" required class="form-control" type="number">
+                                <input name="no_jaringan" placeholder="Nomor Jaringan" style="color: black"  class="form-control" type="number">
                             </div>
                         </div>
                         <div class="form-group">
@@ -483,7 +485,7 @@
                             <label class="control-label col-md-3" for="subservices">Sub Services</label>
                             <div class="col-md-9">
                                 <select id='subservices' style="height:40px; color: black" class="form-control" name="subservices" >
-                                    <option value="" disabled selected hidden>Please Choose...</option>
+                                    <option value="" disabled selected hidden>Pilih Salah Satu</option>
                                     <option value="Cloud Server">Cloud Server</option>
                                     <option value="Managed Server" >Managed Server</option>
                                     <option value="Managed Wifi" >Managed Wifi</option>
@@ -689,8 +691,8 @@
                             <label class="control-label col-md-3" for="type">Type</label>
                             <div class="col-md-9">
                                 <!--                                    <input name="assignment" placeholder="Assignment" required class="form-control" type="text">-->
-                                <select name="type" style="height: 40px; color: black" class="form-control" required>
-                                    <option value="" disabled selected hidden>Please Choose...</option>
+                                <select name="type" title="Pilih salah satu" style="height: 40px; color: black" class="form-control" required>
+                                    <option value="" disabled selected hidden>Pilih Salah Satu</option>
                                     <option value="Monthly">Monthly</option>
                                     <option value="Joining Free">Joining Free</option>
                                 </select>

@@ -7,7 +7,7 @@
     <title>Lintas Media Danawa</title>
     <LINK REL="SHORTCUT ICON" href="<?php base_url();?>/assets/image/lmd.ico" />
     <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>/assets/bootstrap/css/bootstrap.min.css" />
-    <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>/assets/bootstrap/css/bootstrap.css" />
+<!--    <link rel="stylesheet" type="text/css" href="--><?php //echo base_url(); ?><!--/assets/bootstrap/css/bootstrap.css" />-->
 
     <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>/assets/bootstrap/css/DT_bootstrap.css" />
     <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>/assets/datatables/css/dataTables.bootstrap.css" />
@@ -17,8 +17,12 @@
 
     <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>/assets/font-awesome/css/font-awesome.min.css" />
     <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>/assets/css/local.css" />
+    <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>/assets/css/jquery-ui.css" />
+    <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>/assets/css/jquery-ui.min.css" />
 
-<!--    <link rel="stylesheet" type="text/css" href="--><?php //echo base_url(); ?><!--/assets/css/bootstrap.css" />-->
+
+
+    <!--    <link rel="stylesheet" type="text/css" href="--><?php //echo base_url(); ?><!--/assets/css/bootstrap.css" />-->
 
 
     <script type="text/javascript" src="<?php echo base_url(); ?>/assets/js/jquery-1.10.2.min.js"></script>
@@ -27,12 +31,17 @@
 
 
     <script type="text/javascript" src="<?php echo base_url(); ?>/assets/js/jquery.min.js"></script>
+    <script type="text/javascript" src="<?php echo base_url(); ?>/assets/js/jquery.mask.js"></script>
     <script type="text/javascript" src="<?php echo base_url(); ?>/assets/js/myscript.js"></script>
     <script type="text/javascript" src="<?php echo base_url(); ?>/assets/js/jquery-3.2.1.js"></script>
+    <script type="text/javascript" src="<?php echo base_url(); ?>/assets/js/jquery-ui.js"></script>
+    <script type="text/javascript" src="<?php echo base_url(); ?>/assets/js/jquery-ui.min.js"></script>
+
+
     <script type="text/javascript" src="<?php echo base_url(); ?>/assets/js/jquery-1.10.1.js"></script>
     <script type="text/javascript" src="<?php echo base_url(); ?>/assets/js/form-validation-company.js"></script>
     <script type="text/javascript" src="<?php echo base_url(); ?>/assets/bootstrap/js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="<?php echo base_url(); ?>/assets/js/jquery.maskedinput.js"></script>
+
 
     <script src="<?php echo base_url()."/assets/js/jquery.js"?>" type="text/javascript"></script>
     <script src="<?php echo base_url()."/assets/js/jquery-validation/dist/jquery.validate.min.js"?>" type="text/javascript"></script>
@@ -157,6 +166,7 @@
                             <td><?php echo $company->assignment;?></td>
                             <td class="printoff">
                                 <button class="btn btn-warning printoff" onclick="edit_company(<?php echo $company->no_company;?>)"><i class="glyphicon glyphicon-pencil"></i></button>
+                                <button class="btn btn-danger printoff" onclick="delete_company(<?php echo $company->no_company;?>)"><i class="glyphicon glyphicon-remove"></i></button>
 
 
                             </td>
@@ -436,28 +446,31 @@
 
 
 
-//        function delete_obat(barcode)
-//        {
-//            if(confirm('Are you sure delete this data?'))
-//            {
-//                // ajax delete data from database
-//                $.ajax({
-//                    url : "<?php //echo site_url('index.php/c_obat/obat_delete')?>///"+barcode,
-//                    type: "POST",
-//                    dataType: "JSON",
-//                    success: function(data)
-//                    {
-//
-//                        location.reload();
-//                    },
-//                    error: function (jqXHR, textStatus, errorThrown)
-//                    {
-//                        alert('Error deleting data');
-//                    }
-//                });
-//
-//            }
-//        }
+        function delete_company(no_company)
+        {
+            if(confirm('Are you sure delete this data?'))
+            {
+                // ajax delete data from database
+                $.ajax({
+                    url : "<?php echo site_url('index.php/c_company/company_delete')?>/"+no_company,
+                    type: "POST",
+                    dataType: "JSON",
+                    success: function(data)
+                    {
+
+                        location.reload();
+                    },
+                    error: function (jqXHR, textStatus, errorThrown)
+                    {
+                        alert('Error deleting data');
+                    }
+                });
+
+            }
+        }
+        $(document).ready(function() {
+            $("#npwp").focus();
+        });
 
     </script>
     <!-- Bootstrap modal -->
@@ -475,8 +488,9 @@
                             <div class="form-group">
                                 <label class="control-label col-md-3" for="npwp">NPWP</label>
                                 <div class="col-md-9">
-                                    <input  id="npwp" name="npwp" placeholder="NPWP" style="color: black" required class="form-control" type="number" >
+                                    <input  id="npwp" name="npwp" placeholder="NPWP" style="color: black" required class="form-control" type="text" >
                                     <span id="pesan"></span>
+
                                 </div>
                             </div>
                             <div class="form-group" hidden >
@@ -568,7 +582,7 @@
                             <div class="form-group">
                                 <label class="control-label col-md-3" for="join_date">Join Date</label>
                                 <div class="col-md-9">
-                                    <input name="join_date" data-date-format="dd/mm/yyyy" id="tanggal" placeholder="Join Date" style="color: black" required class="form-control" type="date">
+                                    <input name="join_date" id="join_date" data-date-format="dd/mm/yyyy" id="tanggal" placeholder="Join Date" style="color: black" required class="form-control" type="date">
 
                                 </div>
                             </div>

@@ -704,18 +704,14 @@ $(document).ready(function () {
 });
 
 
-jQuery(function ($) {
-    $('#npwp').mask("99-999-999-9-999-999");
-});
-//        $("#npwp").mask("999-99-9999", {
-//            placeholder: " "
-//        });
 
-//        $("#contract_start_date").mask("99/99/9999",{placeholder:"mm/dd/yyyy"});
+       $("#npwp").mask("99.999.999.9-999.999", {
+           placeholder: "NPWP"
+       });
 
-$("#npwp").inputmask({
-    mask: '999-99-999-9999-9'
-});
+
+$("#join_date").datepicker();
+
 
 $(document).ready(function() {
 // ketika input usia di isi, eksekusi bagian ini.

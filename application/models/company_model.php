@@ -51,11 +51,11 @@ class company_model extends CI_Model
         return $this->db->affected_rows();
     }
 
-//    public function delete_by_id($barcode)
-//    {
-//        $this->db->where('barcode', $barcode);
-//        $this->db->delete($this->table);
-//    }
+    public function delete_by_id($no_company)
+    {
+        $this->db->where('no_company', $no_company);
+        $this->db->delete($this->table);
+    }
 
     public function search_data($company)
     {

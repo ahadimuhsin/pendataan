@@ -37,7 +37,6 @@ class c_company extends CI_Controller{
 
     public function company_add()
     {
-        $this->form_validation->set_rules('join_date','DOB','callback_checkDateFormat');
 
         $data = array(
             'npwp' => $this->input->post('npwp'),
@@ -93,11 +92,11 @@ class c_company extends CI_Controller{
         }
         }
 
-//    public function obat_delete($barcode)
-//    {
-//        $this->obat_model->delete_by_id($barcode);
-//        echo json_encode(array("status" => TRUE));
-//    }
+    public function company_delete($no_company)
+    {
+        $this->company_model->delete_by_id($no_company);
+        echo json_encode(array("status" => TRUE));
+    }
 
 
 

@@ -92,11 +92,11 @@ class c_jasa extends CI_Controller
         }
     }
 
-//    public function obat_delete($barcode)
-//    {
-//        $this->obat_model->delete_by_id($barcode);
-//        echo json_encode(array("status" => TRUE));
-//    }
+    public function jasa_delete($no_jaringan)
+    {
+        $this->jasa_model->delete_by_id($no_jaringan);
+        echo json_encode(array("status" => TRUE));
+    }
 
 
 

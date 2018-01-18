@@ -53,11 +53,11 @@ class jasa_model extends CI_Model
         return $this->db->affected_rows();
     }
 
-//    public function delete_by_id($barcode)
-//    {
-//        $this->db->where('barcode', $barcode);
-//        $this->db->delete($this->table);
-//    }
+    public function delete_by_id($no_jaringan)
+    {
+        $this->db->where('no_jaringan', $no_jaringan);
+        $this->db->delete($this->table);
+    }
 
     public function search_data($company)
     {
