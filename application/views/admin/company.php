@@ -7,7 +7,7 @@
     <title>Lintas Media Danawa</title>
     <LINK REL="SHORTCUT ICON" href="<?php base_url();?>/assets/image/lmd.ico" />
     <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>/assets/bootstrap/css/bootstrap.min.css" />
-<!--    <link rel="stylesheet" type="text/css" href="--><?php //echo base_url(); ?><!--/assets/bootstrap/css/bootstrap.css" />-->
+    <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>/assets/bootstrap/css/bootstrap.css" />
 
     <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>/assets/bootstrap/css/DT_bootstrap.css" />
     <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>/assets/datatables/css/dataTables.bootstrap.css" />
@@ -22,7 +22,7 @@
 
 
 
-    <!--    <link rel="stylesheet" type="text/css" href="--><?php //echo base_url(); ?><!--/assets/css/bootstrap.css" />-->
+    <!--        <link rel="stylesheet" type="text/css" href="--><?php //echo base_url(); ?><!--/assets/css/bootstrap.css" />-->
 
 
     <script type="text/javascript" src="<?php echo base_url(); ?>/assets/js/jquery-1.10.2.min.js"></script>
@@ -165,8 +165,8 @@
                             <td><?php echo $company->join_date;?></td>
                             <td><?php echo $company->assignment;?></td>
                             <td class="printoff">
-                                <button class="btn btn-warning printoff" onclick="edit_company(<?php echo $company->no_company;?>)"><i class="glyphicon glyphicon-pencil"></i></button>
-                                <button class="btn btn-danger printoff" onclick="delete_company(<?php echo $company->no_company;?>)"><i class="glyphicon glyphicon-remove"></i></button>
+                                <button class="btn btn-warning printoff" title="Edit" onclick="edit_company(<?php echo $company->no_company;?>)"><i class="glyphicon glyphicon-pencil"></i></button>
+                                <button class="btn btn-danger printoff" title="Delete" onclick="delete_company(<?php echo $company->no_company;?>)"><i class="glyphicon glyphicon-remove"></i></button>
 
 
                             </td>

@@ -68,7 +68,7 @@ class c_company extends CI_Controller{
         //sampai sini log file
     }
     public function ajax_edit($id)
-    {
+        {
         $data = $this->company_model->get_by_id($id);
 
 

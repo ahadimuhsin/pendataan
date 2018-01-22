@@ -156,8 +156,8 @@
                         <td><?php echo $jasa->type;?></td>
                         <td><?php echo $jasa->keterangan;?></td>
                         <td class="printoff">
-                            <button class="btn btn-warning printoff" onclick="edit_jasa(<?php echo $jasa->no_jaringan;?>)"><i class="glyphicon glyphicon-pencil"></i></button>
-                            <button class="btn btn-danger printoff" onclick="delete_jasa(<?php echo $jasa->no_jaringan;?>)"><i class="glyphicon glyphicon-remove"></i></button>
+                            <button class="btn btn-warning printoff" title="Edit" onclick="edit_jasa(<?php echo $jasa->no_jaringan;?>)"><i class="glyphicon glyphicon-pencil"></i></button>
+                            <button class="btn btn-danger printoff" title="Delete" onclick="delete_jasa(<?php echo $jasa->no_jaringan;?>)"><i class="glyphicon glyphicon-remove"></i></button>
 
 
                         </td>
