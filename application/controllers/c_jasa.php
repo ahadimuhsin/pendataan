@@ -15,9 +15,6 @@ class c_jasa extends CI_Controller
         $this->load->model('jasa_model');
         $this->load->library('form_validation');
         $this->load->model('company_model');
-
-
-
     }
 
     public function add_jasa()
@@ -25,17 +22,7 @@ class c_jasa extends CI_Controller
         $this->load->view('admin/add_company');
     }
 
-    function checkDateFormat($date) {
-        if (preg_match("/[0-31]{2}\/[0-12]{2}\/[0-9]{4}/", $date)) {
-            if(checkdate(substr($date, 3, 2), substr($date, 0, 2), substr($date, 6, 4)))
-                return true;
-            else
-                return false;
-        } else {
-            return false;
-        }
-    }
-
+//untuk menambha data pelayanan jasa
     public function jasa_add()
     {
         $data = array(
@@ -61,7 +48,7 @@ class c_jasa extends CI_Controller
         date_default_timezone_set('Asia/Bangkok');
         $date = new DateTime();
         $date = $date->format("d:m:y h:i:s");
-        $file = 'log.txt';
+        $file = 'log.txt'; //nama file
         $nomor = $data['spk_number'];
         $message = $date. " " .$_SESSION['username']." menambahkan data pelayanan jasa dengan nomor SPK " . "".$nomor.PHP_EOL;
         file_put_contents($file, $message, FILE_APPEND | LOCK_EX);
@@ -76,6 +63,7 @@ class c_jasa extends CI_Controller
         echo json_encode($data);
     }
 
+//untuk update data pelayanana jasa
     public function jasa_update()
     {
         {
@@ -101,13 +89,13 @@ class c_jasa extends CI_Controller
             date_default_timezone_set('Asia/Bangkok');
             $date = new DateTime();
             $date = $date->format("d:m:y h:i:s");
-            $file = 'log.txt';
+            $file = 'log.txt'; //nama file
             $message = $date. " " .$_SESSION['username']." mengubah data pelayanan jasa dengan nomor jaringan " . " ".date("Y").sprintf("%06s",$data['no_jaringan']).PHP_EOL;
             file_put_contents($file, $message, FILE_APPEND | LOCK_EX);
             //sampai sini log file
         }
     }
-
+//untuk menghapus data pelayanan jasa
     public function jasa_delete($no_jaringan)
     {
         $this->jasa_model->delete_by_id($no_jaringan);
@@ -116,7 +104,7 @@ class c_jasa extends CI_Controller
         date_default_timezone_set('Asia/Bangkok');
         $date = new DateTime();
         $date = $date->format("d:m:y h:i:s");
-        $file = 'log.txt';
+        $file = 'log.txt'; //nama file
         $message = $date. " " .$_SESSION['username']." menghapus data pelayanan jasa dengan nomor jaringan " . " ".date("Y").sprintf("%06s",$no_jaringan).PHP_EOL;
         file_put_contents($file, $message, FILE_APPEND | LOCK_EX);
         //sampai sini log file
@@ -318,7 +306,7 @@ class c_jasa extends CI_Controller
         date_default_timezone_set('Asia/Bangkok');
         $date = new DateTime();
         $date = $date->format("d:m:y h:i:s");
-        $file = 'log.txt';
+        $file = 'log.txt'; //nama file
         $message = $date. " " .$_SESSION['username']." mendownload data pelayanan jasa".PHP_EOL;
         file_put_contents($file, $message, FILE_APPEND | LOCK_EX);
         //sampai sini log file
