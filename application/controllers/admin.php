@@ -6,10 +6,7 @@ class Admin extends CI_Controller{
 	function __construct(){
 		parent::__construct();
 
-		$this->load->model('obat_model');
-		$this->load->model('karyawan_model');
-		$this->load->model('supplier_model');
-		$this->load->model('obat_masuk_model');
+
 		$this->load->helper('url');
 		$this->load->model('company_model');
         $this->load->model('jasa_model');
@@ -132,6 +129,15 @@ class Admin extends CI_Controller{
 	function logout()
 	{
 	$this->session->sess_destroy();
+
+//untuk log file
+	date_default_timezone_set('Asia/Bangkok');
+        $date = new DateTime();
+        $date = $date->format("d:m:y h:i:s");
+        $file = 'log.txt';
+        $message = $date. " " .$_SESSION['username']." telah logout".PHP_EOL;
+        file_put_contents($file, $message, FILE_APPEND | LOCK_EX);
+        //sampai sini log file
 	echo
 	"<script>
 		alert('Successfully Logout!');

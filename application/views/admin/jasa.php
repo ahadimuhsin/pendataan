@@ -207,11 +207,6 @@
                 //mengambil data dalam bentuk json
                 $('[name="no_company"]').val(data.no_company);
                 $('[name="no_jaringan"]').val(data.no_jaringan);
-//                $('[name="company"]').val(data.company);
-//                $('[name="parent_company"]').val(data.parent_company);
-
-//                $('[name="business_consultant"]').val(data.business_consultant);
-//                $('[name="assignment"]').val(data.assignment);
                 $('[name="subservices"]').val(data.subservices);
                 $('[name="services"]').val(data.services);
                 $('[name="product_family"]').val(data.product_family);
@@ -472,6 +467,7 @@
                             <label class="control-label col-md-3" for="no_company">No Company</label>
                             <div class="col-md-9">
                                 <input  name="no_company" id="no_company" title="Contoh inputan: nomor company 2018001 ditulis 1" placeholder="<?php echo date("Y");?>XXX (3 digit terakhir Nomor Company)" style="color: black" required class="form-control" type="number" >
+                                <p>Contoh: Tulis "001" untuk No Company "2018001"</p>
                             </div>
                         </div>
                         <div class="form-group" hidden>

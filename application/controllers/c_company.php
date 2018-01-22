@@ -58,6 +58,14 @@ class c_company extends CI_Controller{
         $data['id']=$id;*/
         $insert = $this->company_model->company_add($data);
         echo json_encode(array("status" => TRUE));
+        //untuk log file
+        date_default_timezone_set('Asia/Bangkok');
+        $date = new DateTime();
+        $date = $date->format("d:m:y h:i:s");
+        $file = 'log.txt';
+        $message = $date. " " .$_SESSION['username']." menambahkan data perusahaan" . " ".$data['company'].PHP_EOL;
+        file_put_contents($file, $message, FILE_APPEND | LOCK_EX);
+        //sampai sini log file
     }
     public function ajax_edit($id)
     {
@@ -89,6 +97,14 @@ class c_company extends CI_Controller{
             );
             $this->company_model->company_update(array('no_company' => $this->input->post('no_company')), $data);
             echo json_encode(array("status" => TRUE));
+            //untuk log file
+            date_default_timezone_set('Asia/Bangkok');
+            $date = new DateTime();
+            $date = $date->format("d:m:y h:i:s");
+            $file = 'log.txt';
+            $message = $date. " " .$_SESSION['username']." mengubah data perusahaan" . " ".$data['company'].PHP_EOL;
+            file_put_contents($file, $message, FILE_APPEND | LOCK_EX);
+            //sampai sini log file
         }
         }
 
@@ -96,10 +112,18 @@ class c_company extends CI_Controller{
     {
         $this->company_model->delete_by_id($no_company);
         echo json_encode(array("status" => TRUE));
+        //untuk log file
+        date_default_timezone_set('Asia/Bangkok');
+        $date = new DateTime();
+        $date = $date->format("d:m:y h:i:s");
+        $file = 'log.txt';
+        $message = $date. " " .$_SESSION['username']." menghapus data perusahaan dengan nomor " . "" .date("Y").sprintf("%03s",$no_company).PHP_EOL;
+        file_put_contents($file, $message, FILE_APPEND | LOCK_EX);
+        //sampai sini log file
     }
 
 
-
+//fungsi export ke dalam excel
     public function export()
     {
         // Load plugin PHPExcel nya
@@ -236,10 +260,10 @@ class c_company extends CI_Controller{
             $numrow++; // Tambah 1 setiap kali looping
         }
         // Set width kolom
-        $excel->getActiveSheet()->getColumnDimension('A')->setWidth(25); // Set width kolom A
-        $excel->getActiveSheet()->getColumnDimension('B')->setWidth(15); // Set width kolom B
-        $excel->getActiveSheet()->getColumnDimension('C')->setWidth(25); // Set width kolom C
-        $excel->getActiveSheet()->getColumnDimension('D')->setWidth(20); // Set width kolom D
+        $excel->getActiveSheet()->getColumnDimension('A')->setWidth(30); // Set width kolom A
+        $excel->getActiveSheet()->getColumnDimension('B')->setWidth(30); // Set width kolom B
+        $excel->getActiveSheet()->getColumnDimension('C')->setWidth(30); // Set width kolom C
+        $excel->getActiveSheet()->getColumnDimension('D')->setWidth(30); // Set width kolom D
         $excel->getActiveSheet()->getColumnDimension('E')->setWidth(30); // Set width kolom E
         $excel->getActiveSheet()->getColumnDimension('F')->setWidth(30);
         $excel->getActiveSheet()->getColumnDimension('G')->setWidth(30);
@@ -267,6 +291,14 @@ class c_company extends CI_Controller{
         header('Cache-Control: max-age=0');
         $write = PHPExcel_IOFactory::createWriter($excel, 'Excel2007');
         $write->save('php://output');
+        //untuk log file
+        date_default_timezone_set('Asia/Bangkok');
+        $date = new DateTime();
+        $date = $date->format("d:m:y h:i:s");
+        $file = 'log.txt';
+        $message = $date. " " .$_SESSION['username']." mendownload data perusahaan".PHP_EOL;
+        file_put_contents($file, $message, FILE_APPEND | LOCK_EX);
+        //sampai sini log file
     }
 
 }

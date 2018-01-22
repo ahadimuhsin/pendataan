@@ -27,7 +27,16 @@ class c_login extends CI_Controller{
 				'status' => "login"
 				);
 
-			$this->session->set_userdata($data_session);
+			//untuk log file
+            $date = new DateTime();
+            date_default_timezone_set('Asia/Bangkok');
+			$date = $date->format("d:m:y h:i:s");
+		$file = 'log.txt';
+		$message = $date. " " .$username." telah login".PHP_EOL;
+		file_put_contents($file, $message, FILE_APPEND | LOCK_EX);
+		//sampe sini log file
+
+            $this->session->set_userdata($data_session);
 			echo
 			"<script>
 				alert('Successfully Login!');
