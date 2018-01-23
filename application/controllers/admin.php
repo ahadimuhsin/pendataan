@@ -10,6 +10,8 @@ class Admin extends CI_Controller{
 		$this->load->helper('url');
 		$this->load->model('company_model');
         $this->load->model('jasa_model');
+        $this->load->helper('file');
+        $this->load->helper('download');
 
 		if($this->session->userdata('status') != "login"){
 			echo
@@ -55,6 +57,24 @@ class Admin extends CI_Controller{
         $data['jasa']=$this->jasa_model->get_all_jasa();
         //$data['supplier']=$this->supplier_model->get_all_supplier();
         $this->load->view('admin/jasa',$data);
+	}
+
+	function download_log($fileName=NULL)
+	{
+		$fileName = "log.txt";
+        if ($fileName) {
+            $file = realpath ( "log/" ) . "\\" . $fileName;
+            // check file exists
+            if (file_exists ( $file )) {
+                // get file content
+                $data = file_get_contents ( $file );
+                //force download
+                force_download ( $fileName, $data );
+            } else {
+                // Redirect to base url
+                redirect ( base_url () );
+            }
+        }
 	}
 
 
@@ -131,10 +151,10 @@ class Admin extends CI_Controller{
 	$this->session->sess_destroy();
 
 //untuk log file
-	date_default_timezone_set('Asia/Bangkok');
+	date_default_timezone_set('Asia/Bangkok'); //mengatur zona waktu
         $date = new DateTime();
         $date = $date->format("d:m:y h:i:s");
-        $file = 'log.txt';
+        $file = 'log/log.txt';
         $message = $date. " " .$_SESSION['username']." telah logout".PHP_EOL;
         file_put_contents($file, $message, FILE_APPEND | LOCK_EX);
         //sampai sini log file

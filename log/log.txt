@@ -20,3 +20,14 @@
 22:01:18 01:19:29 admin2 menambahkan data perusahaan Kokoro
 22:01:18 01:20:22 admin menambahkan data perusahaan Kakaro
 22:01:18 01:29:08 admin menghapus data perusahaan dengan nomor 2018012
+23:01:18 02:53:24 admin telah login
+23:01:18 08:59:16 admin telah logout
+23:01:18 03:00:25 admin telah login
+23:01:18 09:01:01 admin telah logout
+23:01:18 09:01:14 admin telah login
+23:01:18 09:06:45 admin telah logout
+23:01:18 09:06:52 admin telah login
+23:01:18 09:15:51 admin telah logout
+23:01:18 09:21:49 admin telah login
+23:01:18 09:33:20 admin telah logout
+23:01:18 09:33:37 admin2 telah login

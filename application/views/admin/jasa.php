@@ -92,6 +92,7 @@
                 <!--                    <li><a href="--><?php //base_url()?><!--obat_masuk"><i class="fa fa-tasks"></i> Obat Masuk</a></li>-->
                 <li><a href="<?php base_url()?>company"><i class="fa fa-building-o"></i> Company</a></li>
                 <li><a href="<?php base_url()?>jasa"><i class="fa fa-handshake-o"></i> Pelayanan Jasa</a></li>
+                <li><a href="<?php base_url()?> download_log"><i class="fa fa-download"></i>  See Log</a></li>
                 <li><a href="<?php base_url()?>logout"><i class="glyphicon glyphicon-log-out
 "></i> Log Out</a></li>
             </ul>
