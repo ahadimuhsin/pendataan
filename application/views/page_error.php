@@ -9,7 +9,13 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>Page Not Found</title>
-<style type="text/css">
+    <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>/assets/bootstrap/css/bootstrap.css" />
+    <script type="text/javascript" src="<?php echo base_url(); ?>/assets/bootstrap/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>/assets/bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>/assets/css/jquery-ui.css" />
+    <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>/assets/font-awesome/css/font-awesome.min.css" />
+
+    <style type="text/css">
 body{
 	font-family:Arial, Helvetica, sans-serif;
 }
@@ -180,7 +186,8 @@ p a:hover{
 <div class="wrap">
     <div class="logo">
         <img src="<?php echo base_url();?>images/404.png" />
-        <p><a href="index.php">Go back to Home</a></p>
+        <p> <a class="btn btn-success "  onclick="javascript:history.back()" role="button" >
+                <i class="glyphicon glyphicon-plus"></i> Back</a></p>
     </div>
 </div>
 <div class="footer">
