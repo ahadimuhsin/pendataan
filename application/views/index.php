@@ -67,7 +67,7 @@
             <div class="row" >
                 <div class="col-lg-12">
                     <h3 align="left" >&nbsp Hai, <?php echo $this->session->userdata('username');?></h3>
-                  <H3>&nbsp Di halaman ini, anda dapat:
+                  <H3>&nbsp Aplikasi ini membantu admin dalam:
                     <ul>
                       <li>&nbsp Mengelola Data Perusahaan</li>
                       <li>&nbsp Mengelola Data Pelayanan Jasa</li>
