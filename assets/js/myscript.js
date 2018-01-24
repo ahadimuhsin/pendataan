@@ -709,9 +709,21 @@ $(document).ready(function () {
            placeholder: "NPWP"
        });
 
+    $("#phone").mask("+62999-9999-9999", {
+        placeholder: "Phone (awalan +62)"
+        });
 
+    $("#mobile").mask("+62999-9999-9999", {
+         placeholder: "Mobile (awalan +62)"
+        });
 $("#join_date").datepicker();
 
-
+//     $("#myphone").keyup(function(e) {
+//     if (this.value.length < 3) {
+//         this.value = '+62';
+//     } else if (this.value.indexOf('+62') !== 0) {
+//         this.value = '+62' + String.fromCharCode(e.which);
+//     }
+// });
 
 

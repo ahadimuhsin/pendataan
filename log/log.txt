@@ -20,3 +20,6 @@
 24:01:18 01:28:32 admin mendownload data perusahaan
 24:01:18 01:29:09 admin mendownload data perusahaan
 24:01:18 01:29:51 admin mendownload data perusahaan
+24:01:18 02:00:55 admin menambahkan data perusahaan werwerwr
+24:01:18 02:21:19 admin menambahkan data perusahaan Huawei
+24:01:18 02:21:31 admin mendownload data perusahaan

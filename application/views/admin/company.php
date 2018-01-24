@@ -196,6 +196,7 @@
 
     <script type="text/javascript">
 
+
         function changeColumn(x) {
 
             if ( x.value === "Show All Columns" )  {
@@ -598,13 +599,13 @@
                             <div class="form-group">
                                 <label class="control-label " for="phone">&nbsp &nbsp&nbspPhone</label>
                                 <div class="col-md-12">
-                                    <input name="phone" placeholder="Phone" style="color: black" required class="form-control" type="number">
+                                    <input name="phone" id="phone" placeholder="Phone (awalan +62)" style="color: black" required value="+62" class="form-control" type="text">
                                 </div>
                             </div>
                             <div class="form-group">
                                 <label class="control-label " for="mobile">&nbsp &nbsp&nbspMobile</label>
                                 <div class="col-md-12">
-                                    <input name="mobile" placeholder="Mobile" style="color: black" required class="form-control" type="number">
+                                    <input name="mobile" id="mobile" placeholder="Mobile" value="+62" style="color: black" required class="form-control" type="text">
                                 </div>
                             </div>
                             <div class="form-group">
@@ -629,7 +630,7 @@
                             <div class="form-group">
                                 <label class="control-label" for="join_date">&nbsp &nbsp&nbspJoin Date</label>
                                 <div class="col-md-12">
-                                    <input name="join_date" id="join_date" data-date-format="dd/mm/yyyy" id="tanggal" placeholder="Join Date" style="color: black" required class="form-control" type="date">
+                                    <input name="join_date" id="join_date" data-date-format="dd/mm/yyyy"  placeholder="Join Date" style="color: black" required class="form-control" type="date">
 
                                 </div>
                             </div>
