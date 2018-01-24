@@ -61,7 +61,7 @@ class c_company extends CI_Controller{
         //untuk log file
         date_default_timezone_set('Asia/Bangkok');
         $date = new DateTime();
-        $date = $date->format("d:m:y h:i:s");
+        $date = $date->format("d:m:y H:i:s");
         $file = 'log/log.txt'; //nama file
         $message = $date. " " .$_SESSION['username']." menambahkan data perusahaan" . " ".$data['company'].PHP_EOL;
         file_put_contents($file, $message, FILE_APPEND | LOCK_EX);
@@ -100,7 +100,7 @@ class c_company extends CI_Controller{
             //untuk log file
             date_default_timezone_set('Asia/Bangkok');
             $date = new DateTime();
-            $date = $date->format("d:m:y h:i:s");
+            $date = $date->format("d:m:y H:i:s");
             $file = 'log/log.txt'; //nama file
             $message = $date. " " .$_SESSION['username']." mengubah data perusahaan" . " ".$data['company'].PHP_EOL;
             file_put_contents($file, $message, FILE_APPEND | LOCK_EX);
@@ -115,7 +115,7 @@ class c_company extends CI_Controller{
         //untuk log file
         date_default_timezone_set('Asia/Bangkok');
         $date = new DateTime();
-        $date = $date->format("d:m:y h:i:s");
+        $date = $date->format("d:m:y H:i:s");
         $file = 'log/log.txt';
         $message = $date. " " .$_SESSION['username']." menghapus data perusahaan dengan nomor " . "" .date("Y").sprintf("%03s",$no_company).PHP_EOL;
         file_put_contents($file, $message, FILE_APPEND | LOCK_EX);
@@ -295,7 +295,7 @@ class c_company extends CI_Controller{
         //untuk log file
         date_default_timezone_set('Asia/Bangkok');
         $date = new DateTime();
-        $date = $date->format("d:m:y h:i:s");
+        $date = $date->format("d:m:y H:i:s");
         $file = 'log/log.txt'; //nama file
         $message = $date. " " .$_SESSION['username']." mendownload data perusahaan".PHP_EOL;
         file_put_contents($file, $message, FILE_APPEND | LOCK_EX);

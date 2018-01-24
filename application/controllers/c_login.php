@@ -30,7 +30,7 @@ class c_login extends CI_Controller{
 			//untuk log file
             date_default_timezone_set('Asia/Bangkok');
             $date = new DateTime();
-			$date = $date->format("d:m:y h:i:s");
+			$date = $date->format("d:m:y H:i:s");
 		$file = 'log/log.txt';
 		$message = $date. " " .$username." telah login".PHP_EOL;
 		file_put_contents($file, $message, FILE_APPEND | LOCK_EX);

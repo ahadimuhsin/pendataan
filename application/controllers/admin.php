@@ -153,7 +153,7 @@ class Admin extends CI_Controller{
 //untuk log file
 	date_default_timezone_set('Asia/Bangkok'); //mengatur zona waktu
         $date = new DateTime();
-        $date = $date->format("d:m:y h:i:s");
+        $date = $date->format("d:m:y H:i:s");
         $file = 'log/log.txt';
         $message = $date. " " .$_SESSION['username']." telah logout".PHP_EOL;
         file_put_contents($file, $message, FILE_APPEND | LOCK_EX);

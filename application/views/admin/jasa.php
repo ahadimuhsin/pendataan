@@ -9,31 +9,55 @@
 <!--  bagian css  -->
     <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>/assets/bootstrap/css/bootstrap.min.css" />
     <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>/assets/bootstrap/css/bootstrap.css" />
+
     <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>/assets/bootstrap/css/DT_bootstrap.css" />
     <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>/assets/datatables/css/dataTables.bootstrap.css" />
-    <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>/assets/font-awesome/css/font-awesome.min.css" />
-    <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>/assets/css/local.css" />
-
-<!--    file javascript -->
     <!--    <link rel="stylesheet" type="text/css" href="--><?php //echo base_url(); ?><!--/assets/datatables/css/jquery.dataTables.min.css" />-->
     <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>/assets/datatables/js/dataTables.bootstrap.js" />
     <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>/assets/datatables/js/jquery.dataTables.min.js" />
-    <!--    <link rel="stylesheet" type="text/css" href="--><?php //echo base_url(); ?><!--/assets/css/bootstrap.css" />-->
+
+    <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>/assets/font-awesome/css/font-awesome.min.css" />
+    <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>/assets/css/local.css" />
+    <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>/assets/css/jquery-ui.css" />
+    <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>/assets/css/jquery-ui.min.css" />
+
+
+
+    <!--        <link rel="stylesheet" type="text/css" href="--><?php //echo base_url(); ?><!--/assets/css/bootstrap.css" />-->
+
 
     <script type="text/javascript" src="<?php echo base_url(); ?>/assets/js/jquery-1.10.2.min.js"></script>
-    <script type="text/javascript" src="<?php echo base_url(); ?>/assets/js/jquery-3.2.1.js"></script>
-    <script type="text/javascript" src="<?php echo base_url(); ?>/assets/js/jquery.maskedinput.js"></script>
+    <script type="text/javascript" src="<?php echo base_url(); ?>/assets/jasny-bootstrap/js/jasny-bootstrap.js"></script>
+    <script type="text/javascript" src="<?php echo base_url(); ?>/assets/jasny-bootstrap/js/jasny-bootstrap.min.js"></script>
 
+
+    <script type="text/javascript" src="<?php echo base_url(); ?>/assets/js/jquery.min.js"></script>
+    <script type="text/javascript" src="<?php echo base_url(); ?>/assets/js/jquery.mask.js"></script>
     <script type="text/javascript" src="<?php echo base_url(); ?>/assets/js/myscript.js"></script>
+    <script type="text/javascript" src="<?php echo base_url(); ?>/assets/js/jquery-3.2.1.js"></script>
+    <script type="text/javascript" src="<?php echo base_url(); ?>/assets/js/jquery-ui.js"></script>
+    <script type="text/javascript" src="<?php echo base_url(); ?>/assets/js/jquery-ui.min.js"></script>
+
+
     <script type="text/javascript" src="<?php echo base_url(); ?>/assets/js/jquery-1.10.1.js"></script>
-    <script type="text/javascript" src="<?php echo base_url(); ?>/assets/js/form-validation-jasa.js"></script>
+    <script type="text/javascript" src="<?php echo base_url(); ?>/assets/js/form-validation-company.js"></script>
     <script type="text/javascript" src="<?php echo base_url(); ?>/assets/bootstrap/js/bootstrap.min.js"></script>
+
+
     <script src="<?php echo base_url()."/assets/js/jquery.js"?>" type="text/javascript"></script>
     <script src="<?php echo base_url()."/assets/js/jquery-validation/dist/jquery.validate.min.js"?>" type="text/javascript"></script>
     <script src="<?php echo base_url()."/assets/js/bootstrap.js"?>" type="text/javascript"></script>
 
     <script type="text/javascript" charset="utf-8" language="javascript" src="<?php echo base_url()."/assets/js/jquery.dataTables.js"?>"></script>
     <script type="text/javascript" charset="utf-8" language="javascript" src="<?php echo base_url()."/assets/js/DT_bootstrap.js"?>"></script>
+
+    <!-- you need to include the shieldui css and js assets in order for the charts to work -->
+    <!--    <link rel="stylesheet" type="text/css" href="http://www.shieldui.com/shared/components/latest/css/light-bootstrap/all.min.css" />-->
+    <!--    <link id="gridcss" rel="stylesheet" type="text/css" href="http://www.shieldui.com/shared/components/latest/css/dark-bootstrap/all.min.css" />-->
+
+    <!--    <script type="text/javascript" src="http://www.shieldui.com/shared/components/latest/js/shieldui-all.min.js"></script>-->
+    <!--    <script type="text/javascript" src="http://www.prepbootstrap.com/Content/js/gridData.js"></script>-->
+    <!--    <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/1.12.4/jquery.min.js"></script>-->
 
     <!-- /#wrapper -->
     <script src="<?php echo base_url('assests/jquery/jquery-3.1.0.min.js')?>"></script>
@@ -45,7 +69,9 @@
         #managed_wifi_services, #managed_wifi_product, #managed_mail_services,#managed_mail_product,
         #managed_radius_services,#managed_radius_product,#it_solution_services, #it_solution_product,
         #salesforce_product,#salesforce_services,#microsoft_services,#cozytizen_services,#application_services,
-        #sms_services{
+        #sms_services,#tblmulai,#tblakhir,#tblspk,#tblspknumber,#tblspkterbit,#tblotc,#tblmrc,#tbltype,#tblketerangan,
+        .startdate,.end_date,.spk_handover_date,.spk_date,.spk_number,.otc,
+        .mrc,.type,.keterangan{
             display: none;
         }
         @media print {
@@ -102,6 +128,8 @@
             <a class="btn btn-success printoff"  onclick="add_jasa()"   role="button" ><i class="glyphicon glyphicon-plus"></i> Add Jasa</a>
             <!--                <button class="btn btn-danger printoff" onclick="window.print()"><i class="glyphicon glyphicon-print"></i>Print</button>-->
             <a href="<?php echo base_url("index.php/c_jasa/export");?>" class="btn btn-info" role="button"><i class ="fa fa-file-excel-o"></i> Save as Excel file</a>
+            <input type="button" value="Show All Columns" class="btn btn-primary" id="showColumns" onclick="return changeColumn(this)">
+
         </div><br> <br>
         <div class="row-fluid">
 
@@ -118,15 +146,15 @@
                     <th width="200px">Sub Services</th>
                     <th width="200px">Services</th>
                     <th width="200px">Product Family</th>
-                    <th width="200px">Tanggal Mulai Kontrak (Y-M-D)</th>
-                    <th width="200px">Tanggal Akhir Kontrak (Y-M-D)</th>
-                    <th width="200px">SPK/SO/Quote Number</th>
-                    <th width="250px">Tanggal SPK Terbit (Y-M-D)</th>
-                    <th width="250px">Waktu Penyerahan SPK (Y-M-D)</th>
-                    <th width="200px">OTC</th>
-                    <th width="200px">MRC</th>
-                    <th width="200px">Type</th>
-                    <th width="200px">Keterangan</th>
+                    <th width="200px" id="tblmulai">Tanggal Mulai Kontrak (Y-M-D)</th>
+                    <th width="200px" id="tblakhir">Tanggal Akhir Kontrak (Y-M-D)</th>
+                    <th width="200px" id="tblspknumber">SPK/SO/Quote Number</th>
+                    <th width="250px" id="tblspkterbit">Tanggal SPK Terbit (Y-M-D)</th>
+                    <th width="250px" id="tblspk">Waktu Penyerahan SPK (Y-M-D)</th>
+                    <th width="200px" id="tblotc">OTC</th>
+                    <th width="200px" id="tblmrc">MRC</th>
+                    <th width="200px" id="tbltype">Type</th>
+                    <th width="200px" id="tblketerangan">Keterangan</th>
                     <th style="width:125px;" class="printoff">Action
                         </p></th>
                 </tr>
@@ -134,25 +162,25 @@
                 <tbody>
                 <?php foreach($jasa as $jasa){?>
                     <tr>
-                        <td><?php echo date("Y").sprintf("%03s", $jasa->no_company);?></td>
-                        <td><?php echo $jasa->company;?></td>
-                        <td><?php echo $jasa->parent_company;?></td>
-                        <td><?php echo date("Y").sprintf("%06s", $jasa->no_jaringan);?></td>
-                        <td><?php echo $jasa->business_consultant;?></td>
-                        <td><?php echo $jasa->assignment;?></td>
-                        <td><?php echo $jasa->subservices;?></td>
-                        <td><?php echo $jasa->services;?></td>
-                        <td><?php echo $jasa->product_family;?></td>
-                        <td><?php echo $jasa->contract_start_date;?></td>
-                        <td><?php echo $jasa->contract_end_date;?></td>
-                        <td><?php echo $jasa->spk_number;?></td>
-                        <td><?php echo $jasa->spk_date;?></td>
-                        <td><?php echo $jasa->spk_handover_date;?></td>
-                        <td><?php echo $jasa->otc;?></td>
-                        <td><?php echo $jasa->mrc;?></td>
-                        <td><?php echo $jasa->type;?></td>
-                        <td><?php echo $jasa->keterangan;?></td>
-                        <td class="printoff">
+                        <td style="background-color: black"><?php echo date("Y").sprintf("%03s", $jasa->no_company);?></td>
+                        <td style="background-color: black"><?php echo $jasa->company;?></td>
+                        <td style="background-color: black"><?php echo $jasa->parent_company;?></td>
+                        <td style="background-color: black"><?php echo date("Y").sprintf("%06s", $jasa->no_jaringan);?></td>
+                        <td style="background-color: black"><?php echo $jasa->business_consultant;?></td>
+                        <td style="background-color: black"><?php echo $jasa->assignment;?></td>
+                        <td style="background-color: black"><?php echo $jasa->subservices;?></td>
+                        <td style="background-color: black"><?php echo $jasa->services;?></td>
+                        <td style="background-color: black"><?php echo $jasa->product_family;?></td>
+                        <td style="background-color: black" class="startdate"><?php echo $jasa->contract_start_date;?></td>
+                        <td style="background-color: black" class="end_date"><?php echo $jasa->contract_end_date;?></td>
+                        <td style="background-color: black" class="spk_number"><?php echo $jasa->spk_number;?></td>
+                        <td style="background-color: black" class="spk_date"><?php echo $jasa->spk_date;?></td>
+                        <td style="background-color: black" class="spk_handover_date"><?php echo $jasa->spk_handover_date;?></td>
+                        <td style="background-color: black" class="otc"><?php echo $jasa->otc;?></td>
+                        <td style="background-color: black" class="mrc"><?php echo $jasa->mrc;?></td>
+                        <td style="background-color: black" class="type"><?php echo $jasa->type;?></td>
+                        <td style="background-color: black" class="keterangan"><?php echo $jasa->keterangan;?></td>
+                        <td     style="background-color: black">
                             <button class="btn btn-warning printoff" title="Edit" onclick="edit_jasa(<?php echo $jasa->no_jaringan;?>)"><i class="glyphicon glyphicon-pencil"></i></button>
                             <button class="btn btn-danger printoff" title="Delete" onclick="delete_jasa(<?php echo $jasa->no_jaringan;?>)"><i class="glyphicon glyphicon-remove"></i></button>
 
@@ -174,6 +202,51 @@
 
 
 <script type="text/javascript">
+    function changeColumn(x) {
+
+        if ( x.value === "Show All Columns" )  {
+            $("#tblmulai").show();
+            $("#tblakhir").show();
+            $("#tblspknumber").show();
+            $("#tblspk").show();
+            $("#tblspkterbit").show();
+            $("#tblotc").show();
+            $("#tblmrc").show();
+            $("#tbltype").show();
+            $("#tblketerangan").show();
+            $(".startdate").show();
+            $(".end_date").show();
+            $(".spk_number").show();
+            $(".spk_handover_date").show();
+            $(".spk_date").show();
+            $(".otc").show();
+            $(".mrc").show();
+            $(".type").show();
+            $(".keterangan").show();
+            x.value = "Hide Some Columns";
+        }
+        else {
+            $("#tblmulai").hide();
+            $("#tblakhir").hide();
+            $("#tblspknumber").hide();
+            $("#tblspk").hide();
+            $("#tblspkterbit").hide();
+            $("#tblotc").hide();
+            $("#tblmrc").hide();
+            $("#tbltype").hide();
+            $("#tblketerangan").hide();
+            $(".startdate").hide();
+            $(".end_date").hide();
+            $(".spk_number").hide();
+            $(".spk_handover_date").hide();
+            $(".spk_date").hide();
+            $(".otc").hide();
+            $(".mrc").hide();
+            $(".type").hide();
+            $(".keterangan").hide();
+            x.value = "Show All Columns";
+        }
+    }
     $(document).ready( function () {
         $('#table_id').DataTable();
     } );
@@ -247,7 +320,7 @@
         var jasa_mrc=form.mrc;
         var jasa_type=form.type;
 
-        if (save_method == 'add') { //jika save_method = add, menambah data baru
+        if (save_method === 'add') { //jika save_method = add, menambah data baru
 
             if (jasa_number.value==="") {
                 alert("Mohon Isi Form Secara Lengkap");
@@ -450,7 +523,7 @@
 
 </script>
 <!-- Bootstrap modal -->
-<div class="modal fade" id="modal_form" role="dialog">
+<div class="modal fade" style="width: 100%" id="modal_form" role="dialog">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
@@ -465,7 +538,7 @@
                         <div class="form-group">
                             <label class="control-label" for="no_company">&nbsp &nbsp&nbspNo Company</label>
                             <div class="col-sm-12">
-                                <input  name="no_company" id="no_company" title="Contoh inputan: nomor company 2018001 ditulis 1" placeholder="<?php echo date("Y");?>XXX (3 digit terakhir Nomor Company)" style="color: black" required class="form-control" type="number" >
+                                <input  name="no_company" id="mycompany" title="Contoh inputan: nomor company 2018001 ditulis 1" placeholder="<?php echo date("Y");?>XXX (3 digit terakhir Nomor Company)" style="color: black" required class="form-control" type="text" >
                                 <p>Contoh: Tulis "001" untuk No Company "2018001"</p>
                             </div>
                         </div>
@@ -699,7 +772,7 @@
                                 </div>
                             </div>
                         <div class="form-group">
-                            <label class="control-label" for="keterangan">&nbsp &nbsp&<nbsp></nbsp>Keterangan</label>
+                            <label class="control-label" for="keterangan">&nbsp &nbsp&nbspKeterangan</label>
                             <div class="col-sm-12">
                                 <input name="keterangan" placeholder="Keterangan" style="color: black" class="form-control" type="text">
                             </div>

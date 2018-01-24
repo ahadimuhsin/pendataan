@@ -712,7 +712,8 @@ $(document).ready(function () {
     $("#phone").mask("+62999-9999-9999", {
         placeholder: "Phone (awalan +62)"
         });
-
+    $("#mycompany").mask("999", {
+    });
     $("#mobile").mask("+62999-9999-9999", {
          placeholder: "Mobile (awalan +62)"
         });

@@ -47,7 +47,7 @@ class c_jasa extends CI_Controller
         //untuk log file
         date_default_timezone_set('Asia/Bangkok');
         $date = new DateTime();
-        $date = $date->format("d:m:y h:i:s");
+        $date = $date->format("d:m:y H:i:s");
         $file = 'log/log.txt'; //nama file
         $nomor = $data['spk_number'];
         $message = $date. " " .$_SESSION['username']." menambahkan data pelayanan jasa dengan nomor SPK " . "".$nomor.PHP_EOL;
@@ -88,7 +88,7 @@ class c_jasa extends CI_Controller
             //untuk log file
             date_default_timezone_set('Asia/Bangkok');
             $date = new DateTime();
-            $date = $date->format("d:m:y h:i:s");
+            $date = $date->format("d:m:y H:i:s");
             $file = 'log/log.txt'; //nama file
             $message = $date. " " .$_SESSION['username']." mengubah data pelayanan jasa dengan nomor jaringan " . " ".date("Y").sprintf("%06s",$data['no_jaringan']).PHP_EOL;
             file_put_contents($file, $message, FILE_APPEND | LOCK_EX);
@@ -103,7 +103,7 @@ class c_jasa extends CI_Controller
         //untuk log file
         date_default_timezone_set('Asia/Bangkok');
         $date = new DateTime();
-        $date = $date->format("d:m:y h:i:s");
+        $date = $date->format("d:m:y H:i:s");
         $file = 'log/log.txt'; //nama file
         $message = $date. " " .$_SESSION['username']." menghapus data pelayanan jasa dengan nomor jaringan " . " ".date("Y").sprintf("%06s",$no_jaringan).PHP_EOL;
         file_put_contents($file, $message, FILE_APPEND | LOCK_EX);
@@ -307,7 +307,7 @@ class c_jasa extends CI_Controller
         //untuk log file
         date_default_timezone_set('Asia/Bangkok');
         $date = new DateTime();
-        $date = $date->format("d:m:y h:i:s");
+        $date = $date->format("d:m:y H:i:s");
         $file = 'log/log.txt'; //nama file
         $message = $date. " " .$_SESSION['username']." mendownload data pelayanan jasa".PHP_EOL;
         file_put_contents($file, $message, FILE_APPEND | LOCK_EX);

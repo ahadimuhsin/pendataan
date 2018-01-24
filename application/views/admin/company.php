@@ -96,7 +96,7 @@
         }
     </style>
 </head>
-<body style="background-color: whitesmoke">
+<body >
 <div id="wrapper">
     <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
         <div class="navbar-header">
@@ -196,7 +196,7 @@
 
     <script type="text/javascript">
 
-
+//fungsi menampilkan/menyembunyikan kolom
         function changeColumn(x) {
 
             if ( x.value === "Show All Columns" )  {
