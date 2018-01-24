@@ -129,7 +129,7 @@
                 <a class="btn btn-success printoff"  onclick="add_company()"  class="btn btn-info" role="button" ><i class="glyphicon glyphicon-plus"></i> Add Company</a>
 <!--                <button class="btn btn-danger printoff" onclick="window.print()"><i class="glyphicon glyphicon-print"></i>Print</button>-->
                 <a href="<?php echo base_url("index.php/c_company/export");?>" class="btn btn-info" role="button"><i class ="fa fa-file-excel-o"></i> Save as Excel file</a>
-                <input type="button" value="Show More Columns" class="btn btn-primary" id="showColumns" onclick="return changeColumn(this)">
+                <input type="button" value="Show All Columns" class="btn btn-primary" id="showColumns" onclick="return changeColumn(this)">
             </div></br> </br>
                 <div class="row-fluid">
 
@@ -198,7 +198,7 @@
 
         function changeColumn(x) {
 
-            if ( x.value === "Show More Columns" ) {
+            if ( x.value === "Show All Columns" )  {
                 $("#tblassignment").show();
                 $("#tblemail").show();
                 $("#tblphone").show();
@@ -226,7 +226,7 @@
                 $(".isidate").hide();
                 $(".isimobile").hide();
                 $(".isibusiness").hide();
-                x.value = "Show More Columns";
+                x.value = "Show All Columns";
             }
         }
 
