@@ -186,7 +186,7 @@ p a:hover{
 <div class="wrap">
     <div class="logo">
         <img src="<?php echo base_url();?>images/404.png" />
-        <p> <a class="btn btn-success "  onclick="javascript:history.back()" role="button" >
+        <p> <a class="btn btn-success "  onclick="javascript:history.back()"     role="button" >
                 <i class="glyphicon glyphicon-plus"></i> Back</a></p>
     </div>
 </div>

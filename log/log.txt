@@ -1,3 +1,22 @@
 23:01:18 11:50:26 admin telah login
 23:01:18 02:18:38 admin telah login
 23:01:18 02:22:47 admin telah login
+23:01:18 04:45:03 admin telah logout
+23:01:18 04:45:10 admin telah login
+23:01:18 04:45:19 admin telah logout
+23:01:18 04:45:25 admin2 telah login
+24:01:18 08:30:46 admin telah login
+24:01:18 08:32:57 admin telah login
+24:01:18 08:34:07 admin menambahkan data perusahaan Lintas Media
+24:01:18 08:34:22 admin mendownload data perusahaan
+24:01:18 08:34:30 admin mendownload data perusahaan
+24:01:18 08:36:03 admin mengubah data perusahaan Lintas Media
+24:01:18 08:36:14 admin menghapus data perusahaan dengan nomor 2018001
+24:01:18 08:37:36 admin menambahkan data perusahaan Lintas Media
+24:01:18 09:33:30 admin menambahkan data perusahaan dfsdf
+24:01:18 09:35:13 admin menambahkan data perusahaan fwfwef
+24:01:18 09:37:00 admin telah login
+24:01:18 01:28:09 admin mendownload data perusahaan
+24:01:18 01:28:32 admin mendownload data perusahaan
+24:01:18 01:29:09 admin mendownload data perusahaan
+24:01:18 01:29:51 admin mendownload data perusahaan

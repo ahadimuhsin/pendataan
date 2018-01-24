@@ -66,9 +66,6 @@ font-size: 18px;
 </head>
 <body>
 
-
-
-
   <div class="container" style="margin-top: 15px">
     <div class="profile">
       <button class="profile__avatar" id="toggleProfile">

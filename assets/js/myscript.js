@@ -713,18 +713,5 @@ $(document).ready(function () {
 $("#join_date").datepicker();
 
 
-$(document).ready(function() {
-// ketika input usia di isi, eksekusi bagian ini.
-    $("#npwp").keypress(function (data)
-    {
-// kalau data bukan berupa angka, tampilkan pesan error
-        if(data.which!==8 && data.which!==0 &&
-            (data.which<48 || data.which>57))
-        {
-            $("#pesan").html("Isikan Angka").show().fadeOut("slow");
-            return false;
-        }
-    });
-});
 
 

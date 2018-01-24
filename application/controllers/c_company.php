@@ -283,10 +283,11 @@ class c_company extends CI_Controller{
         $excel->getActiveSheet(0)->setTitle("Laporan Data Company");
         $excel->setActiveSheetIndex(0);
         // Proses file excel
+        date_default_timezone_set('Asia/Bangkok');
 
         //mengatur tipe dan nama file
         header('Content-Type: application/vnd.openxmlformats-officedocument.spreadsheetml.sheet');
-        header('Content-Disposition: attachment; filename="Data Perusahaan"'.date("d-F-Y").'".xlsx'); // Set nama file excel nya
+        header('Content-Disposition: attachment; filename="Data Perusahaan"'.date("d-F-Y H:i:s").'".xlsx'); // Set nama file excel nya
 
         header('Cache-Control: max-age=0');
         $write = PHPExcel_IOFactory::createWriter($excel, 'Excel2007');

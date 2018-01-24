@@ -296,8 +296,10 @@ class c_jasa extends CI_Controller
         $excel->getActiveSheet(0)->setTitle("Laporan Data Pelayanan Jasa");
         $excel->setActiveSheetIndex(0);
         // Proses file excel
+        date_default_timezone_set('Asia/Bangkok');
+
         header('Content-Type: application/vnd.openxmlformats-officedocument.spreadsheetml.sheet');
-        header('Content-Disposition: attachment; filename="Data Pelayanan Jasa"'.date("d-F-Y").'".xlsx'); // Set nama file excel nya
+        header('Content-Disposition: attachment; filename="Data Pelayanan Jasa"'.date("d-F-Y H:i:s").'".xlsx'); // Set nama file excel nya
 
         header('Cache-Control: max-age=0');
         $write = PHPExcel_IOFactory::createWriter($excel, 'Excel2007');

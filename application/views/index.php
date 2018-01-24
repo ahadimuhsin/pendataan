@@ -22,6 +22,11 @@
 <!--    <script type="text/javascript" src="http://www.shieldui.com/shared/components/latest/js/shieldui-all.min.js"></script>-->
 <!--    <script type="text/javascript" src="http://www.prepbootstrap.com/Content/js/gridData.js"></script>-->
 </head>
+<style>
+    h3{
+        color: black;
+    }
+</style>
 <body >
 <header class="main-header">
     <nav class="navbar navbar-static-top" role="navigation">
@@ -51,9 +56,6 @@
             <div class="collapse navbar-collapse navbar-ex1-collapse">
                 <ul id="active" class="nav navbar-nav side-nav" >
                     <li class="selected"><a href="<?php base_url()?>welcome"><i class="fa fa-home"></i> Dashboard</a></li>
-<!--                    <li><a href="--><?php //base_url()?><!--karyawan"><i class="fa fa-tasks"></i> Karyawan</a></li>-->
-<!--                    <li><a href="--><?php //base_url()?><!--supplier"><i class="fa fa-tasks"></i> Supplier</a></li>-->
-<!--                    <li><a href="--><?php //base_url()?><!--obat_masuk"><i class="fa fa-tasks"></i> Obat Masuk</a></li>-->
                     <li><a href="<?php base_url()?>company"><i class="fa fa-building-o"></i> Company</a></li>
                     <li><a href="<?php base_url()?>jasa"><i class="fa fa-handshake-o"></i> Pelayanan Jasa</a></li>
                     <li><a href="<?php base_url()?> download_log"><i class="fa fa-download"></i>  See Log</a></li>
@@ -65,8 +67,8 @@
 
         <div id="page-wrapper" >
             <div class="row" >
-                <div class="col-lg-12">
-                    <h3 align="left" >&nbsp Hai, <?php echo $this->session->userdata('username');?></h3>
+                <div class="col-lg-12" >
+                    <h3  align="left" >&nbsp Hai, <?php echo $this->session->userdata('username');?></h3>
                   <H3>&nbsp Aplikasi ini membantu admin dalam:
                     <ul>
                       <li>&nbsp Mengelola Data Perusahaan</li>

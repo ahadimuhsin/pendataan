@@ -86,10 +86,6 @@
         <div class="collapse navbar-collapse navbar-ex1-collapse">
             <ul id="active" class="nav navbar-nav side-nav">
                 <li><a href="<?php base_url()?>welcome"><i class="fa fa-home"></i> Dashboard</a></li>
-                <!--                    <li><a href="--><?php //base_url()?><!--obat"><i class="fa fa-tasks"></i> Obat</a></li>-->
-                <!--                    <li><a href="--><?php //base_url()?><!--karyawan"><i class="fa fa-tasks"></i> Karyawan</a></li>-->
-                <!--                    <li><a href="--><?php //base_url()?><!--supplier"><i class="fa fa-tasks"></i> Supplier</a></li>-->
-                <!--                    <li><a href="--><?php //base_url()?><!--obat_masuk"><i class="fa fa-tasks"></i> Obat Masuk</a></li>-->
                 <li><a href="<?php base_url()?>company"><i class="fa fa-building-o"></i> Company</a></li>
                 <li><a href="<?php base_url()?>jasa"><i class="fa fa-handshake-o"></i> Pelayanan Jasa</a></li>
                 <li><a href="<?php base_url()?> download_log"><i class="fa fa-download"></i>  See Log</a></li>
@@ -112,7 +108,7 @@
             <br><br>
             <table cellpadding="0" cellspacing="0" border="0" width="100%" class="table table-striped table-bordered" id="example">
                 <thead>
-                <tr>
+                <tr style="background-color: grey">
                     <th width="200px">Nomor Company</th>
                     <th width="200px">Company</th>
                     <th width="200px">Parent Company</th>
@@ -237,6 +233,7 @@
 
     function save() {
         //sebelum disave, melakukan form validation terlebih dahulu
+        //deklarasikan variabel
             var url;
         var jasa_number=form.no_company;
         var jasa_network=form.no_jaringan;
@@ -464,23 +461,24 @@
                 <form action=""  name="myform"
                        id="form" class="form-horizontal" method="post" enctype="multipart/form-data">
                     <div class="form-body">
+                        <div class="col-sm-6">
                         <div class="form-group">
-                            <label class="control-label col-md-3" for="no_company">No Company</label>
-                            <div class="col-md-9">
+                            <label class="control-label" for="no_company">&nbsp &nbsp&nbspNo Company</label>
+                            <div class="col-sm-12">
                                 <input  name="no_company" id="no_company" title="Contoh inputan: nomor company 2018001 ditulis 1" placeholder="<?php echo date("Y");?>XXX (3 digit terakhir Nomor Company)" style="color: black" required class="form-control" type="number" >
                                 <p>Contoh: Tulis "001" untuk No Company "2018001"</p>
                             </div>
                         </div>
                         <div class="form-group" hidden>
-                            <label class="control-label col-md-3" for="no_jaringan">No Jaringan</label>
-                            <div class="col-md-9">
+                            <label class="control-label" for="no_jaringan">No Jaringan</label>
+                            <div class="col-md-12">
                                 <input name="no_jaringan" placeholder="Nomor Jaringan" style="color: black"  class="form-control" type="number">
                             </div>
                         </div>
                         <div class="form-group">
 
-                            <label class="control-label col-md-3" for="subservices">Sub Services</label>
-                            <div class="col-md-9">
+                            <label class="control-label" for="subservices">&nbsp &nbsp&nbspSub Services</label>
+                            <div class="col-sm-12">
                                 <select id='subservices' style="height:40px; color: black" class="form-control" name="subservices" >
                                     <option value="" disabled selected hidden>Pilih Salah Satu</option>
                                     <option value="Cloud Server">Cloud Server</option>
@@ -514,179 +512,183 @@
 
 <!--                            Bagian Cloud Server-->
                         <div class="form-group" id='cloud_server_services'>
-                            <label class="control-label col-md-3" for="services">Services</label>
-                            <div class="col-md-9">
+                            <label  for="services">&nbsp &nbsp&nbspServices</label>
+                            <div class="col-sm-12">
                                 <input name="services" placeholder="Services" value="Cloud Server" style="color: black" readonly required class="form-control" type="text">
                             </div>
                         </div>
 
                         <div class="form-group" id='cloud_server_product'>
-                            <label class="control-label col-md-3" for="product_family">Product Family</label>
-                            <div class="col-md-9">
+                            <label class="control-label" for="product_family">&nbsp &nbsp&nbspProduct Family</label>
+                            <div class="col-sm-12">
                                 <input name="product_family" placeholder="Product Family" value="Cloud Services" readonly style="color: black" required class="form-control" type="text">
                             </div>
                         </div>
 <!--                    Bagian Managed Server-->
                         <div class="form-group" id='managed_server_services'>
-                            <label class="control-label col-md-3" for="services">Services</label>
-                            <div class="col-md-9">
+                            <label class="control-label" for="services">&nbsp &nbsp&nbspServices</label>
+                            <div class="col-sm-12">
                                 <input name="services" placeholder="Services" value="Managed Server" style="color: black" required readonly class="form-control" type="text">
                             </div>
                         </div>
 
                         <div class="form-group" id='managed_server_product'>
-                            <label class="control-label col-md-3" for="product_family">Product Family</label>
-                            <div class="col-md-9">
+                            <label class="control-label" for="product_family">&nbsp &nbsp&nbspProduct Family</label>
+                            <div class="col-sm-12">
                                 <input name="product_family" placeholder="Product Family" value="Managed Services" style="color: black" required readonly class="form-control" type="text">
                             </div>
                         </div>
 <!--                            Bagian Managed Wifi-->
                         <div class="form-group" id='managed_wifi_services'>
-                            <label class="control-label col-md-3" for="services">Services</label>
-                            <div class="col-md-9">
+                            <label class="control-label" for="services">&nbsp &nbsp&nbspServices</label>
+                            <div class="col-sm-12">
                                 <input name="services" placeholder="Services" value="Managed Wifi" style="color: black" required readonly class="form-control" type="text">
                             </div>
                         </div>
 
                         <div class="form-group" id='managed_wifi_product'>
-                            <label class="control-label col-md-3" for="product_family">Product Family</label>
-                            <div class="col-md-9">
+                            <label class="control-label" for="product_family">&nbsp &nbsp&nbspProduct Family</label>
+                            <div class="col-sm-12">
                                 <input name="product_family" placeholder="Product Family" value="Managed Services" style="color: black" required readonly class="form-control" type="text">
                             </div>
                         </div>
 <!--                        Bagian Managed Mail-->
                         <div class="form-group" id='managed_mail_services'>
-                            <label class="control-label col-md-3" for="services">Services</label>
-                            <div class="col-md-9">
+                            <label class="control-label" for="services">&nbsp &nbsp&nbspServices</label>
+                            <div class="col-sm-12">
                                 <input name="services" placeholder="Services" value="Managed Application" style="color: black" required readonly class="form-control" type="text">
                             </div>
                         </div>
 
                         <div class="form-group" id='managed_mail_product'>
-                            <label class="control-label col-md-3" for="product_family">Product Family</label>
-                            <div class="col-md-9">
+                            <label class="control-label" for="product_family">&nbsp &nbsp&nbspProduct Family</label>
+                            <div class="col-sm-12">
                                 <input name="product_family" placeholder="Product Family" value="Managed Services" style="color: black" required readonly class="form-control" type="text">
                             </div>
                         </div>
 <!--                        Bagian Managed Radius-->
                         <div class="form-group" id='managed_radius_services'>
-                            <label class="control-label col-md-3" for="services">Services</label>
-                            <div class="col-md-9">
+                            <label class="control-label" for="services">&nbsp &nbsp&nbspServices</label>
+                            <div class="col-sm-12">
                                 <input name="services" placeholder="Services" value="Managed Application" style="color: black" required readonly class="form-control" type="text">
                             </div>
                         </div>
 
                         <div class="form-group" id='managed_radius_product'>
-                            <label class="control-label col-md-3" for="product_family">Product Family</label>
-                            <div class="col-md-9">
+                            <label class="control-label" for="product_family">&nbsp &nbsp&nbspProduct Family</label>
+                            <div class="col-sm-12">
                                 <input name="product_family" placeholder="Product Family" value="Managed Services" style="color: black" required readonly class="form-control" type="text">
                             </div>
                         </div>
 
 <!--                        Bagian IT Solution-->
                         <div class="form-group" id='it_solution_services'>
-                            <label class="control-label col-md-3" for="services">Services</label>
-                            <div class="col-md-9">
+                            <label class="control-label" for="services">&nbsp &nbsp&nbspServices</label>
+                            <div class="col-sm-12">
                                 <input name="services" placeholder="Services" value="Professional Services" style="color: black" required readonly class="form-control" type="text">
                             </div>
                         </div>
 
                         <div class="form-group" id='it_solution_product'>
-                            <label class="control-label col-md-3" for="product_family">Product Family</label>
-                            <div class="col-md-9">
+                            <label class="control-label" for="product_family">&nbsp &nbsp&nbspProduct Family</label>
+                            <div class="col-sm-12">
                                 <input name="product_family" placeholder="Product Family" value="Managed Services" style="color: black" required readonly class="form-control" type="text">
                             </div>
                         </div>
 <!--                   Bagian Salesforce -->
                         <div class="form-group" id='salesforce_services'>
-                            <label class="control-label col-md-3" for="services">Services</label>
-                            <div class="col-md-9">
+                            <label class="control-label" for="services">&nbsp &nbsp&nbspServices</label>
+                            <div class="col-sm-12">
                                 <input name="services" placeholder="Services" value="CRM Salesforce.com" style="color: black" required readonly class="form-control" type="text">
                             </div>
                         </div>
                         <!--                    Bagian Microsoft-->
                         <div class="form-group" id='microsoft_services'>
-                            <label class="control-label col-md-3" for="services">Services</label>
-                            <div class="col-md-9">
+                            <label class="control-label" for="services">&nbsp &nbsp&nbspServices</label>
+                            <div class="col-sm-12">
                                 <input name="services" placeholder="Services" value="Microsoft" style="color: black" required readonly class="form-control" type="text">
                             </div>
                         </div>
 
 <!--                      Cozytizen  -->
                         <div class="form-group" id='cozytizen_services'>
-                            <label class="control-label col-md-3" for="services">Services</label>
-                            <div class="col-md-9">
+                            <label class="control-label" for="services">&nbsp &nbsp&nbspServices</label>
+                            <div class="col-sm-12">
                                 <input name="services" placeholder="Services" value="Cozytizen" style="color: black" required readonly class="form-control" type="text">
                             </div>
                         </div>
 <!--                      Application  -->
                         <div class="form-group" id='application_services'>
-                            <label class="control-label col-md-3" for="services">Services</label>
-                            <div class="col-md-9">
+                            <label class="control-label" for="services">&nbsp &nbsp&nbspServices</label>
+                            <div class="col-sm-12">
                                 <input name="services" placeholder="Services" value="Application Development" style="color: black" required readonly class="form-control" type="text">
                             </div>
                         </div>
 <!--                      SMS Corporate  -->
                         <div class="form-group" id='sms_services'>
-                            <label class="control-label col-md-3" for="services">Services</label>
-                            <div class="col-md-9">
+                            <label class="control-label" for="services">&nbsp &nbsp&nbspServices</label>
+                            <div class="col-sm-12">
                                 <input name="services" placeholder="Services" value="SMS Corporate" style="color: black" required readonly class="form-control" type="text">
                             </div>
                         </div>
                         <div class="form-group" id='salesforce_product'>
-                            <label class="control-label col-md-3" for="product_family">Product Family</label>
-                            <div class="col-md-9">
+                            <label class="control-label" for="product_family">&nbsp &nbsp&nbspProduct Family</label>
+                            <div class="col-sm-12">
                                 <input name="product_family" placeholder="Product Family" value="SaaS" style="color: black" required readonly class="form-control" type="text">
                             </div>
                         </div>
 <!--                                    End-->
                         <div class="form-group">
-                            <label class="control-label col-md-3" for="contract_start_date">Contract Start Date</label>
-                            <div class="col-md-9">
+                            <label class="control-label" for="contract_start_date">&nbsp &nbsp&nbspContract Start Date</label>
+                            <div class="col-sm-12">
                                 <input name="contract_start_date" style="color: black" required placeholder="Contract Start Date" class="form-control" type="date">
                             </div>
                         </div>
                         <div class="form-group">
-                            <label class="control-label col-md-3" for="contract_end_date">Contract End Date</label>
-                            <div class="col-md-9">
+                            <label class="control-label" for="contract_end_date">&nbsp &nbsp&nbspContract End Date</label>
+                            <div class="col-sm-12">
                                 <input name="contract_end_date" placeholder="Contract End Date" style="color: black" required class="form-control" type="date">
                             </div>
                         </div>
                         <div class="form-group">
-                            <label class="control-label col-md-3" for="spk_number">SPK/SO/Quote Number</label>
-                            <div class="col-md-9">
+                            <label class="control-label" for="spk_number">&nbsp &nbsp&nbspSPK/SO/Quote Number</label>
+                            <div class="col-sm-12">
                                 <input name="spk_number" placeholder="SPK/SO/Quote Number" style="color: black" required class="form-control" type="number">
                             </div>
                         </div>
-
+                        </div>
+                        <!--                        Right Column-->
+                        <div class="col-sm-6">
                         <div class="form-group">
-                            <label class="control-label col-md-3" for="spk_date">Tanggal SPK Terbit</label>
-                            <div class="col-md-9">
+                            <label class="control-label" for="spk_date">&nbsp &nbsp&nbspTanggal SPK Terbit</label>
+                            <div class="col-sm-12">
                                 <input name="spk_date" placeholder="Tanggal SPK Terbit" style="color: black" required class="form-control" type="date">
                             </div>
                         </div>
                         <div class="form-group">
-                            <label class="control-label col-md-3" for="spk_handover_date">Waktu Penyerahan SPK</label>
-                            <div class="col-md-9">
+                            <label class="control-label" for="spk_handover_date">&nbsp &nbsp&nbspWaktu Penyerahan SPK</label>
+                            <div class="col-sm-12">
                                 <input name="spk_handover_date" placeholder="Waktu Penyerahan SPK" style="color: black" required class="form-control" type="date">
                             </div>
                         </div>
+
+
                         <div class="form-group">
-                            <label class="control-label col-md-3" for="otc">OTC</label>
-                                <div class="col-md-9">
+                            <label class="control-label" for="otc">&nbsp &nbsp&nbspOTC</label>
+                                <div class="col-sm-12">
                                     <input name="otc" placeholder="OTC" style="color: black" required class="form-control" type="number">
                                 </div>
                         </div>
 
                         <div class="form-group">
-                            <label class="control-label col-md-3" for="mrc">MRC</label>
-                            <div class="col-md-9">
+                            <label  class="control-label" for="mrc">&nbsp &nbsp&nbspMRC</label>
+                            <div class="col-sm-12">
                                 <input name="mrc" placeholder="MRC" style="color: black" required class="form-control" type="number">
                             </div>
                         </div>
                         <div class="form-group">
-                            <label class="control-label col-md-3" for="type">Type</label>
-                            <div class="col-md-9">
+                            <label class="control-label" for="type">&nbsp &nbsp&nbspType</label>
+                            <div class="col-sm-12">
                                 <!--                                    <input name="assignment" placeholder="Assignment" required class="form-control" type="text">-->
                                 <select name="type" title="Pilih salah satu" style="height: 40px; color: black" class="form-control" required>
                                     <option value="" disabled selected hidden>Pilih Salah Satu</option>
@@ -697,21 +699,23 @@
                                 </div>
                             </div>
                         <div class="form-group">
-                            <label class="control-label col-md-3" for="keterangan">Keterangan</label>
-                            <div class="col-md-9">
+                            <label class="control-label" for="keterangan">&nbsp &nbsp&<nbsp></nbsp>Keterangan</label>
+                            <div class="col-sm-12">
                                 <input name="keterangan" placeholder="Keterangan" style="color: black" class="form-control" type="text">
                             </div>
                         </div>
-
+                        </div>
                     </div>
+            </div>
                     <div class="modal-footer">
-                        <button type="submit" id="btnSave "class="btn btn-primary" onclick="save()">Save</button>
                         <button type="button" class="btn btn-danger" data-dismiss="modal">Cancel</button>
+                        <button type="submit" id="btnSave "class="btn btn-primary" onclick="save()">Save</button>
+                    </div>
                     </div>
                 </form>
-            </div>
 
-        </div><!-- /.modal-content -->
+
+        <!-- /.modal-content -->
     </div><!-- /.modal-dialog -->
 </div><!-- /.modal -->
 <!-- End Bootstrap modal -->
