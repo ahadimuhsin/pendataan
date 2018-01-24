@@ -5,7 +5,7 @@ $(document).ready(function () {
     $('#subservices').change (function () {
         if(this.value === "Cloud Server"){
             $('input[name="services"]').val('Cloud Server');
-            $('input[name="product_family"]').val('Cloud Service');
+            $('input[name="product_family"]').val('Cloud Services');
             //bagian yang muncul
             $("#cloud_server_services").show();
             $("#cloud_server_product").show();
@@ -31,10 +31,10 @@ $(document).ready(function () {
         }
         else if(this.value==="Managed Server") {
             $('input[name="services"]').val('Managed Server');
-            $('input[name="product_family"]').val('Managed Service');
+            $('input[name="product_family"]').val('Managed Services');
             //baguian yang muncul
             $("#managed_server_services").show();
-            $("#managed_server_product").show()
+            $("#managed_server_product").show();
             //bagian yang gak muncul
             $("#cloud_server_services").hide();
             $("#cloud_server_product").hide();
@@ -57,7 +57,7 @@ $(document).ready(function () {
         }
         else if (this.value ==="Managed Wifi"){
             $('input[name="services"]').val('Managed Wifi');
-            $('input[name="product_family"]').val('Managed Service');
+            $('input[name="product_family"]').val('Managed Services');
             //bagian yang muncul
             $("#managed_wifi_services").show();
             $("#managed_wifi_product").show();
@@ -86,7 +86,7 @@ $(document).ready(function () {
         else if (this.value === "Managed Mail")
         {
             $('input[name="services"]').val('Managed Application');
-            $('input[name="product_family"]').val('Managed Service');
+            $('input[name="product_family"]').val('Managed Services');
             //bagian yang muncul
             $("#managed_mail_services").show();
             $("#managed_mail_product").show();
@@ -113,7 +113,7 @@ $(document).ready(function () {
 
         else if (this.value === "Managed Radius"){
             $('input[name="services"]').val('Managed Application');
-            $('input[name="product_family"]').val('Managed Service');
+            $('input[name="product_family"]').val('Managed Services');
             //bagian yang muncul
             $("#managed_radius_services").show();
             $("#managed_radius_product").show();
@@ -140,7 +140,7 @@ $(document).ready(function () {
         }
         else if (this.value === "Managed Web"){
             $('input[name="services"]').val('Managed Application');
-            $('input[name="product_family"]').val('Managed Service');
+            $('input[name="product_family"]').val('Managed Services');
             //bagian yang muncul
             $("#managed_radius_services").show();
             $("#managed_radius_product").show();
@@ -167,7 +167,7 @@ $(document).ready(function () {
         }
         else if (this.value === "Managed Antivirus"){
             $('input[name="services"]').val('Managed Application');
-            $('input[name="product_family"]').val('Managed Service');
+            $('input[name="product_family"]').val('Managed Services');
             //bagian yang muncul
             $("#managed_radius_services").show();
             $("#managed_radius_product").show();
@@ -195,7 +195,7 @@ $(document).ready(function () {
         }
         else if (this.value === "Managed SSL"){
             $('input[name="services"]').val('Managed Application');
-            $('input[name="product_family"]').val('Managed Service');
+            $('input[name="product_family"]').val('Managed Services');
             //bagian yang muncul
             $("#managed_radius_services").show();
             $("#managed_radius_product").show();
@@ -223,7 +223,7 @@ $(document).ready(function () {
         }
         else if (this.value === "Managed Cpanel"){
             $('input[name="services"]').val('Managed Application');
-            $('input[name="product_family"]').val('Managed Service');
+            $('input[name="product_family"]').val('Managed Services');
             //bagian yang muncul
             $("#managed_radius_services").show();
             $("#managed_radius_product").show();
@@ -250,7 +250,7 @@ $(document).ready(function () {
         }
         else if (this.value === "Managed Firewall"){
             $('input[name="services"]').val('Managed Application');
-            $('input[name="product_family"]').val('Managed Service');
+            $('input[name="product_family"]').val('Managed Services');
             //bagian yang muncul
             $("#managed_radius_services").show();
             $("#managed_radius_product").show();
@@ -278,7 +278,7 @@ $(document).ready(function () {
         }
         else if (this.value === "Managed DNS"){
             $('input[name="services"]').val('Managed Application');
-            $('input[name="product_family"]').val('Managed Service');
+            $('input[name="product_family"]').val('Managed Services');
             //bagian yang muncul
             $("#managed_radius_services").show();
             $("#managed_radius_product").show();
@@ -306,7 +306,7 @@ $(document).ready(function () {
         }
         else if (this.value === "IT Solution"){
             $('input[name="services"]').val('Professional Services');
-            $('input[name="product_family"]').val('Managed Service');
+            $('input[name="product_family"]').val('Managed Services');
             //bagian yang muncul
             $("#it_solution_services").show();
             $("#it_solution_product").show();
@@ -334,7 +334,7 @@ $(document).ready(function () {
         }
         else if (this.value === "Implementasi - Integrasi - Migrasi - Pengadaan"){
             $('input[name="services"]').val('Professional Services');
-            $('input[name="product_family"]').val('Managed Service');
+            $('input[name="product_family"]').val('Managed Services');
             //bagian yang muncul
             $("#it_solution_services").show();
             $("#it_solution_product").show();

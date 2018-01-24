@@ -616,7 +616,7 @@
                                         <option value="" disabled selected hidden>Please Choose...</option>
                                         <option value="Fahmi Ernanto">Fahmi Ernanto</option>
                                         <option value="Hadi Fatkhul Amin">Hadi Fatkhul Amin</option>
-                                        <option value="Mochamad Badriansyah">Mochamad Badriansyah</option>
+                                        <option value="Mochamad Badrinsyah">Mochamad Badrinsyah</option>
                                         <option value="Movita Suci Mutiara">Movita Suci Mutiara</option>
                                         <option value="Shoba Mediwati">Shoba Mediwati</option>
                                         <option value="Sigit Tri Marwanto">Sigit Tri Marwanto</option>
