@@ -174,8 +174,8 @@
                             <td style="background-color: black" class="isidate"><?php echo $company->join_date;?></td>
                             <td style="background-color: black" class="isiassignment"><?php echo $company->assignment;?></td>
                             <td class="printoff" style="background-color: black">
-                                <button class="btn btn-warning printoff" title="Edit" onclick="edit_company(<?php echo $company->no_company;?>)"><i class="glyphicon glyphicon-pencil"></i></button>
-                                <button class="btn btn-danger printoff" title="Delete" onclick="delete_company(<?php echo $company->no_company;?>)"><i class="glyphicon glyphicon-remove"></i></button>
+                                <button class="btn btn-warning printoff" title="Edit" onclick="edit_company(<?php echo $company->no_company;?>)"><i class="glyphicon glyphicon-edit"></i></button>
+                                <button class="btn btn-danger printoff" title="Delete" onclick="delete_company(<?php echo $company->no_company;?>)"><i class="glyphicon glyphicon-remove-sign"></i></button>
 
 
                             </td>
@@ -638,7 +638,7 @@
                                 <label class="control-label " for="assignment">&nbsp &nbsp&nbspAssignment</label>
                                 <div class="col-md-12">
 <!--                                    <input name="assignment" placeholder="Assignment" required class="form-control" type="text">-->
-                                    <select name="assignment" style="height: 40px; color: black" class="form-control" required>
+                                    <select title="Choose Assignment" name="assignment" style="height: 40px; color: black" class="form-control" required>
                                         <option value="" disabled selected hidden>Please Choose...</option>
                                         <option value="Full Managed">Full Managed</option>
                                         <option value="Lead Assignment">Lead Assignment</option>

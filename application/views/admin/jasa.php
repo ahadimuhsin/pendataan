@@ -41,6 +41,7 @@
 
     <script type="text/javascript" src="<?php echo base_url(); ?>/assets/js/jquery-1.10.1.js"></script>
     <script type="text/javascript" src="<?php echo base_url(); ?>/assets/js/form-validation-company.js"></script>
+    <script type="text/javascript" src="<?php echo base_url(); ?>/assets/js/form-validation-jasa.js"></script>
     <script type="text/javascript" src="<?php echo base_url(); ?>/assets/bootstrap/js/bootstrap.min.js"></script>
 
 
@@ -181,8 +182,8 @@
                         <td style="background-color: black" class="type"><?php echo $jasa->type;?></td>
                         <td style="background-color: black" class="keterangan"><?php echo $jasa->keterangan;?></td>
                         <td     style="background-color: black">
-                            <button class="btn btn-warning printoff" title="Edit" onclick="edit_jasa(<?php echo $jasa->no_jaringan;?>)"><i class="glyphicon glyphicon-pencil"></i></button>
-                            <button class="btn btn-danger printoff" title="Delete" onclick="delete_jasa(<?php echo $jasa->no_jaringan;?>)"><i class="glyphicon glyphicon-remove"></i></button>
+                            <button class="btn btn-warning printoff" title="Edit" onclick="edit_jasa(<?php echo $jasa->no_jaringan;?>)"><i class="glyphicon glyphicon-edit"></i></button>
+                            <button class="btn btn-danger printoff" title="Delete" onclick="delete_jasa(<?php echo $jasa->no_jaringan;?>)"><i class="glyphicon glyphicon-remove-sign"></i></button>
 
 
                         </td>
@@ -538,7 +539,7 @@
                         <div class="form-group">
                             <label class="control-label" for="no_company">&nbsp &nbsp&nbspNo Company</label>
                             <div class="col-sm-12">
-                                <input  name="no_company" id="mycompany" title="Contoh inputan: nomor company 2018001 ditulis 1" placeholder="<?php echo date("Y");?>XXX (3 digit terakhir Nomor Company)" style="color: black" required class="form-control" type="text" >
+                                <input  name="no_company" id="mycompany" placeholder="<?php echo date("Y");?>XXX (3 digit terakhir Nomor Company)" style="color: black" required class="form-control" type="text" >
                                 <p>Contoh: Tulis "001" untuk No Company "2018001"</p>
                             </div>
                         </div>
@@ -552,7 +553,7 @@
 
                             <label class="control-label" for="subservices">&nbsp &nbsp&nbspSub Services</label>
                             <div class="col-sm-12">
-                                <select id='subservices' style="height:40px; color: black" class="form-control" name="subservices" >
+                                <select id='subservices' style="height:40px; color: black" required class="form-control" name="subservices" >
                                     <option value="" disabled selected hidden>Pilih Salah Satu</option>
                                     <option value="Cloud Server">Cloud Server</option>
                                     <option value="Managed Server" >Managed Server</option>
@@ -730,6 +731,7 @@
                             </div>
                         </div>
                         </div>
+
                         <!--                        Right Column-->
                         <div class="col-sm-6">
                         <div class="form-group">
@@ -762,8 +764,7 @@
                         <div class="form-group">
                             <label class="control-label" for="type">&nbsp &nbsp&nbspType</label>
                             <div class="col-sm-12">
-                                <!--                                    <input name="assignment" placeholder="Assignment" required class="form-control" type="text">-->
-                                <select name="type" title="Pilih salah satu" style="height: 40px; color: black" class="form-control" required>
+                                <select name="type" style="height: 40px; color: black" class="form-control" required>
                                     <option value="" disabled selected hidden>Pilih Salah Satu</option>
                                     <option value="Monthly">Monthly</option>
                                     <option value="Joining Free">Joining Free</option>
@@ -774,7 +775,7 @@
                         <div class="form-group">
                             <label class="control-label" for="keterangan">&nbsp &nbsp&nbspKeterangan</label>
                             <div class="col-sm-12">
-                                <input name="keterangan" placeholder="Keterangan" style="color: black" class="form-control" type="text">
+                                <input name="keterangan" placeholder="Keterangan" required style="color: black" class="form-control" type="text">
                             </div>
                         </div>
                         </div>
@@ -785,6 +786,7 @@
                         <button type="submit" id="btnSave "class="btn btn-primary" onclick="save()">Save</button>
                     </div>
                     </div>
+
                 </form>
 
 

@@ -32,7 +32,7 @@ $(function() {
                 required:true,
                 date:true
             },
-            assignment: "required",
+            assignment: "required"
             // password: {
             //     required: true,
             //     minlength: 5

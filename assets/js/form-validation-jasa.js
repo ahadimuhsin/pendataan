@@ -20,7 +20,8 @@ $(function() {
             spk_handover_date: "required",
             otc: "required",
             mrc: "required",
-            type: "required"
+            type: "required",
+            keterangan: "required"
 
         },
         // Specify validation error messages
@@ -34,7 +35,9 @@ $(function() {
             spk_handover_date: "Mohon masukkan tanggal penyerahan SPK",
             otc: "Mohon masukkan nomor OTC",
             mrc: "Mohon masukkan nomor MRC",
-            type: "Mohon masukkan tipe berlangganan"
+            type: "Mohon masukkan tipe berlangganan",
+            keterangan : "Mohon masukkan keterangan. Bila kosong, isi '-'"
+
 
         },
         // Make sure the form is submitted to the destination defined
