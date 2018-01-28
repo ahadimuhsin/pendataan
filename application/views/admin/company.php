@@ -126,7 +126,7 @@
     <div id="page-wrapper" >
 
             <div class="col-lg-12 span">
-                <a class="btn btn-success printoff"  onclick="add_company()"  class="btn btn-info" role="button" ><i class="glyphicon glyphicon-plus"></i> Add Company</a>
+                <a class="btn btn-success printoff"  onclick="add_company()"role="button" ><i class="glyphicon glyphicon-plus"></i> Add Company</a>
 <!--                <button class="btn btn-danger printoff" onclick="window.print()"><i class="glyphicon glyphicon-print"></i>Print</button>-->
                 <a href="<?php echo base_url("index.php/c_company/export");?>" class="btn btn-info" role="button"><i class ="fa fa-file-excel-o"></i> Save as Excel file</a>
                 <input type="button" value="Show All Columns" class="btn btn-primary" id="showColumns" onclick="return changeColumn(this)">
@@ -134,7 +134,7 @@
                 <div class="row-fluid">
 
                             <br><br>
-                            <table cellpadding="0" cellspacing="0" border="0" width="100%" class="table table-striped table-bordered" id="example">
+                            <table cellpadding="0" cellspacing="0" border="0" width="100%" class="table table-responsive table-bordered" id="example">
                                 <thead>
                                 <tr style="background-color: grey">
                         <th width="200px">NPWP</th>

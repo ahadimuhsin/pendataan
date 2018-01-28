@@ -135,7 +135,7 @@
         <div class="row-fluid">
 
             <br><br>
-            <table cellpadding="0" cellspacing="0" border="0" width="100%" class="table table-striped table-bordered" id="example">
+            <table cellpadding="0" cellspacing="0" border="0" width="100%" class="table table-bordered table-responsive" id="example">
                 <thead>
                 <tr style="background-color: grey">
                     <th width="200px">Nomor Company</th>
@@ -163,24 +163,24 @@
                 <tbody>
                 <?php foreach($jasa as $jasa){?>
                     <tr>
-                        <td style="background-color: black"><?php echo date("Y").sprintf("%03s", $jasa->no_company);?></td>
-                        <td style="background-color: black"><?php echo $jasa->company;?></td>
-                        <td style="background-color: black"><?php echo $jasa->parent_company;?></td>
-                        <td style="background-color: black"><?php echo date("Y").sprintf("%06s", $jasa->no_jaringan);?></td>
-                        <td style="background-color: black"><?php echo $jasa->business_consultant;?></td>
-                        <td style="background-color: black"><?php echo $jasa->assignment;?></td>
-                        <td style="background-color: black"><?php echo $jasa->subservices;?></td>
-                        <td style="background-color: black"><?php echo $jasa->services;?></td>
-                        <td style="background-color: black"><?php echo $jasa->product_family;?></td>
-                        <td style="background-color: black" class="startdate"><?php echo $jasa->contract_start_date;?></td>
-                        <td style="background-color: black" class="end_date"><?php echo $jasa->contract_end_date;?></td>
-                        <td style="background-color: black" class="spk_number"><?php echo $jasa->spk_number;?></td>
-                        <td style="background-color: black" class="spk_date"><?php echo $jasa->spk_date;?></td>
-                        <td style="background-color: black" class="spk_handover_date"><?php echo $jasa->spk_handover_date;?></td>
-                        <td style="background-color: black" class="otc"><?php echo $jasa->otc;?></td>
-                        <td style="background-color: black" class="mrc"><?php echo $jasa->mrc;?></td>
-                        <td style="background-color: black" class="type"><?php echo $jasa->type;?></td>
-                        <td style="background-color: black" class="keterangan"><?php echo $jasa->keterangan;?></td>
+                        <td style="background-color: black" class="active"><?php echo date("Y").sprintf("%03s", $jasa->no_company);?></td>
+                        <td style="background-color: black" class="active"><?php echo $jasa->company;?></td>
+                        <td style="background-color: black" class="active"><?php echo $jasa->parent_company;?></td>
+                        <td style="background-color: black" class="active"><?php echo date("Y").sprintf("%06s", $jasa->no_jaringan);?></td>
+                        <td style="background-color: black" class="active"><?php echo $jasa->business_consultant;?></td>
+                        <td style="background-color: black" class="active"><?php echo $jasa->assignment;?></td>
+                        <td style="background-color: black" class="active"><?php echo $jasa->subservices;?></td>
+                        <td style="background-color: black" class="active"><?php echo $jasa->services;?></td>
+                        <td style="background-color: black" class="active"><?php echo $jasa->product_family;?></td>
+                        <td style="background-color: black" class="startdate active"><?php echo $jasa->contract_start_date;?></td>
+                        <td style="background-color: black" class="end_date active"><?php echo $jasa->contract_end_date;?></td>
+                        <td style="background-color: black" class="spk_number active"><?php echo $jasa->spk_number;?></td>
+                        <td style="background-color: black" class="spk_date active"><?php echo $jasa->spk_date;?></td>
+                        <td style="background-color: black" class="spk_handover_date active"><?php echo $jasa->spk_handover_date;?></td>
+                        <td style="background-color: black" class="otc active"><?php echo $jasa->otc;?></td>
+                        <td style="background-color: black" class="mrc active"><?php echo $jasa->mrc;?></td>
+                        <td style="background-color: black" class="type active"><?php echo $jasa->type;?></td>
+                        <td style="background-color: black" class="keterangan active"><?php echo $jasa->keterangan;?></td>
                         <td     style="background-color: black">
                             <button class="btn btn-warning printoff" title="Edit" onclick="edit_jasa(<?php echo $jasa->no_jaringan;?>)"><i class="glyphicon glyphicon-edit"></i></button>
                             <button class="btn btn-danger printoff" title="Delete" onclick="delete_jasa(<?php echo $jasa->no_jaringan;?>)"><i class="glyphicon glyphicon-remove-sign"></i></button>
