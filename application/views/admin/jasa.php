@@ -307,9 +307,8 @@
     function save() {
         //sebelum disave, melakukan form validation terlebih dahulu
         //deklarasikan variabel
-            var url;
+        var url;
         var jasa_number=form.no_company;
-        var jasa_network=form.no_jaringan;
         var jasa_subservices=form.subservices;
         var jasa_contract_start=form.contract_start_date;
         var jasa_contract_end=form.contract_end_date;
@@ -327,11 +326,6 @@
                 jasa_number.focus();
                 return false;
             }
-//            else if (jasa_network.value==="") {
-//                alert("Mohon Isi Form Secara Lengkap");
-//                company_name.focus();
-//                return false;
-//            }
             else if (jasa_subservices.value==="") {
                 alert("Mohon Isi Form Secara Lengkap");
                 jasa_subservices.focus();
@@ -517,6 +511,16 @@
     });
 
 
+    //    $(document).ready(function() {
+//        var start_date = new Date(document.getElementById("start_date").value);
+//        var end_date = new Date(document.getElementById("end_date").value);
+//
+//        if (start_date > end_date) {
+//            alert('Masukkan tanggal dengan benar');
+//        }
+//    });
+
+
 </script>
 <!-- Bootstrap modal -->
 <div class="modal fade" style="width: 100%" id="modal_form" role="dialog">
@@ -535,7 +539,7 @@
                             <label class="control-label" for="no_company">&nbsp &nbsp&nbspNo Company</label>
                             <div class="col-sm-12">
                                 <input  name="no_company" autofocus id="mycompany" placeholder="<?php echo date("Y");?>XXX (3 digit terakhir Nomor Company)" style="color: black" required class="form-control" type="text" >
-                                <p>Cek <a href="<?php echo base_url();?> admin/company">Halaman Company</a> terlebih dahulu untuk memeriksa Nomor Company<br> Inputan: Tulis "001" untuk No Company "2018001"</p>
+                                <p>Cek <a href="<?php echo base_url();?>admin/company">Halaman Company</a> terlebih dahulu untuk memeriksa Nomor Company<br> Inputan: Tulis "001" untuk No Company "2018001"</p>
                             </div>
                         </div>
                         <div class="form-group" hidden>
@@ -710,13 +714,13 @@
                         <div class="form-group">
                             <label class="control-label" for="contract_start_date">&nbsp &nbsp&nbspContract Start Date</label>
                             <div class="col-sm-12">
-                                <input name="contract_start_date" style="color: black" required placeholder="Contract Start Date" class="form-control" type="date">
+                                <input name="contract_start_date" style="color: black" required placeholder="Contract Start Date" id="start_date" class="form-control" type="date">
                             </div>
                         </div>
                         <div class="form-group">
                             <label class="control-label" for="contract_end_date">&nbsp &nbsp&nbspContract End Date</label>
                             <div class="col-sm-12">
-                                <input name="contract_end_date" placeholder="Contract End Date" style="color: black" required class="form-control" type="date">
+                                <input name="contract_end_date" placeholder="Contract End Date" style="color: black" id="end_date" required class="form-control" type="date">
                             </div>
                         </div>
                         <div class="form-group">

@@ -49,3 +49,11 @@ $(function() {
 });/**
  * Created by Muhsin Ahadi on 1/17/2018.
  */
+$(function() {
+    var start_date = new Date(document.getElementById("start_date"));
+    var end_date = new Date(document.getElementById("end_date"));
+
+    if (start_date > end_date) {
+        alert('Masukkan tanggal dengan benar');
+    }
+});

@@ -717,14 +717,13 @@ $(document).ready(function () {
     $("#mobile").mask("+62999-9999-9999", {
          placeholder: "Mobile (awalan +62)"
         });
-$("#join_date").datepicker();
+//$("#join_date").datepicker();
+$(document).ready(function () {
+    var start_date = $("#start_date").val();
+    var end_date = $("#end_date").val();
 
-//     $("#myphone").keyup(function(e) {
-//     if (this.value.length < 3) {
-//         this.value = '+62';
-//     } else if (this.value.indexOf('+62') !== 0) {
-//         this.value = '+62' + String.fromCharCode(e.which);
-//     }
-// });
-
-
+    if (start_date > end_date){
+        alert ('Masukkan tanggal dengan benar');
+        return false;
+    }
+});

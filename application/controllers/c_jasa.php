@@ -26,6 +26,7 @@ class c_jasa extends CI_Controller
 //untuk menambha data pelayanan jasa
     public function jasa_add()
     {
+
         $data = array(
             'no_jaringan' => $this->input->post('no_jaringan'),
             'no_company' => $this->input->post('no_company'),
@@ -54,6 +55,7 @@ class c_jasa extends CI_Controller
         $message = $date. " " .$_SESSION['username']." menambahkan data pelayanan jasa dengan nomor SPK " . "".$nomor.PHP_EOL;
         file_put_contents($file, $message, FILE_APPEND | LOCK_EX);
         //sampai sini log file
+
     }
     public function ajax_edit($id) //mengupdate data berdasarkan id dengan ajax
     {
