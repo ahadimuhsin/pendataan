@@ -126,8 +126,7 @@
     <div id="page-wrapper">
 
         <div class="col-lg-12 span">
-            <a class="btn btn-success printoff"  onclick="add_jasa()"   role="button" ><i class="glyphicon glyphicon-plus"></i> Add Jasa</a>
-            <!--                <button class="btn btn-danger printoff" onclick="window.print()"><i class="glyphicon glyphicon-print"></i>Print</button>-->
+            <a class="btn btn-success"  onclick="add_jasa()"   role="button" ><i class="glyphicon glyphicon-plus"></i> Add Jasa</a>
             <a href="<?php echo base_url("index.php/c_jasa/export");?>" class="btn btn-info" role="button"><i class ="fa fa-file-excel-o"></i> Save as Excel file</a>
             <input type="button" value="Show All Columns" class="btn btn-primary" id="showColumns" onclick="return changeColumn(this)">
 
@@ -138,10 +137,10 @@
             <table cellpadding="0" cellspacing="0" border="0" width="100%" class="table table-bordered table-responsive" id="example">
                 <thead>
                 <tr style="background-color: grey">
+                    <th width="200px">No. Jaringan</th>
                     <th width="200px">Nomor Company</th>
                     <th width="200px">Company</th>
                     <th width="200px">Parent Company</th>
-                    <th width="200px">No. Jaringan</th>
                     <th width="200px">Business Consultant</th>
                     <th width="200px">Assignment</th>
                     <th width="200px">Sub Services</th>
@@ -163,10 +162,10 @@
                 <tbody>
                 <?php foreach($jasa as $jasa){?>
                     <tr>
+                        <td style="background-color: black" class="active"><?php echo date("Y").sprintf("%06s", $jasa->no_jaringan);?></td>
                         <td style="background-color: black" class="active"><?php echo date("Y").sprintf("%03s", $jasa->no_company);?></td>
                         <td style="background-color: black" class="active"><?php echo $jasa->company;?></td>
                         <td style="background-color: black" class="active"><?php echo $jasa->parent_company;?></td>
-                        <td style="background-color: black" class="active"><?php echo date("Y").sprintf("%06s", $jasa->no_jaringan);?></td>
                         <td style="background-color: black" class="active"><?php echo $jasa->business_consultant;?></td>
                         <td style="background-color: black" class="active"><?php echo $jasa->assignment;?></td>
                         <td style="background-color: black" class="active"><?php echo $jasa->subservices;?></td>
@@ -540,7 +539,7 @@
                             <label class="control-label" for="no_company">&nbsp &nbsp&nbspNo Company</label>
                             <div class="col-sm-12">
                                 <input  name="no_company" id="mycompany" placeholder="<?php echo date("Y");?>XXX (3 digit terakhir Nomor Company)" style="color: black" required class="form-control" type="text" >
-                                <p>Contoh: Tulis "001" untuk No Company "2018001"</p>
+                                <p>Cek <a href="company">Halaman Company</a> terlebih dahulu untuk memeriksa Nomor Company<br> Inputan: Tulis "001" untuk No Company "2018001"</p>
                             </div>
                         </div>
                         <div class="form-group" hidden>

@@ -126,8 +126,7 @@
     <div id="page-wrapper" >
 
             <div class="col-lg-12 span">
-                <a class="btn btn-success printoff"  onclick="add_company()"role="button" ><i class="glyphicon glyphicon-plus"></i> Add Company</a>
-<!--                <button class="btn btn-danger printoff" onclick="window.print()"><i class="glyphicon glyphicon-print"></i>Print</button>-->
+                <a class="btn btn-success"  onclick="add_company()"role="button" ><i class="glyphicon glyphicon-plus"></i> Add Company</a>
                 <a href="<?php echo base_url("index.php/c_company/export");?>" class="btn btn-info" role="button"><i class ="fa fa-file-excel-o"></i> Save as Excel file</a>
                 <input type="button" value="Show All Columns" class="btn btn-primary" id="showColumns" onclick="return changeColumn(this)">
             </div></br> </br>
@@ -137,8 +136,8 @@
                             <table cellpadding="0" cellspacing="0" border="0" width="100%" class="table table-responsive table-bordered" id="example">
                                 <thead>
                                 <tr style="background-color: grey">
-                        <th width="200px">NPWP</th>
                         <th width="200px">Nomor Company</th>
+                        <th width="200px">NPWP</th>
                         <th width="200px">Company</th>
                         <th width="200px">Parent Company</th>
                         <th width="200px">Address</th>
@@ -159,8 +158,8 @@
                     <tbody>
                     <?php foreach($company as $company){?>
                         <tr >
-                            <td style="background-color: black"><?php echo $company->npwp;?></td>
                             <td style="background-color: black"><?php echo date("Y").sprintf("%03s", $company->no_company);?></td>
+                            <td style="background-color: black"><?php echo $company->npwp;?></td>
                             <td style="background-color: black"><?php echo $company->company;?></td>
                             <td style="background-color: black"><?php echo $company->parent_company;?></td>
                             <td style="background-color: black"><?php echo $company->address;?></td>
@@ -230,7 +229,9 @@
                 x.value = "Show All Columns";
             }
         }
-
+        $(document).ready(function() {
+            $("#npwp").focus();
+            });
         $(document).ready( function () {
             $('#table_id').DataTable();
         } );
@@ -242,6 +243,7 @@
             $('#form')[0].reset(); // reset form on modals
             $('#modal_form').modal('show'); // show bootstrap modal
             $('#disabled').attr('disabled', false);
+
             //$('.modal-title').text('Add Person'); // Set Title to Bootstrap modal title
         }
 
@@ -506,7 +508,7 @@
                     },
                     error: function (jqXHR, textStatus, errorThrown)
                     {
-                        alert('Error deleting data');
+                        alert('Error deleting data \n(Company sedang menggunakan jasa)');
                     }
                 });
 

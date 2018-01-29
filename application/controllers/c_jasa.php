@@ -54,7 +54,7 @@ class c_jasa extends CI_Controller
         file_put_contents($file, $message, FILE_APPEND | LOCK_EX);
         //sampai sini log file
     }
-    public function ajax_edit($id)
+    public function ajax_edit($id) //mengupdate data berdasarkan id dengan ajax
     {
         $data = $this->jasa_model->get_by_id($id);
 
@@ -116,19 +116,10 @@ class c_jasa extends CI_Controller
     {
         // Load plugin PHPExcel nya
         include APPPATH . 'third_party/PHPExcel/PHPExcel.php';
-//        $today = date("m.d.y");
-//        $format_date = array(
-//            'numberformat' => array(
-//                'code' => 'DD/MM/YYYY',
-//            ),
-//        );
-//
-
-
 
         // Panggil class PHPExcel nya
         $excel = new PHPExcel();
-        // Settingan awal fil excel
+        // Settingan awal file excel
         $excel->getProperties()->setCreator('Muhsin Ahadi')
             ->setLastModifiedBy('Muhsin Ahadi')
             ->setTitle("Data Perusahaan")
@@ -170,30 +161,30 @@ class c_jasa extends CI_Controller
                 'left' => array('style' => PHPExcel_Style_Border::BORDER_THIN) // Set border left dengan garis tipis
             )
         );
-        $excel->setActiveSheetIndex(0)->setCellValue('A1', "Data Pelayanan Jasa"); // Set kolom A1 dengan tulisan "DATA SISWA"
-        $excel->getActiveSheet()->mergeCells('A1:N1'); // Set Merge Cell pada kolom A1 sampai E1
+        $excel->setActiveSheetIndex(0)->setCellValue('A1', "Data Pelayanan Jasa"); // Set kolom A1 dengan tulisan "DATA PELAYANAN JASA"
+        $excel->getActiveSheet()->mergeCells('A1:N1'); // Set Merge Cell pada kolom A1 sampai N1
         $excel->getActiveSheet()->getStyle('A1')->getFont()->setBold(TRUE); // Set bold kolom A1
         $excel->getActiveSheet()->getStyle('A1')->getFont()->setSize(15); // Set font size 15 untuk kolom A1
         $excel->getActiveSheet()->getStyle('A1')->getAlignment()->setHorizontal(PHPExcel_Style_Alignment::HORIZONTAL_CENTER); // Set text center untuk kolom A1
         // Buat header tabel nya pada baris ke 3
-        $excel->setActiveSheetIndex(0)->setCellValue('A3', "No. Company");
-        $excel->setActiveSheetIndex(0)->setCellValue('B3', "Company"); // Set kolom A3 dengan tulisan "NO"
-        $excel->setActiveSheetIndex(0)->setCellValue('C3', "Parent Company"); // Set kolom B3 dengan tulisan "NIS"
-        $excel->setActiveSheetIndex(0)->setCellValue('D3', "No. Jaringan/Opportunity"); // Set kolom C3 dengan tulisan "NAMA"
-        $excel->setActiveSheetIndex(0)->setCellValue('E3', "Business Consultant"); // Set kolom D3 dengan tulisan "JENIS KELAMIN"
-        $excel->setActiveSheetIndex(0)->setCellValue('F3', "Assignment"); // Set kolom E3 dengan tulisan "ALAMAT"
-        $excel->setActiveSheetIndex(0)->setCellValue('G3', "Subservices"); // Set kolom E3 dengan tulisan "ALAMAT"
-        $excel->setActiveSheetIndex(0)->setCellValue('H3', "Services"); // Set kolom E3 dengan tulisan "ALAMAT"
-        $excel->setActiveSheetIndex(0)->setCellValue('I3', "Product Family"); // Set kolom E3 dengan tulisan "ALAMAT"
-        $excel->setActiveSheetIndex(0)->setCellValue('J3', "Kontrak Start Date (Y-M-D)"); // Set kolom E3 dengan tulisan "ALAMAT"
-        $excel->setActiveSheetIndex(0)->setCellValue('K3', "Kontrak End Date (Y-M-D)"); // Set kolom E3 dengan tulisan "ALAMAT"
-        $excel->setActiveSheetIndex(0)->setCellValue('L3', "SPK/SO/Quote Number"); // Set kolom E3 dengan tulisan "ALAMAT"
-        $excel->setActiveSheetIndex(0)->setCellValue('M3', "Tanggal SPK Terbit (Y-M-D)"); // Set kolom E3 dengan tulisan "ALAMAT"
-        $excel->setActiveSheetIndex(0)->setCellValue('N3', "Waktu Penyerahan SPK (Y-M-D)"); // Set kolom E3 dengan tulisan "ALAMAT"
-        $excel->setActiveSheetIndex(0)->setCellValue('O3', "OTC"); // Set kolom E3 dengan tulisan "ALAMAT"
-        $excel->setActiveSheetIndex(0)->setCellValue('P3', "MRC"); // Set kolom E3 dengan tulisan "ALAMAT"
-        $excel->setActiveSheetIndex(0)->setCellValue('Q3', "Type"); // Set kolom E3 dengan tulisan "ALAMAT"
-        $excel->setActiveSheetIndex(0)->setCellValue('R3', "Keterangan"); // Set kolom E3 dengan tulisan "ALAMAT"
+        $excel->setActiveSheetIndex(0)->setCellValue('A3', "No. Company"); //Set kolom A3 dengan tulisan No. Company
+        $excel->setActiveSheetIndex(0)->setCellValue('B3', "Company"); // Set kolom B3 dengan tulisan Company
+        $excel->setActiveSheetIndex(0)->setCellValue('C3', "Parent Company"); // Set kolom C3 dengan tulisan Parent Company
+        $excel->setActiveSheetIndex(0)->setCellValue('D3', "No. Jaringan/Opportunity"); // Set kolom D3 dengan tulisan No.Jaringan/Opportunity
+        $excel->setActiveSheetIndex(0)->setCellValue('E3', "Business Consultant"); // Set kolom E3 dengan tulisan Business Consultant
+        $excel->setActiveSheetIndex(0)->setCellValue('F3', "Assignment"); // Set kolom F3 dengan tulisan Assignment
+        $excel->setActiveSheetIndex(0)->setCellValue('G3', "Subservices"); // Set kolom G3 dengan tulisan Subservices
+        $excel->setActiveSheetIndex(0)->setCellValue('H3', "Services"); // Set kolom H3 dengan tulisan Services
+        $excel->setActiveSheetIndex(0)->setCellValue('I3', "Product Family"); // Set kolom I3 dengan tulisan Product Family
+        $excel->setActiveSheetIndex(0)->setCellValue('J3', "Kontrak Start Date (Y-M-D)"); // Set kolom J3 dengan tulisan Kontrak Start Date (Y-M-D)
+        $excel->setActiveSheetIndex(0)->setCellValue('K3', "Kontrak End Date (Y-M-D)"); // Set kolom K3 dengan tulisan Kontrak End Date (Y-M-D)
+        $excel->setActiveSheetIndex(0)->setCellValue('L3', "SPK/SO/Quote Number"); // Set kolom L3 dengan tulisan SPK/SO/Quote Number
+        $excel->setActiveSheetIndex(0)->setCellValue('M3', "Tanggal SPK Terbit (Y-M-D)"); // Set kolom M3 dengan tulisan Tanggal SPK Terbit (Y-M-D)
+        $excel->setActiveSheetIndex(0)->setCellValue('N3', "Waktu Penyerahan SPK (Y-M-D)"); // Set kolom N3 dengan tulisan Waktu Penyerahan SPK
+        $excel->setActiveSheetIndex(0)->setCellValue('O3', "OTC"); // Set kolom O3 dengan tulisan OTC
+        $excel->setActiveSheetIndex(0)->setCellValue('P3', "MRC"); // Set kolom P3 dengan tulisan MRC
+        $excel->setActiveSheetIndex(0)->setCellValue('Q3', "Type"); // Set kolom Q3 dengan tulisan Type
+        $excel->setActiveSheetIndex(0)->setCellValue('R3', "Keterangan"); // Set kolom R3 dengan tulisan Keterangan
 
         // Apply style header yang telah kita buat tadi ke masing-masing kolom header
         $excel->getActiveSheet()->getStyle('A3')->applyFromArray($style_col);
@@ -215,9 +206,8 @@ class c_jasa extends CI_Controller
         $excel->getActiveSheet()->getStyle('Q3')->applyFromArray($style_col);
         $excel->getActiveSheet()->getStyle('R3')->applyFromArray($style_col);
 
-        // Panggil function view yang ada di SiswaModel untuk menampilkan semua data siswanya
-        $jasa = $this->jasa_model->get_all_jasa();
-//        $no = 1; // Untuk penomoran tabel, di awal set dengan 1
+
+        $jasa = $this->jasa_model->get_all_jasa(); //load jasa_model untuk mendapatkan data tabel
         $numrow = 4; // Set baris pertama untuk isi tabel adalah baris ke 4
         foreach ($jasa as $data) { // Lakukan looping pada variabel jasa
             $excel->setActiveSheetIndex(0)->setCellValue('A' . $numrow, date("Y").sprintf("%03s",$data->no_company));
@@ -268,11 +258,11 @@ class c_jasa extends CI_Controller
             $numrow++; // Tambah 1 setiap kali looping
         }
         // Set width kolom
-        $excel->getActiveSheet()->getColumnDimension('A')->setWidth(30); // Set width kolom A
-        $excel->getActiveSheet()->getColumnDimension('B')->setWidth(30); // Set width kolom B
-        $excel->getActiveSheet()->getColumnDimension('C')->setWidth(30); // Set width kolom C
-        $excel->getActiveSheet()->getColumnDimension('D')->setWidth(30); // Set width kolom D
-        $excel->getActiveSheet()->getColumnDimension('E')->setWidth(30); // Set width kolom E
+        $excel->getActiveSheet()->getColumnDimension('A')->setWidth(30);
+        $excel->getActiveSheet()->getColumnDimension('B')->setWidth(30);
+        $excel->getActiveSheet()->getColumnDimension('C')->setWidth(30);
+        $excel->getActiveSheet()->getColumnDimension('D')->setWidth(30);
+        $excel->getActiveSheet()->getColumnDimension('E')->setWidth(30);
         $excel->getActiveSheet()->getColumnDimension('F')->setWidth(30);
         $excel->getActiveSheet()->getColumnDimension('G')->setWidth(30);
         $excel->getActiveSheet()->getColumnDimension('H')->setWidth(30);
@@ -304,6 +294,7 @@ class c_jasa extends CI_Controller
         header('Cache-Control: max-age=0');
         $write = PHPExcel_IOFactory::createWriter($excel, 'Excel2007');
         $write->save('php://output');
+
         //untuk log file
         date_default_timezone_set('Asia/Bangkok');
         $date = new DateTime();

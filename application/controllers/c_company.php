@@ -67,7 +67,7 @@ class c_company extends CI_Controller{
         file_put_contents($file, $message, FILE_APPEND | LOCK_EX);
         //sampai sini log file
     }
-    public function ajax_edit($id)
+    public function ajax_edit($id) //mengupdate data berdasarkan id dengan ajax
         {
         $data = $this->company_model->get_by_id($id);
 
@@ -128,12 +128,7 @@ class c_company extends CI_Controller{
     {
         // Load plugin PHPExcel nya
         include APPPATH . 'third_party/PHPExcel/PHPExcel.php';
-//        $today = date("m.d.y");
-//        $format_date = array(
-//            'numberformat' => array(
-//                'code' => 'DD/MM/YYYY',
-//            ),
-//        );
+
 
 
 
@@ -188,20 +183,20 @@ class c_company extends CI_Controller{
         $excel->getActiveSheet()->getStyle('A1')->getFont()->setSize(15); // Set font size 15 untuk kolom A1
         $excel->getActiveSheet()->getStyle('A1')->getAlignment()->setHorizontal(PHPExcel_Style_Alignment::HORIZONTAL_CENTER); // Set text center untuk kolom A1
         // Buat header tabel nya pada baris ke 3
-        $excel->setActiveSheetIndex(0)->setCellValue('A3', "No. Company");
-        $excel->setActiveSheetIndex(0)->setCellValue('B3', "Company"); // Set kolom A3 dengan tulisan "NO"
-        $excel->setActiveSheetIndex(0)->setCellValue('C3', "Parent Company"); // Set kolom B3 dengan tulisan "NIS"
-        $excel->setActiveSheetIndex(0)->setCellValue('D3', "NPWP"); // Set kolom C3 dengan tulisan "NAMA"
-        $excel->setActiveSheetIndex(0)->setCellValue('E3', "Address"); // Set kolom D3 dengan tulisan "JENIS KELAMIN"
-        $excel->setActiveSheetIndex(0)->setCellValue('F3', "City"); // Set kolom E3 dengan tulisan "ALAMAT"
-        $excel->setActiveSheetIndex(0)->setCellValue('G3', "Contact Person"); // Set kolom E3 dengan tulisan "ALAMAT"
-        $excel->setActiveSheetIndex(0)->setCellValue('H3', "Title"); // Set kolom E3 dengan tulisan "ALAMAT"
-        $excel->setActiveSheetIndex(0)->setCellValue('I3', "Email"); // Set kolom E3 dengan tulisan "ALAMAT"
-        $excel->setActiveSheetIndex(0)->setCellValue('J3', "Phone"); // Set kolom E3 dengan tulisan "ALAMAT"
-        $excel->setActiveSheetIndex(0)->setCellValue('K3', "Mobile"); // Set kolom E3 dengan tulisan "ALAMAT"
-        $excel->setActiveSheetIndex(0)->setCellValue('L3', "Business Consultant"); // Set kolom E3 dengan tulisan "ALAMAT"
-        $excel->setActiveSheetIndex(0)->setCellValue('M3', "Join Start Date (Y-M-D)"); // Set kolom E3 dengan tulisan "ALAMAT"
-        $excel->setActiveSheetIndex(0)->setCellValue('N3', "Assignment"); // Set kolom E3 dengan tulisan "ALAMAT"
+        $excel->setActiveSheetIndex(0)->setCellValue('A3', "No. Company"); //Set kolom A3 dengan tulisan No. Company
+        $excel->setActiveSheetIndex(0)->setCellValue('B3', "Company"); // Set kolom B3 dengan tulisan Company
+        $excel->setActiveSheetIndex(0)->setCellValue('C3', "Parent Company"); // Set kolom C3 dengan tulisan Parent Company
+        $excel->setActiveSheetIndex(0)->setCellValue('D3', "NPWP"); // Set kolom D3 dengan tulisan NPWP
+        $excel->setActiveSheetIndex(0)->setCellValue('E3', "Address"); // Set kolom E3 dengan tulisan Address
+        $excel->setActiveSheetIndex(0)->setCellValue('F3', "City"); // Set kolom F3 dengan tulisan City
+        $excel->setActiveSheetIndex(0)->setCellValue('G3', "Contact Person"); // Set kolom G3 dengan tulisan Contact Person
+        $excel->setActiveSheetIndex(0)->setCellValue('H3', "Title"); // Set kolom H3 dengan tulisan Title
+        $excel->setActiveSheetIndex(0)->setCellValue('I3', "Email"); // Set kolom I3 dengan tulisan Email
+        $excel->setActiveSheetIndex(0)->setCellValue('J3', "Phone"); // Set kolom J3 dengan tulisan Phone
+        $excel->setActiveSheetIndex(0)->setCellValue('K3', "Mobile"); // Set kolom K3 dengan tulisan Mobile
+        $excel->setActiveSheetIndex(0)->setCellValue('L3', "Business Consultant"); // Set kolom L3 dengan tulisan Business Consultant
+        $excel->setActiveSheetIndex(0)->setCellValue('M3', "Join Start Date (Y-M-D)"); // Set kolom M3 dengan tulisan Join Start Date (Y-M-D)
+        $excel->setActiveSheetIndex(0)->setCellValue('N3', "Assignment"); // Set kolom N3 dengan tulisan Assignment
 
         // Apply style header yang telah kita buat tadi ke masing-masing kolom header
         $excel->getActiveSheet()->getStyle('A3')->applyFromArray($style_col);
@@ -218,9 +213,8 @@ class c_company extends CI_Controller{
         $excel->getActiveSheet()->getStyle('L3')->applyFromArray($style_col);
         $excel->getActiveSheet()->getStyle('M3')->applyFromArray($style_col);
         $excel->getActiveSheet()->getStyle('N3')->applyFromArray($style_col);
-        // Panggil function view yang ada di SiswaModel untuk menampilkan semua data siswanya
-        $company = $this->company_model->get_all_company();
-//        $no = 1; // Untuk penomoran tabel, di awal set dengan 1
+
+        $company = $this->company_model->get_all_company(); //load company_model untuk menampilkan data
         $numrow = 4; // Set baris pertama untuk isi tabel adalah baris ke 4
         foreach ($company as $data) { // Lakukan looping pada variabel siswa
             $excel->setActiveSheetIndex(0)->setCellValue('A' . $numrow, date("Y").sprintf("%03s",$data->no_company));

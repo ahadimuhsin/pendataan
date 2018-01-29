@@ -51,29 +51,12 @@ class company_model extends CI_Model
         return $this->db->affected_rows();
     }
 
-    public function delete_by_id($no_company)
+    public function delete_by_id($no_company) //menghapus data company
     {
         $this->db->where('no_company', $no_company);
         $this->db->delete($this->table);
     }
 
-    public function search_data($company)
-    {
-        $this->db->like('company',$company);
-        $query = $this->db->get('company');
-        return $query->result();
-    }
-
-//    public function get_supplier()
-//    {
-//        $query=$this->db->query("select * from supplier");
-//        if ($query->num_rows() > 0) {
-//            foreach ($query->result() as $data) {
-//                $datac[]=$data;
-//            }
-//            return $datac;
-//        }
-//    }
 
 
 }
