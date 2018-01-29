@@ -242,9 +242,10 @@
             save_method = 'add';
             $('#form')[0].reset(); // reset form on modals
             $('#modal_form').modal('show'); // show bootstrap modal
+            $('#npwp').focus();
             $('#disabled').attr('disabled', false);
 
-            //$('.modal-title').text('Add Person'); // Set Title to Bootstrap modal title
+            $('.modal-title').text('Add Company'); // Set Title to Bootstrap modal title
         }
 
         function edit_company(no_company)
@@ -514,9 +515,6 @@
 
             }
         }
-        $(document).ready(function() {
-            $("#npwp").focus();
-        });
 
     </script>
     <!-- Bootstrap modal -->
@@ -535,7 +533,7 @@
                             <div class="form-group">
                                 <label class="control-label "  for="npwp">&nbsp &nbsp&nbspNPWP</label>
                                 <div class="col-md-12">
-                                    <input  id="npwp"  name="npwp" placeholder="NPWP" style="color: black" required class="form-control" type="text" >
+                                    <input  id="npwp"  name="npwp" autofocus placeholder="NPWP" style="color: black" required class="form-control" type="text" >
                             </div>
 
                             </div>

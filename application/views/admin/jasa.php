@@ -258,7 +258,7 @@
         $('#form')[0].reset(); // reset form on modals
         $('#modal_form').modal('show'); // show bootstrap modal
         $('#disabled').attr('disabled', false);
-        //$('.modal-title').text('Add Person'); // Set Title to Bootstrap modal title
+        $('.modal-title').text('Add Jasa'); // Set Title to Bootstrap modal title
     }
 
     function edit_jasa(no_jaringan)
@@ -394,11 +394,7 @@
                 jasa_number.focus();
                 return false;
             }
-//            else if (jasa_network.value==="") {
-//                alert("Mohon Isi Form Secara Lengkap");
-//                company_name.focus();
-//                return false;
-//            }
+
             else if (jasa_subservices.value==="") {
                 alert("Mohon Isi Form Secara Lengkap");
                 jasa_subservices.focus();
@@ -468,7 +464,7 @@
             },
             error: function (jqXHR, textStatus, errorThrown)
             {
-                alert('Error adding / update data');
+                alert('Error adding / update data \n(No. Company does not exist)');
             }
         });
     }
@@ -538,8 +534,8 @@
                         <div class="form-group">
                             <label class="control-label" for="no_company">&nbsp &nbsp&nbspNo Company</label>
                             <div class="col-sm-12">
-                                <input  name="no_company" id="mycompany" placeholder="<?php echo date("Y");?>XXX (3 digit terakhir Nomor Company)" style="color: black" required class="form-control" type="text" >
-                                <p>Cek <a href="company">Halaman Company</a> terlebih dahulu untuk memeriksa Nomor Company<br> Inputan: Tulis "001" untuk No Company "2018001"</p>
+                                <input  name="no_company" autofocus id="mycompany" placeholder="<?php echo date("Y");?>XXX (3 digit terakhir Nomor Company)" style="color: black" required class="form-control" type="text" >
+                                <p>Cek <a href="<?php echo base_url();?> admin/company">Halaman Company</a> terlebih dahulu untuk memeriksa Nomor Company<br> Inputan: Tulis "001" untuk No Company "2018001"</p>
                             </div>
                         </div>
                         <div class="form-group" hidden>

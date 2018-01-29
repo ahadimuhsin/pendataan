@@ -11,6 +11,7 @@ class c_company extends CI_Controller{
 
     public function __construct()
     {
+        //memanggil helper yang akan digunakan
         parent::__construct();
         $this->load->helper('url');
         $this->load->model('company_model');
@@ -24,16 +25,6 @@ class c_company extends CI_Controller{
         $this->load->view('admin/add_company');
     }
 
-    function checkDateFormat($date) {
-        if (preg_match("/[0-31]{2}\/[0-12]{2}\/[0-9]{4}/", $date)) {
-            if(checkdate(substr($date, 3, 2), substr($date, 0, 2), substr($date, 6, 4)))
-                return true;
-            else
-                return false;
-        } else {
-            return false;
-        }
-    }
 
     public function company_add()
     {

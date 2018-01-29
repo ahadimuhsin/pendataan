@@ -6,7 +6,7 @@ class Admin extends CI_Controller{
 	function __construct(){
 		parent::__construct();
 
-
+//memanggil helper yang akan digunakan
 		$this->load->helper('url');
 		$this->load->model('company_model');
         $this->load->model('jasa_model');

@@ -10,6 +10,7 @@ class c_jasa extends CI_Controller
 {
     public function __construct()
     {
+        //memanggil helper yang akan digunakan
         parent::__construct();
         $this->load->helper('url');
         $this->load->model('jasa_model');
