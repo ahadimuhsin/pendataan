@@ -131,7 +131,7 @@
             <br><br>
             <table cellpadding="0" cellspacing="0" border="0" width="100%" class="table table-bordered table-responsive" id="example">
                 <thead>
-                <tr style="background-color: #0069d9">
+                <tr style="background-color: #2a9fd6">
                     <th width="200px">No. Jaringan</th>
                     <th width="200px">Nomor Company</th>
                     <th width="200px">Company</th>

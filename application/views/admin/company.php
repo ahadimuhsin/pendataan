@@ -7,7 +7,7 @@
     <title>Lintas Media Danawa</title>
     <LINK REL="SHORTCUT ICON" href="<?php base_url();?>/assets/image/lmd.ico" />
 <!--    <link rel="stylesheet" type="text/css" href="--><?php //echo base_url(); ?><!--/assets/bootstrap/css/bootstrap.min.css" />-->
-<!--    <link rel="stylesheet" type="text/css" href="--><?php //echo base_url(); ?><!--/assets/bootstrap/css/bootstrap.css" />-->
+    <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>/assets/bootstrap/css/bootstrap.css" />
 
     <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>/assets/bootstrap/css/DT_bootstrap.css" />
     <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>/assets/datatables/css/dataTables.bootstrap.css" />
@@ -102,7 +102,7 @@
                 <span class="icon-bar"></span>
             </button>
 
-            <a class="navbar-brand" style="text-align: right">Admin Panel</a>
+            <a class="navbar-brand" style="color: white">Admin Panel</a>
 <!--            <img src="--><?php //echo base_url();?><!--assets/image/logo.png" align="center" width="30" height="20">-->
         </div>
         <div class="collapse navbar-collapse navbar-ex1-collapse">
@@ -121,7 +121,7 @@
     <div id="page-wrapper" >
 
             <div class="col-lg-12 span">
-                <a class="btn btn-success"  onclick="add_company()"role="button" ><i class="glyphicon glyphicon-plus"></i> Add Company</a>
+                <a class="btn btn-success"  onclick="add_company()"role="button" style="color: white"><i class="glyphicon glyphicon-plus"></i> Add Company</a>
                 <a href="<?php echo base_url("index.php/c_company/export");?>" class="btn btn-info" role="button"><i class ="fa fa-file-excel-o"></i> Save as Excel file</a>
                 <input type="button" value="Show All Columns" class="btn btn-primary" id="showColumns" onclick="return changeColumn(this)">
             </div></br> </br>
@@ -130,7 +130,7 @@
                             <br><br>
                             <table cellpadding="0" cellspacing="0" border="0" width="100%" class="table table-responsive table-bordered" id="example">
                                 <thead>
-                                <tr style="background-color: #0069d9">
+                                <tr style="background-color: #2a9fd6">
                         <th width="200px">Nomor Company</th>
                         <th width="200px">NPWP</th>
                         <th width="200px">Company</th>
