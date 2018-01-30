@@ -370,3 +370,7 @@ div.FixedHeader_Cloned table {
 	margin: 0 !important
 }
 
+td.dataTables_empty{
+	text-align:center;
+	color: black;
+}

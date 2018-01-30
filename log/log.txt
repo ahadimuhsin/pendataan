@@ -44,3 +44,29 @@
 29:01:18 16:35:57 admin menambahkan data pelayanan jasa dengan nomor SPK 52423432
 29:01:18 16:44:15 admin menambahkan data pelayanan jasa dengan nomor SPK 4435345345
 29:01:18 16:48:19 admin menambahkan data pelayanan jasa dengan nomor SPK 214124
+30:01:18 08:21:21 admin telah login
+30:01:18 09:04:55 admin menambahkan data perusahaan Puskom
+30:01:18 09:05:47 admin menambahkan data perusahaan Perpustakaan
+30:01:18 10:19:32 admin menghapus data pelayanan jasa dengan nomor jaringan  2018000019
+30:01:18 10:19:35 admin menghapus data pelayanan jasa dengan nomor jaringan  2018000018
+30:01:18 10:19:39 admin menghapus data pelayanan jasa dengan nomor jaringan  2018000035
+30:01:18 10:20:15 admin menambahkan data pelayanan jasa dengan nomor SPK 34254535
+30:01:18 10:36:03 admin menambahkan data pelayanan jasa dengan nomor SPK 32425234
+30:01:18 10:56:13 admin mendownload data perusahaan
+30:01:18 12:05:59 admin menghapus data pelayanan jasa dengan nomor jaringan  2018000017
+30:01:18 12:06:04 admin menghapus data pelayanan jasa dengan nomor jaringan  2018000017
+30:01:18 12:06:08 admin menghapus data pelayanan jasa dengan nomor jaringan  2018000034
+30:01:18 13:31:42 admin menambahkan data perusahaan a
+30:01:18 14:01:56 admin menambahkan data perusahaan FMIPA
+30:01:18 14:13:16 admin menambahkan data pelayanan jasa dengan nomor SPK 32423423424
+30:01:18 14:14:05 admin menambahkan data pelayanan jasa dengan nomor SPK 323313
+30:01:18 14:26:55 admin menghapus data pelayanan jasa dengan nomor jaringan  2018000038
+30:01:18 14:29:26 admin menambahkan data pelayanan jasa dengan nomor SPK 4234234234
+30:01:18 14:31:14 admin menambahkan data perusahaan fwfwe
+30:01:18 14:36:08 admin menambahkan data pelayanan jasa dengan nomor SPK 23123
+30:01:18 14:37:41 admin menambahkan data pelayanan jasa dengan nomor SPK 3424234
+30:01:18 14:38:32 admin menambahkan data pelayanan jasa dengan nomor SPK 4234234
+30:01:18 14:39:48 admin menambahkan data pelayanan jasa dengan nomor SPK 3213123
+30:01:18 14:46:34 admin menghapus data pelayanan jasa dengan nomor jaringan  2018000045
+30:01:18 14:46:39 admin menghapus data pelayanan jasa dengan nomor jaringan  2018000043
+30:01:18 14:46:41 admin menghapus data pelayanan jasa dengan nomor jaringan  2018000042

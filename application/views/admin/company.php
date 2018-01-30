@@ -6,12 +6,11 @@
     <meta charset="utf-8">
     <title>Lintas Media Danawa</title>
     <LINK REL="SHORTCUT ICON" href="<?php base_url();?>/assets/image/lmd.ico" />
-    <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>/assets/bootstrap/css/bootstrap.min.css" />
-    <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>/assets/bootstrap/css/bootstrap.css" />
+<!--    <link rel="stylesheet" type="text/css" href="--><?php //echo base_url(); ?><!--/assets/bootstrap/css/bootstrap.min.css" />-->
+<!--    <link rel="stylesheet" type="text/css" href="--><?php //echo base_url(); ?><!--/assets/bootstrap/css/bootstrap.css" />-->
 
     <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>/assets/bootstrap/css/DT_bootstrap.css" />
     <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>/assets/datatables/css/dataTables.bootstrap.css" />
-<!--    <link rel="stylesheet" type="text/css" href="--><?php //echo base_url(); ?><!--/assets/datatables/css/jquery.dataTables.min.css" />-->
     <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>/assets/datatables/js/dataTables.bootstrap.js" />
     <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>/assets/datatables/js/jquery.dataTables.min.js" />
 
@@ -19,10 +18,6 @@
     <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>/assets/css/local.css" />
     <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>/assets/css/jquery-ui.css" />
     <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>/assets/css/jquery-ui.min.css" />
-
-
-
-    <!--        <link rel="stylesheet" type="text/css" href="--><?php //echo base_url(); ?><!--/assets/css/bootstrap.css" />-->
 
 
     <script type="text/javascript" src="<?php echo base_url(); ?>/assets/js/jquery-1.10.2.min.js"></script>
@@ -107,7 +102,7 @@
                 <span class="icon-bar"></span>
             </button>
 
-            <a class="navbar-brand" >Admin Panel</a>
+            <a class="navbar-brand" style="text-align: right">Admin Panel</a>
 <!--            <img src="--><?php //echo base_url();?><!--assets/image/logo.png" align="center" width="30" height="20">-->
         </div>
         <div class="collapse navbar-collapse navbar-ex1-collapse">
@@ -135,7 +130,7 @@
                             <br><br>
                             <table cellpadding="0" cellspacing="0" border="0" width="100%" class="table table-responsive table-bordered" id="example">
                                 <thead>
-                                <tr style="background-color: grey">
+                                <tr style="background-color: #0069d9">
                         <th width="200px">Nomor Company</th>
                         <th width="200px">NPWP</th>
                         <th width="200px">Company</th>
@@ -158,21 +153,21 @@
                     <tbody>
                     <?php foreach($company as $company){?>
                         <tr >
-                            <td style="background-color: black"><?php echo date("Y").sprintf("%03s", $company->no_company);?></td>
-                            <td style="background-color: black"><?php echo $company->npwp;?></td>
-                            <td style="background-color: black"><?php echo $company->company;?></td>
-                            <td style="background-color: black"><?php echo $company->parent_company;?></td>
-                            <td style="background-color: black"><?php echo $company->address;?></td>
-                            <td style="background-color: black"><?php echo $company->city;?></td>
-                            <td style="background-color: black"><?php echo $company->contact_person;?></td>
-                            <td style="background-color: black"><?php echo $company->title;?></td>
-                            <td style="background-color: black" class="isiemail"><?php echo $company->email;?></td>
-                            <td style="background-color: black" class="isiphone"><?php echo $company->phone;?></td>
-                            <td style="background-color: black" class="isimobile"><?php echo $company->mobile;?></td>
-                            <td style="background-color: black" class="isibusiness"><?php echo $company->business_consultant;?></td>
-                            <td style="background-color: black" class="isidate"><?php echo $company->join_date;?></td>
-                            <td style="background-color: black" class="isiassignment"><?php echo $company->assignment;?></td>
-                            <td class="printoff" style="background-color: black">
+                            <td style="color: black; background-color: whitesmoke"><?php echo date("Y").sprintf("%03s", $company->no_company);?></td>
+                            <td style="color: black; background-color: whitesmoke"><?php echo $company->npwp;?></td>
+                            <td style="color: black; background-color: whitesmoke"><?php echo $company->company;?></td>
+                            <td style="color: black; background-color: whitesmoke"><?php echo $company->parent_company;?></td>
+                            <td style="color: black; background-color: whitesmoke"><?php echo $company->address;?></td>
+                            <td style="color: black; background-color: whitesmoke"><?php echo $company->city;?></td>
+                            <td style="color: black; background-color: whitesmoke"><?php echo $company->contact_person;?></td>
+                            <td style="color: black; background-color: whitesmoke"><?php echo $company->title;?></td>
+                            <td style="color: black; background-color: whitesmoke" class="isiemail"><?php echo $company->email;?></td>
+                            <td style="color: black; background-color: whitesmoke" class="isiphone"><?php echo $company->phone;?></td>
+                            <td style="color: black; background-color: whitesmoke" class="isimobile"><?php echo $company->mobile;?></td>
+                            <td style="color: black; background-color: whitesmoke" class="isibusiness"><?php echo $company->business_consultant;?></td>
+                            <td style="color: black; background-color: whitesmoke" class="isidate"><?php echo $company->join_date;?></td>
+                            <td style="color: black; background-color: whitesmoke" class="isiassignment"><?php echo $company->assignment;?></td>
+                            <td class="printoff" style="color: black; background-color: whitesmoke">
                                 <button class="btn btn-warning printoff" title="Edit" onclick="edit_company(<?php echo $company->no_company;?>)"><i class="glyphicon glyphicon-edit"></i></button>
                                 <button class="btn btn-danger printoff" title="Delete" onclick="delete_company(<?php echo $company->no_company;?>)"><i class="glyphicon glyphicon-remove-sign"></i></button>
 
@@ -516,10 +511,11 @@
             }
         }
 
+
     </script>
     <!-- Bootstrap modal -->
-    <div class="modal fade mymodal" style="width: 100%" id="modal_form" role="dialog">
-        <div class="modal-dialog ">
+    <div class="modal fade mymodal modal-lg" style="right: 50%; left: 25%;" id="modal_form" role="dialog">
+        <div class="modal-dialog modal-lg" style="align-content: center">
             <div class="modal-content">
                 <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
@@ -560,10 +556,6 @@
                                 <label class="control-label " for="address">&nbsp &nbsp&nbspAddress</label>
                                 <div class="col-md-12">
                                     <input name="address" placeholder="Address" style="color: black" required class="form-control" type="text">
-<!--                                    <select name="nama_supplier">-->
-<!--                                        --><?php //foreach($supplier as $supplier){?>
-<!--                                            <option value="--><?php //echo $supplier->nama;?><!--">--><?php //echo $supplier->nama;?><!--</option>-->
-<!--                                        --><?php //} ?>
 
                                 </div>
                             </div>
@@ -579,15 +571,16 @@
                                     <input name="contact_person" style="color: black" required placeholder="Contact Person" class="form-control" type="text">
                                 </div>
                             </div>
+                            </div>
+
+                            <!--                            Right Column-->
+                            <div class="col-sm-6">
                             <div class="form-group">
                                 <label class="control-label " for="title">&nbsp &nbsp&nbspTitle</label>
                                 <div class="col-md-12">
                                     <input name="title" placeholder="Title" style="color: black" required class="form-control" type="text">
                                 </div>
                             </div>
-                            </div>
-<!--                            Right Column-->
-                            <div class="col-sm-6">
 
                             <div class="form-group">
                                 <label class="control-label " for="email">&nbsp &nbsp&nbspEmail</label>
@@ -650,17 +643,17 @@
                             </div>
                             </div>
                         </div>
-                </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-danger" data-dismiss="modal">Cancel</button>
-                            <button type="submit" id="btnSave "class="btn btn-primary" onclick="save()">Save</button>
-                        </div>
-
-                    </form>
-
-
-            </div><!-- /.modal-content -->
-        </div><!-- /.modal-dialog -->
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-danger" data-dismiss="modal">Cancel</button>
+                                <button type="submit" id="btnSave "class="btn btn-primary" onclick="save()">Save</button>
+                            </div>
+                        </form>
+                 </div>
+                    </div>
+                    </div>
+    </div>
+<!-- /.modal-content -->
+      <!-- /.modal-dialog -->
     <!-- /.modal -->
     <!-- End Bootstrap modal -->
 

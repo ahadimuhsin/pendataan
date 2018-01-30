@@ -7,12 +7,11 @@
     <title>Lintas Media Danawa</title>
     <LINK REL="SHORTCUT ICON" href="<?php base_url();?>/assets/image/lmd.ico" />
 <!--  bagian css  -->
-    <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>/assets/bootstrap/css/bootstrap.min.css" />
+<!--    <link rel="stylesheet" type="text/css" href="--><?php //echo base_url(); ?><!--/assets/bootstrap/css/bootstrap.min.css" />-->
     <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>/assets/bootstrap/css/bootstrap.css" />
 
     <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>/assets/bootstrap/css/DT_bootstrap.css" />
     <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>/assets/datatables/css/dataTables.bootstrap.css" />
-    <!--    <link rel="stylesheet" type="text/css" href="--><?php //echo base_url(); ?><!--/assets/datatables/css/jquery.dataTables.min.css" />-->
     <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>/assets/datatables/js/dataTables.bootstrap.js" />
     <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>/assets/datatables/js/jquery.dataTables.min.js" />
 
@@ -21,9 +20,6 @@
     <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>/assets/css/jquery-ui.css" />
     <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>/assets/css/jquery-ui.min.css" />
 
-
-
-    <!--        <link rel="stylesheet" type="text/css" href="--><?php //echo base_url(); ?><!--/assets/css/bootstrap.css" />-->
 
 
     <script type="text/javascript" src="<?php echo base_url(); ?>/assets/js/jquery-1.10.2.min.js"></script>
@@ -40,7 +36,6 @@
 
 
     <script type="text/javascript" src="<?php echo base_url(); ?>/assets/js/jquery-1.10.1.js"></script>
-    <script type="text/javascript" src="<?php echo base_url(); ?>/assets/js/form-validation-company.js"></script>
     <script type="text/javascript" src="<?php echo base_url(); ?>/assets/js/form-validation-jasa.js"></script>
     <script type="text/javascript" src="<?php echo base_url(); ?>/assets/bootstrap/js/bootstrap.min.js"></script>
 
@@ -107,11 +102,11 @@
                 <span class="icon-bar"></span>
             </button>
 
-            <a class="navbar-brand" >Admin Panel</a>
+            <a class="navbar-brand" style="text-align: center; color: white" >Admin Panel</a>
             <!--            <img src="--><?php //echo base_url();?><!--assets/image/logo.png" align="center" width="30" height="20">-->
         </div>
         <div class="collapse navbar-collapse navbar-ex1-collapse">
-            <ul id="active" class="nav navbar-nav side-nav">
+            <ul id="active" class="nav navbar-nav side-nav" style="top: 60px">
                 <li><a href="<?php base_url()?>welcome"><i class="fa fa-home"></i> Dashboard</a></li>
                 <li><a href="<?php base_url()?>company"><i class="fa fa-building-o"></i> Company</a></li>
                 <li><a href="<?php base_url()?>jasa"><i class="fa fa-handshake-o"></i> Pelayanan Jasa</a></li>
@@ -126,7 +121,7 @@
     <div id="page-wrapper">
 
         <div class="col-lg-12 span">
-            <a class="btn btn-success"  onclick="add_jasa()"   role="button" ><i class="glyphicon glyphicon-plus"></i> Add Jasa</a>
+            <a class="btn btn-success"  onclick="add_jasa()" style="color: white"  role="button" ><i class="glyphicon glyphicon-plus"></i> Add Jasa</a>
             <a href="<?php echo base_url("index.php/c_jasa/export");?>" class="btn btn-info" role="button"><i class ="fa fa-file-excel-o"></i> Save as Excel file</a>
             <input type="button" value="Show All Columns" class="btn btn-primary" id="showColumns" onclick="return changeColumn(this)">
 
@@ -136,7 +131,7 @@
             <br><br>
             <table cellpadding="0" cellspacing="0" border="0" width="100%" class="table table-bordered table-responsive" id="example">
                 <thead>
-                <tr style="background-color: grey">
+                <tr style="background-color: #0069d9">
                     <th width="200px">No. Jaringan</th>
                     <th width="200px">Nomor Company</th>
                     <th width="200px">Company</th>
@@ -162,25 +157,25 @@
                 <tbody>
                 <?php foreach($jasa as $jasa){?>
                     <tr>
-                        <td style="background-color: black" class="active"><?php echo date("Y").sprintf("%06s", $jasa->no_jaringan);?></td>
-                        <td style="background-color: black" class="active"><?php echo date("Y").sprintf("%03s", $jasa->no_company);?></td>
-                        <td style="background-color: black" class="active"><?php echo $jasa->company;?></td>
-                        <td style="background-color: black" class="active"><?php echo $jasa->parent_company;?></td>
-                        <td style="background-color: black" class="active"><?php echo $jasa->business_consultant;?></td>
-                        <td style="background-color: black" class="active"><?php echo $jasa->assignment;?></td>
-                        <td style="background-color: black" class="active"><?php echo $jasa->subservices;?></td>
-                        <td style="background-color: black" class="active"><?php echo $jasa->services;?></td>
-                        <td style="background-color: black" class="active"><?php echo $jasa->product_family;?></td>
-                        <td style="background-color: black" class="startdate active"><?php echo $jasa->contract_start_date;?></td>
-                        <td style="background-color: black" class="end_date active"><?php echo $jasa->contract_end_date;?></td>
-                        <td style="background-color: black" class="spk_number active"><?php echo $jasa->spk_number;?></td>
-                        <td style="background-color: black" class="spk_date active"><?php echo $jasa->spk_date;?></td>
-                        <td style="background-color: black" class="spk_handover_date active"><?php echo $jasa->spk_handover_date;?></td>
-                        <td style="background-color: black" class="otc active"><?php echo $jasa->otc;?></td>
-                        <td style="background-color: black" class="mrc active"><?php echo $jasa->mrc;?></td>
-                        <td style="background-color: black" class="type active"><?php echo $jasa->type;?></td>
-                        <td style="background-color: black" class="keterangan active"><?php echo $jasa->keterangan;?></td>
-                        <td     style="background-color: black">
+                        <td style="color: black; background-color: whitesmoke" ><?php echo date("Y").sprintf("%06s", $jasa->no_jaringan);?></td>
+                        <td style="color: black; background-color: whitesmoke" ><?php echo date("Y").sprintf("%03s", $jasa->no_company);?></td>
+                        <td style="color: black; background-color: whitesmoke" ><?php echo $jasa->company;?></td>
+                        <td style="color: black; background-color: whitesmoke" ><?php echo $jasa->parent_company;?></td>
+                        <td style="color: black; background-color: whitesmoke" ><?php echo $jasa->business_consultant;?></td>
+                        <td style="color: black; background-color: whitesmoke" ><?php echo $jasa->assignment;?></td>
+                        <td style="color: black; background-color: whitesmoke" ><?php echo $jasa->subservices;?></td>
+                        <td style="color: black; background-color: whitesmoke" ><?php echo $jasa->services;?></td>
+                        <td style="color: black; background-color: whitesmoke" ><?php echo $jasa->product_family;?></td>
+                        <td style="color: black; background-color: whitesmoke" class="startdate "><?php echo $jasa->contract_start_date;?></td>
+                        <td style="color: black; background-color: whitesmoke" class="end_date "><?php echo $jasa->contract_end_date;?></td>
+                        <td style="color: black; background-color: whitesmoke" class="spk_number "><?php echo $jasa->spk_number;?></td>
+                        <td style="color: black; background-color: whitesmoke" class="spk_date "><?php echo $jasa->spk_date;?></td>
+                        <td style="color: black; background-color: whitesmoke" class="spk_handover_date"><?php echo $jasa->spk_handover_date;?></td>
+                        <td style="color: black; background-color: whitesmoke" class="otc"><?php echo $jasa->otc;?></td>
+                        <td style="color: black; background-color: whitesmoke" class="mrc "><?php echo $jasa->mrc;?></td>
+                        <td style="color: black; background-color: whitesmoke" class="type"><?php echo $jasa->type;?></td>
+                        <td style="color: black; background-color: whitesmoke" class="keterangan "><?php echo $jasa->keterangan;?></td>
+                        <td     style="color: black; background-color: whitesmoke">
                             <button class="btn btn-warning printoff" title="Edit" onclick="edit_jasa(<?php echo $jasa->no_jaringan;?>)"><i class="glyphicon glyphicon-edit"></i></button>
                             <button class="btn btn-danger printoff" title="Delete" onclick="delete_jasa(<?php echo $jasa->no_jaringan;?>)"><i class="glyphicon glyphicon-remove-sign"></i></button>
 
@@ -523,8 +518,8 @@
 
 </script>
 <!-- Bootstrap modal -->
-<div class="modal fade" style="width: 100%" id="modal_form" role="dialog">
-    <div class="modal-dialog">
+<div class="modal fade modal-lg" style="right: 50%; left: 25%;" id="modal_form" role="dialog">
+    <div class="modal-dialog modal-lg">
         <div class="modal-content">
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
@@ -537,7 +532,7 @@
                         <div class="col-sm-6">
                         <div class="form-group">
                             <label class="control-label" for="no_company">&nbsp &nbsp&nbspNo Company</label>
-                            <div class="col-sm-12">
+                            <div class="col-md-12">
                                 <input  name="no_company" autofocus id="mycompany" placeholder="<?php echo date("Y");?>XXX (3 digit terakhir Nomor Company)" style="color: black" required class="form-control" type="text" >
                                 <p>Cek <a href="<?php echo base_url();?>admin/company">Halaman Company</a> terlebih dahulu untuk memeriksa Nomor Company<br> Inputan: Tulis "001" untuk No Company "2018001"</p>
                             </div>
@@ -551,7 +546,7 @@
                         <div class="form-group">
 
                             <label class="control-label" for="subservices">&nbsp &nbsp&nbspSub Services</label>
-                            <div class="col-sm-12">
+                            <div class="col-md-12">
                                 <select id='subservices' style="height:40px; color: black" required class="form-control" name="subservices" >
                                     <option value="" disabled selected hidden>Pilih Salah Satu</option>
                                     <option value="Cloud Server">Cloud Server</option>
@@ -586,70 +581,70 @@
 <!--                            Bagian Cloud Server-->
                         <div class="form-group" id='cloud_server_services'>
                             <label  for="services">&nbsp &nbsp&nbspServices</label>
-                            <div class="col-sm-12">
+                            <div class="col-md-12">
                                 <input name="services" placeholder="Services" value="Cloud Server" style="color: black" readonly required class="form-control" type="text">
                             </div>
                         </div>
 
                         <div class="form-group" id='cloud_server_product'>
                             <label class="control-label" for="product_family">&nbsp &nbsp&nbspProduct Family</label>
-                            <div class="col-sm-12">
+                            <div class="col-md-12">
                                 <input name="product_family" placeholder="Product Family" value="Cloud Services" readonly style="color: black" required class="form-control" type="text">
                             </div>
                         </div>
 <!--                    Bagian Managed Server-->
                         <div class="form-group" id='managed_server_services'>
                             <label class="control-label" for="services">&nbsp &nbsp&nbspServices</label>
-                            <div class="col-sm-12">
+                            <div class="col-md-12">
                                 <input name="services" placeholder="Services" value="Managed Server" style="color: black" required readonly class="form-control" type="text">
                             </div>
                         </div>
 
                         <div class="form-group" id='managed_server_product'>
                             <label class="control-label" for="product_family">&nbsp &nbsp&nbspProduct Family</label>
-                            <div class="col-sm-12">
+                            <div class="col-md-12">
                                 <input name="product_family" placeholder="Product Family" value="Managed Services" style="color: black" required readonly class="form-control" type="text">
                             </div>
                         </div>
 <!--                            Bagian Managed Wifi-->
                         <div class="form-group" id='managed_wifi_services'>
                             <label class="control-label" for="services">&nbsp &nbsp&nbspServices</label>
-                            <div class="col-sm-12">
+                            <div class="col-md-12">
                                 <input name="services" placeholder="Services" value="Managed Wifi" style="color: black" required readonly class="form-control" type="text">
                             </div>
                         </div>
 
                         <div class="form-group" id='managed_wifi_product'>
                             <label class="control-label" for="product_family">&nbsp &nbsp&nbspProduct Family</label>
-                            <div class="col-sm-12">
+                            <div class="col-md-12">
                                 <input name="product_family" placeholder="Product Family" value="Managed Services" style="color: black" required readonly class="form-control" type="text">
                             </div>
                         </div>
 <!--                        Bagian Managed Mail-->
                         <div class="form-group" id='managed_mail_services'>
                             <label class="control-label" for="services">&nbsp &nbsp&nbspServices</label>
-                            <div class="col-sm-12">
+                            <div class="col-md-12">
                                 <input name="services" placeholder="Services" value="Managed Application" style="color: black" required readonly class="form-control" type="text">
                             </div>
                         </div>
 
                         <div class="form-group" id='managed_mail_product'>
                             <label class="control-label" for="product_family">&nbsp &nbsp&nbspProduct Family</label>
-                            <div class="col-sm-12">
+                            <div class="col-md-12">
                                 <input name="product_family" placeholder="Product Family" value="Managed Services" style="color: black" required readonly class="form-control" type="text">
                             </div>
                         </div>
 <!--                        Bagian Managed Radius-->
                         <div class="form-group" id='managed_radius_services'>
                             <label class="control-label" for="services">&nbsp &nbsp&nbspServices</label>
-                            <div class="col-sm-12">
+                            <div class="col-md-12">
                                 <input name="services" placeholder="Services" value="Managed Application" style="color: black" required readonly class="form-control" type="text">
                             </div>
                         </div>
 
                         <div class="form-group" id='managed_radius_product'>
                             <label class="control-label" for="product_family">&nbsp &nbsp&nbspProduct Family</label>
-                            <div class="col-sm-12">
+                            <div class="col-md-12">
                                 <input name="product_family" placeholder="Product Family" value="Managed Services" style="color: black" required readonly class="form-control" type="text">
                             </div>
                         </div>
@@ -657,28 +652,28 @@
 <!--                        Bagian IT Solution-->
                         <div class="form-group" id='it_solution_services'>
                             <label class="control-label" for="services">&nbsp &nbsp&nbspServices</label>
-                            <div class="col-sm-12">
+                            <div class="col-md-12">
                                 <input name="services" placeholder="Services" value="Professional Services" style="color: black" required readonly class="form-control" type="text">
                             </div>
                         </div>
 
                         <div class="form-group" id='it_solution_product'>
                             <label class="control-label" for="product_family">&nbsp &nbsp&nbspProduct Family</label>
-                            <div class="col-sm-12">
+                            <div class="col-md-12">
                                 <input name="product_family" placeholder="Product Family" value="Managed Services" style="color: black" required readonly class="form-control" type="text">
                             </div>
                         </div>
 <!--                   Bagian Salesforce -->
                         <div class="form-group" id='salesforce_services'>
                             <label class="control-label" for="services">&nbsp &nbsp&nbspServices</label>
-                            <div class="col-sm-12">
+                            <div class="col-md-12">
                                 <input name="services" placeholder="Services" value="CRM Salesforce.com" style="color: black" required readonly class="form-control" type="text">
                             </div>
                         </div>
                         <!--                    Bagian Microsoft-->
                         <div class="form-group" id='microsoft_services'>
                             <label class="control-label" for="services">&nbsp &nbsp&nbspServices</label>
-                            <div class="col-sm-12">
+                            <div class="col-md-12">
                                 <input name="services" placeholder="Services" value="Microsoft" style="color: black" required readonly class="form-control" type="text">
                             </div>
                         </div>
@@ -686,46 +681,46 @@
 <!--                      Cozytizen  -->
                         <div class="form-group" id='cozytizen_services'>
                             <label class="control-label" for="services">&nbsp &nbsp&nbspServices</label>
-                            <div class="col-sm-12">
+                            <div class="col-md-12">
                                 <input name="services" placeholder="Services" value="Cozytizen" style="color: black" required readonly class="form-control" type="text">
                             </div>
                         </div>
 <!--                      Application  -->
                         <div class="form-group" id='application_services'>
                             <label class="control-label" for="services">&nbsp &nbsp&nbspServices</label>
-                            <div class="col-sm-12">
+                            <div class="col-md-12">
                                 <input name="services" placeholder="Services" value="Application Development" style="color: black" required readonly class="form-control" type="text">
                             </div>
                         </div>
 <!--                      SMS Corporate  -->
                         <div class="form-group" id='sms_services'>
                             <label class="control-label" for="services">&nbsp &nbsp&nbspServices</label>
-                            <div class="col-sm-12">
+                            <div class="col-md-12">
                                 <input name="services" placeholder="Services" value="SMS Corporate" style="color: black" required readonly class="form-control" type="text">
                             </div>
                         </div>
                         <div class="form-group" id='salesforce_product'>
                             <label class="control-label" for="product_family">&nbsp &nbsp&nbspProduct Family</label>
-                            <div class="col-sm-12">
+                            <div class="col-md-12">
                                 <input name="product_family" placeholder="Product Family" value="SaaS" style="color: black" required readonly class="form-control" type="text">
                             </div>
                         </div>
 <!--                                    End-->
                         <div class="form-group">
                             <label class="control-label" for="contract_start_date">&nbsp &nbsp&nbspContract Start Date</label>
-                            <div class="col-sm-12">
+                            <div class="col-md-12">
                                 <input name="contract_start_date" style="color: black" required placeholder="Contract Start Date" id="start_date" class="form-control" type="date">
                             </div>
                         </div>
                         <div class="form-group">
                             <label class="control-label" for="contract_end_date">&nbsp &nbsp&nbspContract End Date</label>
-                            <div class="col-sm-12">
+                            <div class="col-md-12">
                                 <input name="contract_end_date" placeholder="Contract End Date" style="color: black" id="end_date" required class="form-control" type="date">
                             </div>
                         </div>
                         <div class="form-group">
                             <label class="control-label" for="spk_number">&nbsp &nbsp&nbspSPK/SO/Quote Number</label>
-                            <div class="col-sm-12">
+                            <div class="col-md-12">
                                 <input name="spk_number" placeholder="SPK/SO/Quote Number" style="color: black" required class="form-control" type="number">
                             </div>
                         </div>
@@ -735,13 +730,13 @@
                         <div class="col-sm-6">
                         <div class="form-group">
                             <label class="control-label" for="spk_date">&nbsp &nbsp&nbspTanggal SPK Terbit</label>
-                            <div class="col-sm-12">
+                            <div class="col-md-12">
                                 <input name="spk_date" placeholder="Tanggal SPK Terbit" style="color: black" required class="form-control" type="date">
                             </div>
                         </div>
                         <div class="form-group">
                             <label class="control-label" for="spk_handover_date">&nbsp &nbsp&nbspWaktu Penyerahan SPK</label>
-                            <div class="col-sm-12">
+                            <div class="col-md-12">
                                 <input name="spk_handover_date" placeholder="Waktu Penyerahan SPK" style="color: black" required class="form-control" type="date">
                             </div>
                         </div>
@@ -749,20 +744,20 @@
 
                         <div class="form-group">
                             <label class="control-label" for="otc">&nbsp &nbsp&nbspOTC</label>
-                                <div class="col-sm-12">
+                                <div class="col-md-12">
                                     <input name="otc" placeholder="OTC" style="color: black" required class="form-control" type="number">
                                 </div>
                         </div>
 
                         <div class="form-group">
                             <label  class="control-label" for="mrc">&nbsp &nbsp&nbspMRC</label>
-                            <div class="col-sm-12">
+                            <div class="col-md-12">
                                 <input name="mrc" placeholder="MRC" style="color: black" required class="form-control" type="number">
                             </div>
                         </div>
                         <div class="form-group">
                             <label class="control-label" for="type">&nbsp &nbsp&nbspType</label>
-                            <div class="col-sm-12">
+                            <div class="col-md-12">
                                 <select name="type" style="height: 40px; color: black" class="form-control" required>
                                     <option value="" disabled selected hidden>Pilih Salah Satu</option>
                                     <option value="Monthly">Monthly</option>
@@ -773,25 +768,23 @@
                             </div>
                         <div class="form-group">
                             <label class="control-label" for="keterangan">&nbsp &nbsp&nbspKeterangan</label>
-                            <div class="col-sm-12">
+                            <div class="col-md-12">
                                 <input name="keterangan" placeholder="Keterangan" required style="color: black" class="form-control" type="text">
                             </div>
                         </div>
                         </div>
                     </div>
-            </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-danger" data-dismiss="modal">Cancel</button>
-                        <button type="submit" id="btnSave "class="btn btn-primary" onclick="save()">Save</button>
-                    </div>
-                    </div>
-
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-danger" data-dismiss="modal">Cancel</button>
+                            <button type="submit" id="btnSave "class="btn btn-primary" onclick="save()">Save</button>
+                        </div>
                 </form>
-
-
+            </div>
+    </div>
+    </div>
         <!-- /.modal-content -->
     </div><!-- /.modal-dialog -->
-</div><!-- /.modal -->
+<!-- /.modal -->
 <!-- End Bootstrap modal -->
 
 

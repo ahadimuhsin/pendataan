@@ -3860,6 +3860,7 @@ tbody.collapse.show {
   font-size: 1.25rem;
   line-height: inherit;
   white-space: nowrap;
+  text-align: left;
 }
 
 .navbar-brand:focus, .navbar-brand:hover {
@@ -5352,14 +5353,16 @@ button.close {
   left: 0;
   z-index: 1050;
   display: none;
-  overflow: hidden;
+  overflow: visible;
   outline: 0;
   width: 2000px;
+
+  /*overflow-y: scroll;*/
 }
 
 .modal-open .modal {
   overflow-x: hidden;
-  overflow-y: auto;
+  overflow-y: hidden;
 }
 
 .modal-dialog {
@@ -5417,7 +5420,7 @@ button.close {
   bottom: 0;
   left: 0;
   z-index: 1040;
-  background-color: #000;
+  background-color: white;
 }
 
 .modal-backdrop.fade {
@@ -5429,29 +5432,19 @@ button.close {
 }
 
 .modal-header {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: start;
-  -ms-flex-align: start;
-  align-items: flex-start;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  padding: 1rem;
-  border-bottom: 1px solid #e9ecef;
-  border-top-left-radius: 0.3rem;
-  border-top-right-radius: 0.3rem;
+  padding: 15px;
+  border-bottom: 1px solid #282828;
+  min-height: 16.42857143px;
 }
 
 .modal-header .close {
-  padding: 1rem;
-  margin: -1rem -1rem -1rem auto;
+  margin-top: -2px;
 }
 
 .modal-title {
   margin-bottom: 0;
   line-height: 1.5;
+  text-align: left;
 }
 
 .modal-body {
@@ -5505,9 +5498,10 @@ button.close {
   }
 }
 
-@media (min-width: 992px) {
+@media (min-width: 900px) {
   .modal-lg {
     max-width: 800px;
+
   }
 }
 
@@ -8891,6 +8885,7 @@ a.text-dark:focus, a.text-dark:hover {
   .table td,
   .table th {
     background-color: #fff !important;
+    color: black;
   }
   .table-bordered th,
   .table-bordered td {
