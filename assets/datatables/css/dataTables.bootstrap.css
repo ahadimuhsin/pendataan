@@ -372,5 +372,6 @@ div.FixedHeader_Cloned table {
 
 td.dataTables_empty{
 	text-align:center;
+	background-color: white;
 	color: black;
 }
