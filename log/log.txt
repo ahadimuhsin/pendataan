@@ -113,3 +113,5 @@
 31:01:18 14:10:26 admin telah logout
 31:01:18 14:11:16 admin2 telah login
 31:01:18 14:12:30 admin2 telah logout
+31:01:18 14:23:15 admin telah login
+31:01:18 14:25:58 admin2 telah login

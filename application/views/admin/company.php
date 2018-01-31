@@ -475,17 +475,6 @@
                 }
             });
         }
-        $(document).ready(function () {
-            $('#tanggal').datepicker({
-                //merubah format tanggal datepicker ke dd-mm-yyyy
-                format: "dd-mm-yyyy",
-                //aktifkan kode dibawah untuk melihat perbedaanya, disable baris perintah diatasa
-                //format: "dd-mm-yyyy",
-                autoclose: true
-            });
-        });
-
-
 
 
         function delete_company(no_company)
