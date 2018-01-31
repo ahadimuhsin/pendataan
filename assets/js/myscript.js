@@ -717,6 +717,12 @@ $(document).ready(function () {
     $("#mobile").mask("+62999-9999-9999", {
          placeholder: "Mobile (awalan +62)"
         });
+    $("#nomorspk").mask("99999/I/SPK/-LA/9999",{
+       placeholder:"Format: Nomor/I/SPK/-LA/Tahun keluar SPK"
+    });
+$("#idotc").mask("#,##0.00", {reverse: true});
+$("#idmrc").mask("#,##0.00", {reverse: true});
+
 //$("#join_date").datepicker();
 $(document).ready(function () {
     var start_date = $("#start_date").val();

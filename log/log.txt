@@ -73,3 +73,43 @@
 30:01:18 15:06:29 admin menambahkan data perusahaan Fakultas Pertanian
 30:01:18 15:07:08 admin menambahkan data pelayanan jasa dengan nomor SPK 3424234
 30:01:18 16:21:57 admin telah login
+31:01:18 08:14:48 admin telah login
+31:01:18 08:37:06 admin menambahkan data pelayanan jasa dengan nomor SPK 67328/I/SPK/-LA/2018
+31:01:18 09:08:50 admin mendownload data pelayanan jasa
+31:01:18 09:51:06 admin telah login
+31:01:18 10:26:22 admin mengubah data pelayanan jasa dengan nomor jaringan  2018000049
+31:01:18 10:27:14 admin mengubah data pelayanan jasa dengan nomor jaringan  2018000047
+31:01:18 10:27:27 admin mengubah data pelayanan jasa dengan nomor jaringan  2018000047
+31:01:18 11:31:52 admin telah login
+31:01:18 11:34:44 admin menambahkan data pelayanan jasa dengan nomor SPK 23232/I/SPK/-LA/2018
+31:01:18 11:47:06 admin menambahkan data pelayanan jasa dengan nomor SPK 22222/I/SPK/-LA/2018
+31:01:18 12:02:58 admin menambahkan data pelayanan jasa dengan nomor SPK 22222/I/SPK/-LA/2018
+31:01:18 12:09:51 admin mengubah data pelayanan jasa dengan nomor jaringan  2018000047
+31:01:18 12:10:03 admin mengubah data pelayanan jasa dengan nomor jaringan  2018000049
+31:01:18 12:59:59  mendownload data pelayanan jasa
+31:01:18 13:04:21 admin telah login
+31:01:18 13:05:12 admin menambahkan data pelayanan jasa dengan nomor SPK 22222/I/SPK/-LA/2018
+31:01:18 13:05:26 admin mendownload data pelayanan jasa
+31:01:18 13:06:56 admin mengubah data pelayanan jasa dengan nomor jaringan  2018000047
+31:01:18 13:10:50 admin mengubah data pelayanan jasa dengan nomor jaringan  2018000047
+31:01:18 13:12:36 admin menambahkan data pelayanan jasa dengan nomor SPK 32132/I/SPK/-LA/2312
+31:01:18 13:17:42 admin menambahkan data pelayanan jasa dengan nomor SPK 12312/I/SPK/-LA/4242
+31:01:18 13:24:58 admin menghapus data pelayanan jasa dengan nomor jaringan  2018000055
+31:01:18 13:25:00 admin menghapus data pelayanan jasa dengan nomor jaringan  2018000051
+31:01:18 13:25:06 admin menghapus data pelayanan jasa dengan nomor jaringan  2018000054
+31:01:18 13:25:09 admin menghapus data pelayanan jasa dengan nomor jaringan  2018000053
+31:01:18 13:25:12 admin menghapus data pelayanan jasa dengan nomor jaringan  2018000052
+31:01:18 13:25:14 admin menghapus data pelayanan jasa dengan nomor jaringan  2018000050
+31:01:18 13:25:16 admin menghapus data pelayanan jasa dengan nomor jaringan  2018000049
+31:01:18 13:37:28 admin menambahkan data pelayanan jasa dengan nomor SPK 22222/I/SPK/-LA/2018
+31:01:18 13:40:00 admin menambahkan data pelayanan jasa dengan nomor SPK 23232/I/dPK/-Ls/2323
+31:01:18 13:43:03 admin menambahkan data pelayanan jasa dengan nomor SPK 32123/I/SPK/-LA/2312
+31:01:18 13:46:05 admin mengubah data pelayanan jasa dengan nomor jaringan  2018000047
+31:01:18 13:51:01 admin mengubah data pelayanan jasa dengan nomor jaringan  2018000047
+31:01:18 14:00:50 admin menambahkan data pelayanan jasa dengan nomor SPK 23232/I/
+31:01:18 14:03:24 admin mengubah data pelayanan jasa dengan nomor jaringan  2018000056
+31:01:18 14:03:46 admin mengubah data pelayanan jasa dengan nomor jaringan  2018000057
+31:01:18 14:10:09 admin telah login
+31:01:18 14:10:26 admin telah logout
+31:01:18 14:11:16 admin2 telah login
+31:01:18 14:12:30 admin2 telah logout

@@ -5353,7 +5353,7 @@ button.close {
   left: 0;
   z-index: 1050;
   display: none;
-  overflow: visible;
+  overflow: auto;
   outline: 0;
   width: 2000px;
 

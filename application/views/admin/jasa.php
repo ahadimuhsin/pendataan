@@ -19,6 +19,10 @@
     <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>/assets/css/local.css" />
     <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>/assets/css/jquery-ui.css" />
     <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>/assets/css/jquery-ui.min.css" />
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.3.0/css/datepicker.min.css" />
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.3.0/css/datepicker3.min.css" />
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.3.0/js/bootstrap-datepicker.min.js"></script>
 
 
 
@@ -33,7 +37,6 @@
     <script type="text/javascript" src="<?php echo base_url(); ?>/assets/js/jquery-3.2.1.js"></script>
     <script type="text/javascript" src="<?php echo base_url(); ?>/assets/js/jquery-ui.js"></script>
     <script type="text/javascript" src="<?php echo base_url(); ?>/assets/js/jquery-ui.min.js"></script>
-
 
     <script type="text/javascript" src="<?php echo base_url(); ?>/assets/js/jquery-1.10.1.js"></script>
     <script type="text/javascript" src="<?php echo base_url(); ?>/assets/js/form-validation-jasa.js"></script>
@@ -109,7 +112,7 @@
             <ul id="active" class="nav navbar-nav side-nav" style="top: 60px">
                 <li><a href="<?php base_url()?>welcome"><i class="fa fa-home"></i> Dashboard</a></li>
                 <li><a href="<?php base_url()?>company"><i class="fa fa-building-o"></i> Company</a></li>
-                <li><a href="<?php base_url()?>jasa"><i class="fa fa-handshake-o"></i> Pelayanan Jasa</a></li>
+                <li><a class="selected" href="<?php base_url()?>jasa"><i class="fa fa-handshake-o"></i> Pelayanan Jasa</a></li>
                 <li><a href="<?php base_url()?> download_log"><i class="fa fa-download"></i>  See Log</a></li>
                 <li><a href="<?php base_url()?>logout"><i class="glyphicon glyphicon-log-out
 "></i> Log Out</a></li>
@@ -337,6 +340,11 @@
                 jasa_contract_start.focus();
                 return false;
             }
+            else if (jasa_contract_start.value > jasa_contract_end.value){
+                alert("Tanggal Kontrak Salah");
+                jasa_contract_start.focus();
+                return false;
+            }
             else if (jasa_spk.value==="") {
                 alert("Mohon Isi Form Secara Lengkap");
                 jasa_spk.focus();
@@ -345,6 +353,12 @@
             else if (jasa_spk_date.value==="") {
                 alert("Mohon Isi Form Secara Lengkap");
                 jasa_spk_date.focus();
+                return false;
+            }
+
+            else if (jasa_spk_date.value > jasa_spk.value){
+                alert("Tanggal SPK Salah");
+                jasa_spk.focus();
                 return false;
             }
             else if (jasa_spk_number.value==="") {
@@ -405,6 +419,11 @@
                 jasa_spk.focus();
                 return false;
             }
+            else if (jasa_contract_start.value > jasa_contract_end.value){
+                alert("Tanggal Kontrak Salah");
+                jasa_contract_start.focus();
+                return false;
+            }
             else if (jasa_spk_date.value==="") {
                 alert("Mohon Isi Form Secara Lengkap");
                 jasa_spk_date.focus();
@@ -418,6 +437,11 @@
             else if (jasa_otc.value==="") {
                 alert("Mohon Isi Form Secara Lengkap");
                 jasa_otc.focus();
+                return false;
+            }
+            else if (jasa_spk_date.value > jasa_spk.value){
+                alert("Tanggal SPK Salah");
+                jasa_spk.focus();
                 return false;
             }
             else if (jasa_mrc.value==="") {
@@ -490,31 +514,15 @@
                 }
             }
 
-
-// just for the demos, avoids form submit
-    jQuery.validator.setDefaults({
-        debug: true,
-        success: "valid"
-    });
-    $( "#myform" ).validate({
-        rules: {
-            no_company: {
-                required: true,
-                number: true
-            }
-        }
-    });
-
-
-    //    $(document).ready(function() {
+//
+//        $(document).ready(function() {
 //        var start_date = new Date(document.getElementById("start_date").value);
 //        var end_date = new Date(document.getElementById("end_date").value);
-//
+//        alert(start_date);
 //        if (start_date > end_date) {
 //            alert('Masukkan tanggal dengan benar');
 //        }
 //    });
-
 
 </script>
 <!-- Bootstrap modal -->
@@ -708,20 +716,21 @@
 <!--                                    End-->
                         <div class="form-group">
                             <label class="control-label" for="contract_start_date">&nbsp &nbsp&nbspContract Start Date</label>
-                            <div class="col-md-12">
-                                <input name="contract_start_date" style="color: black" required placeholder="Contract Start Date" id="start_date" class="form-control" type="date">
+                            <div class="col-md-12" ><input name="contract_start_date" id="start_date" style="color: black" required placeholder="Contract Start Date"  class="form-control" type="date">
                             </div>
                         </div>
+
                         <div class="form-group">
                             <label class="control-label" for="contract_end_date">&nbsp &nbsp&nbspContract End Date</label>
-                            <div class="col-md-12">
-                                <input name="contract_end_date" placeholder="Contract End Date" style="color: black" id="end_date" required class="form-control" type="date">
+                            <div class="col-md-12" >
+                                <input name="contract_end_date" id="end_date" placeholder="Contract End Date" style="color: black" required class="form-control" type="date">
                             </div>
                         </div>
                         <div class="form-group">
                             <label class="control-label" for="spk_number">&nbsp &nbsp&nbspSPK/SO/Quote Number</label>
                             <div class="col-md-12">
-                                <input name="spk_number" placeholder="SPK/SO/Quote Number" style="color: black" required class="form-control" type="number">
+                                <input name="spk_number" id="nomorspk" placeholder="SPK/SO/Quote Number" style="color: black" required class="form-control" type="text">
+                                <p>Format Input: 5 digit/I/SPK/-LA/Tahun SPK</p>
                             </div>
                         </div>
                         </div>
@@ -745,20 +754,20 @@
                         <div class="form-group">
                             <label class="control-label" for="otc">&nbsp &nbsp&nbspOTC</label>
                                 <div class="col-md-12">
-                                    <input name="otc" placeholder="OTC" style="color: black" required class="form-control" type="number">
+                                    <input name="otc" placeholder="OTC" style="color: black" id="idotc" required class="form-control" type="text" maxlength="30">
                                 </div>
                         </div>
 
                         <div class="form-group">
                             <label  class="control-label" for="mrc">&nbsp &nbsp&nbspMRC</label>
                             <div class="col-md-12">
-                                <input name="mrc" placeholder="MRC" style="color: black" required class="form-control" type="number">
+                                <input name="mrc" placeholder="MRC" id="idmrc" style="color: black" required class="form-control" type="text" maxlength="30">
                             </div>
                         </div>
                         <div class="form-group">
                             <label class="control-label" for="type">&nbsp &nbsp&nbspType</label>
                             <div class="col-md-12">
-                                <select name="type" style="height: 40px; color: black" class="form-control" required>
+                                <select name="type" title="Choose One" style="height: 40px; color: black" class="form-control" required>
                                     <option value="" disabled selected hidden>Pilih Salah Satu</option>
                                     <option value="Monthly">Monthly</option>
                                     <option value="Joining Free">Joining Free</option>
@@ -780,10 +789,10 @@
                         </div>
                 </form>
             </div>
+         </div>
+       </div>
     </div>
-    </div>
-        <!-- /.modal-content -->
-    </div><!-- /.modal-dialog -->
+        <!-- /.modal-content --><!-- /.modal-dialog -->
 <!-- /.modal -->
 <!-- End Bootstrap modal -->
 
