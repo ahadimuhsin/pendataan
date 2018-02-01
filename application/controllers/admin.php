@@ -14,6 +14,7 @@ class Admin extends CI_Controller{
         $this->load->helper('download');
 
 //memeriksa status login admin
+		//kalau statusnya belum login, muncul peringatan
 		if($this->session->userdata('status') != "login"){
 			echo
 			"<script>

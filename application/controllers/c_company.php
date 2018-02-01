@@ -19,13 +19,7 @@ class c_company extends CI_Controller{
 
 
     }
-
-    public function add_company()
-    {
-        $this->load->view('admin/add_company');
-    }
-
-
+    //fungsi menambah company
     public function company_add()
     {
 
@@ -66,7 +60,7 @@ class c_company extends CI_Controller{
 
         echo json_encode($data);
     }
-
+//fungsi mengupdate company
     public function company_update()
     {
         {
@@ -98,7 +92,7 @@ class c_company extends CI_Controller{
             //sampai sini log file
         }
         }
-
+//fungsi menghapus company berdasarkan ID
     public function company_delete($no_company)
     {
         $this->company_model->delete_by_id($no_company);

@@ -18,10 +18,6 @@ class c_jasa extends CI_Controller
         $this->load->model('company_model');
     }
 
-    public function add_jasa()
-    {
-        $this->load->view('admin/add_company');
-    }
 
 //untuk menambha data pelayanan jasa
     public function jasa_add()
