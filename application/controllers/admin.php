@@ -75,7 +75,7 @@ class Admin extends CI_Controller{
         //sampai sini log file
 	echo
 	"<script>
-		alert('Anda Telah Logout!');
+//		alert('Anda Telah Logout!');
 		window.location.href = '" . base_url() . "';
 	</script>";
 	}

@@ -95,7 +95,7 @@ font-size: 18px;
        </div>
     </div>
     <div class="span2">
-      <p>&copy; LMD 2018</p>
+      <p>Lintas Media Danawa</p>
     </div>
   </div>
 
@@ -105,6 +105,7 @@ document.getElementById('toggleProfile').addEventListener('click', function () {
     el.classList.toggle('profile--open');
   });
 });
+
 </script>
 
 

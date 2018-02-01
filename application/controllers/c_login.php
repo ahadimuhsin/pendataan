@@ -39,15 +39,15 @@ class c_login extends CI_Controller{
             $this->session->set_userdata($data_session);
 			echo
 			"<script>
-				alert('Anda Telah Login!');
+//				alert('Anda Telah Login!');
 				window.location.href = '" . base_url() . "admin/welcome';
 			</script>";
-			//$this->load->view('welcome');
+//			$this->load->view('index');
 
 		}else{
 			echo
 			"<script>
-				alert('Login Failed!');
+				alert('Username atau Password salah!');
 				window.location.href = '" . base_url() . "';
 			</script>";
 		}

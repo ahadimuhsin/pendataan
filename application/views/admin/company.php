@@ -124,7 +124,7 @@
                 <a class="btn btn-success"  onclick="add_company()"role="button" style="color: white"><i class="glyphicon glyphicon-plus"></i> Add Company</a>
                 <a href="<?php echo base_url("index.php/c_company/export");?>" class="btn btn-info" role="button"><i class ="fa fa-file-excel-o"></i> Save as Excel file</a>
                 <input type="button" value="Show All Columns" class="btn btn-primary" id="showColumns" onclick="return changeColumn(this)">
-            </div></br> </br>
+            </div><br> <br>
                 <div class="row-fluid">
 
                             <br><br>
