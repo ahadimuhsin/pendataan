@@ -89,7 +89,7 @@ class c_jasa extends CI_Controller
             $date = new DateTime();
             $date = $date->format("d:m:y H:i:s");
             $file = 'log/log.txt'; //nama file
-            $message = $date. " " .$_SESSION['username']." mengubah data pelayanan jasa dengan nomor jaringan " . " ".date("Y").sprintf("%06s",$data['no_jaringan']).PHP_EOL;
+            $message = $date. " " .$_SESSION['username']." mengubah data pelayanan jasa dengan nomor jaringan" . " ".date("Y").sprintf("%06s",$data['no_jaringan']).PHP_EOL;
             file_put_contents($file, $message, FILE_APPEND | LOCK_EX);
             //sampai sini log file
         }

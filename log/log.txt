@@ -191,3 +191,7 @@
 02:02:18 10:25:12 admin telah logout
 02:02:18 10:25:17 admin2 telah login
 02:02:18 10:25:59 admin2 telah logout
+02:02:18 10:49:43 admin telah login
+02:02:18 10:49:52 admin dengan IP ::1mengubah data pelayanan jasa dengan nomor jaringan  2018000001
+02:02:18 10:50:34 admin mengubah data pelayanan jasa dengan nomor jaringan  2018000001
+02:02:18 10:51:23 admin mengubah data pelayanan jasa dengan nomor jaringan 2018000001
