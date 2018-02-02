@@ -18,7 +18,7 @@ class Admin extends CI_Controller{
 		if($this->session->userdata('status') != "login"){
 			echo
 			"<script>
-				alert('You Must Logged As Admin First!');
+				alert('You Are Not Logged In or Your Session Already Expired!');
 				window.location.href = '" . base_url() . "';
 			</script>";
 		}
