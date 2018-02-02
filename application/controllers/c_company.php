@@ -39,8 +39,7 @@ class c_company extends CI_Controller{
             'join_date' => $this->input->post('join_date'),
             'assignment' => $this->input->post('assignment')
         );
-        /*$data['namaSup']=$this->obat_model->get_supplier();
-        $data['id']=$id;*/
+
         $insert = $this->company_model->company_add($data);
         echo json_encode(array("status" => TRUE));
         //untuk log file

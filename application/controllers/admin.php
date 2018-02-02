@@ -32,14 +32,12 @@ class Admin extends CI_Controller{
 	{
 
         $data['company']=$this->company_model->get_all_company();
-        //$data['supplier']=$this->supplier_model->get_all_supplier();
         $this->load->view('admin/company',$data);
 	}
 //untuk menampilkan halaman jasa beserta datanya
 	function jasa ()
 	{
         $data['jasa']=$this->jasa_model->get_all_jasa();
-        //$data['supplier']=$this->supplier_model->get_all_supplier();
         $this->load->view('admin/jasa',$data);
 	}
 //untuk mendownload file log
