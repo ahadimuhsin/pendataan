@@ -26,16 +26,16 @@ $(function() {
         },
         // Specify validation error messages
         messages: {
-            no_company: "Mohon masukkan satu/dua/tiga digit terakhir nomor Company",
-            subservices: "Mohon masukkan Subservice",
+            no_company: "Anda belum memasukkan nomor Company",
+            subservices: "Anda belum memilih Sub Services",
             // contract_start_date: "Mohon masukkan tanggal dimulainya kontrak",
             // contract_end_date: "Mohon masukkan tanggal berakhirnya kontrak",
-            spk_number: "Mohon masukkan SPK Number",
+            spk_number: "Anda belum memasukkan SPK/SO/Quote Number",
             // spk_date: "Mohon masukkan tanggal SPK terbit",
             // spk_handover_date: "Mohon masukkan tanggal penyerahan SPK",
-            otc: "Mohon masukkan nomor OTC",
-            mrc: "Mohon masukkan nomor MRC",
-            type: "Mohon masukkan tipe berlangganan",
+            otc: "Anda belum memasukkan OTC",
+            mrc: "Anda belum memasukkan MRC",
+            type: "Anda belum memilih Type",
             keterangan : "Mohon masukkan keterangan. Bila kosong, isi '-'"
 
 

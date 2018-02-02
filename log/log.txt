@@ -160,3 +160,7 @@
 01:02:18 16:31:47 admin mendownload data perusahaan
 01:02:18 16:37:51 admin menambahkan data perusahaan Hotel Swiss-Bellinn
 01:02:18 16:38:41 admin menambahkan data pelayanan jasa dengan nomor SPK 22222/I/SPK/-LA/2018
+02:02:18 08:17:27 admin telah login
+02:02:18 08:34:56 admin telah login
+02:02:18 08:40:34 admin menambahkan data perusahaan FMIPA
+02:02:18 08:59:05 admin menambahkan data pelayanan jasa dengan nomor SPK 278328/ksjdk/jasdks

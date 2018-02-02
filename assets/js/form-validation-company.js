@@ -40,23 +40,23 @@ $(function() {
         },
         // Specify validation error messages
         messages: {
-            npwp: "Mohon masukkan NPWP",
-            company: "Mohon masukkan nama Company",
-            parent_company: "Mohon masukkan nama Parent Company",
-            address: "Mohon masukkan Alamat",
-            city: "Mohon masukkan nama Kota",
-            contact_person: "Mohon masukkan contact person",
-            title: "Mohon masukkan jabatan",
-            phone: "Mohon masukkan nomor telepon",
-            mobile: "Mohon masukkan nomor mobile",
-            business_consultant: "Mohon masukkan nama Business Consultant",
-            join_date: "Mohon masukkan tanggal",
-            assignment: "Mohon masukkan nama Assignment",
+            npwp: "Anda belum memasukkan NPWP",
+            company: "Anda belum memasukkan nama Company",
+            parent_company: "Anda belum memasukkan nama Parent Company",
+            address: "Anda belum memasukkan Alamat",
+            city: "Anda belum memasukkan Kota",
+            contact_person: "Anda belum memasukkan Contact Person",
+            title: "Anda belum memasukkan Title",
+            phone: "Anda belum memasukkan nomor Phone",
+            mobile: "Anda belum memasukkan nomor Mobile",
+            business_consultant: "Anda belum memilih Business Consultant",
+            join_date: "Anda belum memasukkan Join Date",
+            assignment: "Anda belum memilih Assignment",
             // password: {
             //     required: "Please provide a password",
             //     minlength: "Your password must be at least 5 characters long"
             // },
-            email: "Please enter a valid email address"
+            email: "Masukkan email dengan format yang benar <br> Contoh: username@domain.com"
         },
         // Make sure the form is submitted to the destination defined
         // in the "action" attribute of the form when valid

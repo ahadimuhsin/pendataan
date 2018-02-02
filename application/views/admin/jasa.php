@@ -728,7 +728,6 @@
                             <label class="control-label" for="spk_number">&nbsp &nbsp&nbspSPK/SO/Quote Number</label>
                             <div class="col-md-12">
                                 <input name="spk_number" id="nomorspk" placeholder="SPK/SO/Quote Number" style="color: black" required class="form-control" type="text">
-                                <p>Format Input: 5 digit/I/SPK/-LA/Tahun SPK</p>
                             </div>
                         </div>
                         </div>
@@ -776,7 +775,7 @@
                         <div class="form-group">
                             <label class="control-label" for="keterangan">&nbsp &nbsp&nbspKeterangan</label>
                             <div class="col-md-12">
-                                <input name="keterangan" placeholder="Keterangan" required style="color: black" class="form-control" type="text">
+                                <input name="keterangan" placeholder="Keterangan. Bila tidak ada, isi '-'" required style="color: black" class="form-control" type="text">
                             </div>
                         </div>
                         </div>
