@@ -38,3 +38,19 @@
 02:02:18 11:27:25 admin2 telah logout
 02:02:18 11:27:49 admin telah login
 02:02:18 11:28:53 admin telah logout
+02:02:18 13:44:41 admin telah login
+02:02:18 14:04:27 admin telah login
+02:02:18 14:23:29 admin telah login
+02:02:18 14:54:21 admin telah login
+05:02:18 09:02:59 admin telah login
+05:02:18 09:11:14 admin menambahkan data pelayanan jasa dengan nomor SPK 7623176lalala
+05:02:18 09:13:29 admin mengubah data pelayanan jasa dengan nomor jaringan 2018000002
+05:02:18 09:16:54 admin menambahkan data perusahaan Puskom
+05:02:18 09:17:50 admin menambahkan data perusahaan Rektorat
+05:02:18 09:40:22 admin telah login
+05:02:18 09:43:11 admin mengubah data perusahaan FMIPA
+05:02:18 10:03:09 admin telah logout
+05:02:18 10:03:18 admin telah login
+05:02:18 10:04:01 admin menambahkan data perusahaan Student Center
+05:02:18 10:15:33 admin menambahkan data pelayanan jasa dengan nomor SPK 23232/I/dPK/-Ls/2323
+05:02:18 10:16:50 admin menambahkan data pelayanan jasa dengan nomor SPK/SO/Quote Number 23131d1we

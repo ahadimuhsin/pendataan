@@ -319,7 +319,6 @@
                     company_parent.focus();
                     return false;
                 }
-//                Entah mengapa kalo ada di bawah ini gak bekerja
                 else if (company_address.value==="") {
                 alert("Mohon Isi Form Secara Lengkap");
                 company_address.focus();
@@ -330,48 +329,46 @@
                 company_city.focus();
                 return false;
                  }
-            else if (company_cp.value==="") {
-                alert("Mohon Isi Form Secara Lengkap");
-                company_cp.focus();
-                return false;
-            }
-            else if (company_title.value==="") {
-                alert("Mohon Isi Form Secara Lengkap");
-                company_title.focus();
-                return false;
-            }
-            else if (company_email.value==="") {
-                alert("Mohon Isi Form Secara Lengkap");
-                company_email.focus();
-                return false;
-            }
-            else if (company_phone.value==="") {
-                alert("Mohon Isi Form Secara Lengkap");
-                company_phone.focus();
-                return false;
-            }
-            else if (company_mobile.value==="") {
-                alert("Mohon Isi Form Secara Lengkap");
-                company_mobile.focus();
-                return false;
-            }
-            else if (company_bc.value==="") {
-                alert("Mohon Isi Form Secara Lengkap");
-                company_bc.focus();
-                return false;
-            }
-            else if (company_date.value==="") {
-                alert("Mohon Isi Form Secara Lengkap");
-                company_date.focus();
-                return false;
-            }
-            else if (company_assignment.value==="") {
-                alert("Mohon Isi Form Secara Lengkap");
-                company_assignment.focus();
-                return false;
-            }
-
-
+                else if (company_cp.value==="") {
+                    alert("Mohon Isi Form Secara Lengkap");
+                    company_cp.focus();
+                    return false;
+                }
+                else if (company_title.value==="") {
+                    alert("Mohon Isi Form Secara Lengkap");
+                    company_title.focus();
+                    return false;
+                }
+                else if (company_email.value==="") {
+                    alert("Mohon Isi Form Secara Lengkap");
+                    company_email.focus();
+                    return false;
+                }
+                else if (company_phone.value==="") {
+                    alert("Mohon Isi Form Secara Lengkap");
+                    company_phone.focus();
+                    return false;
+                }
+                else if (company_mobile.value==="") {
+                    alert("Mohon Isi Form Secara Lengkap");
+                    company_mobile.focus();
+                    return false;
+                }
+                else if (company_bc.value==="") {
+                    alert("Mohon Isi Form Secara Lengkap");
+                    company_bc.focus();
+                    return false;
+                }
+                else if (company_date.value==="") {
+                    alert("Mohon Isi Form Secara Lengkap");
+                    company_date.focus();
+                    return false;
+                }
+                else if (company_assignment.value==="") {
+                    alert("Mohon Isi Form Secara Lengkap");
+                    company_assignment.focus();
+                    return false;
+                }
                 else {
                     url = "<?php echo site_url('index.php/c_company/company_add')?>";
 
@@ -447,15 +444,12 @@
                     company_assignment.focus();
                     return false;
                 }
-
-
                 else {
                     url = "<?php echo site_url('index.php/c_company/company_update')?>";
 
                 }
 
             }
-
 
             // ajax adding data to database
             $.ajax({
@@ -475,7 +469,6 @@
                 }
             });
         }
-
 
         function delete_company(no_company)
         {
