@@ -74,3 +74,13 @@
 06:02:18 11:04:15 admin telah login
 06:02:18 11:04:17 admin telah logout
 06:02:18 11:04:45 admin2 telah login
+06:02:18 12:07:03 admin telah login
+06:02:18 12:07:28 admin menghapus data pelayanan jasa dengan nomor jaringan  2018000007
+06:02:18 13:15:47 admin telah login
+06:02:18 13:23:08 admin menambahkan data perusahaan Menwa
+06:02:18 13:24:38 admin menambahkan data pelayanan jasa dengan nomor SPK/SO/Quote Number 123/SPK/2323
+06:02:18 13:26:58 admin menghapus data perusahaan dengan nomor 2018007
+06:02:18 13:37:37 admin telah logout
+06:02:18 13:38:35 admin telah login
+06:02:18 13:39:57 admin menambahkan data perusahaan Luwes Palur
+06:02:18 13:40:52 admin menambahkan data pelayanan jasa dengan nomor SPK/SO/Quote Number 129391389123

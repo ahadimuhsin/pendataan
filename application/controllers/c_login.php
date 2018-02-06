@@ -19,7 +19,7 @@ class c_login extends CI_Controller{
 			'username' => $username,
 			'password' => md5($password)
 			);
-		$cek = $this->login_model->cek_login1("admin",$where)->num_rows();
+		$cek = $this->login_model->cek_login("admin",$where)->num_rows();
 		if($cek > 0){
 
 			$data_session = array(
