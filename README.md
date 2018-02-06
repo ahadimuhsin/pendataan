@@ -16,7 +16,7 @@ Langkah-langkah instalasi:
 2. Ubah nama folder sesuai keinginan
 3. Pindahkan folder ke folder xampp>htdocs
 4. Import pendataan.sql ke dalam database
-5. Akses localhost/pendataan pada browser
+5. Akses localhost/[nama_folder_yang_baru] pada browser
 
 
 # Login
