@@ -54,7 +54,7 @@
             </div>
             <div class="collapse navbar-collapse navbar-ex1-collapse">
                 <ul id="active" class="nav navbar-nav side-nav" >
-                    <li class="selected"><a href="<?php base_url()?>welcome"><i class="fa fa-home"></i> Dashboard</a></li>
+                    <li class="selected"><a href="<?php base_url()?>home"><i class="fa fa-home"></i> Dashboard</a></li>
                     <li><a href="<?php base_url()?>company"><i class="fa fa-building-o"></i> Company</a></li>
                     <li><a href="<?php base_url()?>jasa"><i class="fa fa-handshake-o"></i> Pelayanan Jasa</a></li>
                     <li><a href="<?php base_url()?> download_log"><i class="fa fa-download"></i>  See Log</a></li>

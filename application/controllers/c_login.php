@@ -40,7 +40,7 @@ class c_login extends CI_Controller{
 			echo
 			"<script>
 //				alert('Anda Telah Login!');
-				window.location.href = '" . base_url() . "admin/welcome';
+				window.location.href = '" . base_url() . "admin/home';
 			</script>";
 //			$this->load->view('index');
 

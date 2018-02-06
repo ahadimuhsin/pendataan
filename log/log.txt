@@ -68,3 +68,9 @@
 06:02:18 10:40:52 admin telah login
 06:02:18 10:52:11 admin menghapus data pelayanan jasa dengan nomor jaringan  2018000002
 06:02:18 10:52:17 admin menghapus data pelayanan jasa dengan nomor jaringan  2018000006
+06:02:18 11:03:37 admin telah logout
+06:02:18 11:03:40  mendownload data pelayanan jasa
+06:02:18 11:03:45  telah logout
+06:02:18 11:04:15 admin telah login
+06:02:18 11:04:17 admin telah logout
+06:02:18 11:04:45 admin2 telah login

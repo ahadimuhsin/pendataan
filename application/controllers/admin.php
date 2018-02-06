@@ -24,7 +24,7 @@ class Admin extends CI_Controller{
 		}
 	}
 //menampilkan halaman index
-	function welcome(){
+	function home(){
 		$this->load->view('index');
 	}
 //untuk menampilkan halaman company beserta datanya
