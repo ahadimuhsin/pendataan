@@ -60,7 +60,6 @@
                     <li><a href="<?php base_url()?> download_log"><i class="fa fa-download"></i>  See Log</a></li>
                     <li><a href="<?php base_url()?>logout"><i class="glyphicon glyphicon-log-out"></i> Log Out</a></li>
                 </ul>
-                </ul>
             </div>
         </nav>
 
