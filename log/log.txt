@@ -54,3 +54,17 @@
 05:02:18 10:04:01 admin menambahkan data perusahaan Student Center
 05:02:18 10:15:33 admin menambahkan data pelayanan jasa dengan nomor SPK 23232/I/dPK/-Ls/2323
 05:02:18 10:16:50 admin menambahkan data pelayanan jasa dengan nomor SPK/SO/Quote Number 23131d1we
+05:02:18 10:51:13 admin telah login
+05:02:18 11:21:20 admin telah login
+05:02:18 15:58:30 admin telah login
+06:02:18 09:16:43 admin telah login
+06:02:18 10:03:59 admin telah login
+06:02:18 10:05:02 admin menambahkan data perusahaan Laboratorium FMIPA
+06:02:18 10:06:09 admin menambahkan data pelayanan jasa dengan nomor SPK/SO/Quote Number 327283/SSS/2018
+06:02:18 10:10:41 admin menambahkan data perusahaan Kaskus
+06:02:18 10:10:48 admin menghapus data perusahaan dengan nomor 2018006
+06:02:18 10:11:43 admin menambahkan data pelayanan jasa dengan nomor SPK/SO/Quote Number 213/weqe/23032
+06:02:18 10:12:56 admin menambahkan data pelayanan jasa dengan nomor SPK/SO/Quote Number 232323
+06:02:18 10:40:52 admin telah login
+06:02:18 10:52:11 admin menghapus data pelayanan jasa dengan nomor jaringan  2018000002
+06:02:18 10:52:17 admin menghapus data pelayanan jasa dengan nomor jaringan  2018000006

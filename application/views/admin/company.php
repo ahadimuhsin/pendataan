@@ -7,41 +7,33 @@
     <title>Lintas Media Danawa</title>
     <LINK REL="SHORTCUT ICON" href="<?php base_url();?>/assets/image/lmd.ico" />
 <!--    <link rel="stylesheet" type="text/css" href="--><?php //echo base_url(); ?><!--/assets/bootstrap/css/bootstrap.min.css" />-->
+<!--   Bagian CSS-->
     <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>/assets/bootstrap/css/bootstrap.css" />
-
     <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>/assets/bootstrap/css/DT_bootstrap.css" />
     <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>/assets/datatables/css/dataTables.bootstrap.css" />
     <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>/assets/datatables/js/dataTables.bootstrap.js" />
     <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>/assets/datatables/js/jquery.dataTables.min.js" />
-
     <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>/assets/font-awesome/css/font-awesome.min.css" />
     <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>/assets/css/local.css" />
     <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>/assets/css/jquery-ui.css" />
     <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>/assets/css/jquery-ui.min.css" />
 
-
+<!--Bagian Javascript-->
     <script type="text/javascript" src="<?php echo base_url(); ?>/assets/js/jquery-1.10.2.min.js"></script>
     <script type="text/javascript" src="<?php echo base_url(); ?>/assets/jasny-bootstrap/js/jasny-bootstrap.js"></script>
     <script type="text/javascript" src="<?php echo base_url(); ?>/assets/jasny-bootstrap/js/jasny-bootstrap.min.js"></script>
-
-
     <script type="text/javascript" src="<?php echo base_url(); ?>/assets/js/jquery.min.js"></script>
     <script type="text/javascript" src="<?php echo base_url(); ?>/assets/js/jquery.mask.js"></script>
     <script type="text/javascript" src="<?php echo base_url(); ?>/assets/js/myscript.js"></script>
     <script type="text/javascript" src="<?php echo base_url(); ?>/assets/js/jquery-3.2.1.js"></script>
     <script type="text/javascript" src="<?php echo base_url(); ?>/assets/js/jquery-ui.js"></script>
     <script type="text/javascript" src="<?php echo base_url(); ?>/assets/js/jquery-ui.min.js"></script>
-
-
     <script type="text/javascript" src="<?php echo base_url(); ?>/assets/js/jquery-1.10.1.js"></script>
     <script type="text/javascript" src="<?php echo base_url(); ?>/assets/js/form-validation-company.js"></script>
     <script type="text/javascript" src="<?php echo base_url(); ?>/assets/bootstrap/js/bootstrap.min.js"></script>
-
-
     <script src="<?php echo base_url()."/assets/js/jquery.js"?>" type="text/javascript"></script>
     <script src="<?php echo base_url()."/assets/js/jquery-validation/dist/jquery.validate.min.js"?>" type="text/javascript"></script>
     <script src="<?php echo base_url()."/assets/js/bootstrap.js"?>" type="text/javascript"></script>
-
     <script type="text/javascript" charset="utf-8" language="javascript" src="<?php echo base_url()."/assets/js/jquery.dataTables.js"?>"></script>
     <script type="text/javascript" charset="utf-8" language="javascript" src="<?php echo base_url()."/assets/js/DT_bootstrap.js"?>"></script>
 

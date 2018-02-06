@@ -9,6 +9,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>Page Not Found</title>
+    <LINK REL="SHORTCUT ICON" href="<?php base_url();?>/assets/image/lmd.ico" />
     <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>/assets/bootstrap/css/bootstrap.css" />
     <script type="text/javascript" src="<?php echo base_url(); ?>/assets/bootstrap/js/bootstrap.min.js"></script>
     <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>/assets/bootstrap/css/bootstrap.min.css" />
@@ -186,7 +187,7 @@ p a:hover{
 <div class="wrap">
     <div class="logo">
         <img src="<?php echo base_url();?>images/404.png" />
-        <p> <a class="btn btn-success "  onclick="javascript:history.back()"     role="button" >
+        <p> <a class="btn btn-success "  onclick="history.back()" role="button" >
                 <i class="glyphicon glyphicon-plus"></i> Back</a></p>
     </div>
 </div>
