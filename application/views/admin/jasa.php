@@ -560,6 +560,7 @@
                                     <option value="License Microsoft" >License Microsoft</option>
                                     <option value="Implementasi Cozytizen" >Implementasi Cozytizen</option>
                                     <option value="License Cozytizen" >License Cozytizen</option>
+                                    <option value="Support & Maintenance Cozytizen" >Support & Maintenance Cozytizen</option>
                                     <option value="Application Development">Application Development</option>
                                     <option value="Staffing">Staffing</option>
                                     <option value="SMS Corporate">SMS Corporate</option>

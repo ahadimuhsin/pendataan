@@ -91,3 +91,12 @@
 06:02:18 14:12:04 admin telah login
 06:02:18 15:16:39 admin telah login
 07:02:18 08:50:56 admin telah login
+07:02:18 09:43:07 admin menghapus data pelayanan jasa dengan nomor jaringan  2018000010
+07:02:18 09:43:15 admin menghapus data pelayanan jasa dengan nomor jaringan  2018000009
+07:02:18 09:43:20 admin menghapus data perusahaan dengan nomor 2018008
+07:02:18 09:43:23 admin menghapus data perusahaan dengan nomor 2018005
+07:02:18 10:00:19 admin mengubah data pelayanan jasa dengan nomor jaringan 2018000001
+07:02:18 10:05:20 admin mengubah data pelayanan jasa dengan nomor jaringan 2018000004
+07:02:18 10:05:30 admin mendownload data pelayanan jasa
+07:02:18 10:06:21 admin mendownload data pelayanan jasa
+22:03:19 10:07:04 admin telah login

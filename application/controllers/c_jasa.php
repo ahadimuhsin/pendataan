@@ -212,7 +212,7 @@ class c_jasa extends CI_Controller
             $excel->setActiveSheetIndex(0)->setCellValue('A' . $numrow, date("Y").sprintf("%03s",$data->no_company));
             $excel->setActiveSheetIndex(0)->setCellValue('B' . $numrow, $data->company);
             $excel->setActiveSheetIndex(0)->setCellValue('C' . $numrow, $data->parent_company);
-            $excel->setActiveSheetIndex(0)->setCellValue('D' . $numrow, date("Y").sprintf("%03s",$data->no_jaringan));
+            $excel->setActiveSheetIndex(0)->setCellValue('D' . $numrow, date("Y").sprintf("%06s",$data->no_jaringan));
             $excel->setActiveSheetIndex(0)->setCellValue('E' . $numrow, $data->business_consultant);
             $excel->setActiveSheetIndex(0)->setCellValue('F' . $numrow, $data->assignment);
             $excel->setActiveSheetIndex(0)->setCellValue('G' . $numrow, $data->subservices);
