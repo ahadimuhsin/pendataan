@@ -704,7 +704,7 @@ $(document).ready(function () {
 });
 
 
-
+//bagian masking
        $("#npwp").mask("99.999.999.9-999.999", {
            placeholder: "NPWP"
        });
@@ -720,8 +720,8 @@ $(document).ready(function () {
     // $("#nomorspk").mask("99999/I/SPK/-LA/9999",{
     //    placeholder:"Format: Nomor/I/SPK/-LA/Tahun keluar SPK"
     // });
-$("#idotc").mask("#,##0.00", {reverse: true});
-$("#idmrc").mask("#,##0.00", {reverse: true});
+    $("#idotc").mask("#,##0.00", {reverse: true});
+    $("#idmrc").mask("#,##0.00", {reverse: true});
 
 //$("#join_date").datepicker();
 $(document).ready(function () {
