@@ -4,7 +4,7 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="utf-8">
-    <title>Lintas Media Danawa</title>
+    <title>Data Pelayanan Jasa - Lintas Media Danawa</title>
     <LINK REL="SHORTCUT ICON" href="<?php base_url();?>/assets/image/lmd.ico" />
 <!--  bagian css  -->
 <!--    <link rel="stylesheet" type="text/css" href="--><?php //echo base_url(); ?><!--/assets/bootstrap/css/bootstrap.min.css" />-->
