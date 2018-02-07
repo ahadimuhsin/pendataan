@@ -6,25 +6,15 @@
 02:02:18 09:29:20 admin telah logout
 02:02:18 09:29:24 admin telah login
 02:02:18 09:50:53 admin telah login
-02:02:18 09:58:13  telah logout
-02:02:18 09:58:47  telah logout
 02:02:18 09:58:53 admin telah login
 02:02:18 09:58:55 admin telah logout
 02:02:18 09:59:01 admin telah login
 02:02:18 09:59:05 admin telah logout
-02:02:18 09:59:23 admin telah login
-02:02:18 10:08:58  telah logout
-02:02:18 10:09:03  telah logout
-02:02:18 10:09:07  telah logout
-02:02:18 10:09:12  telah logout
 02:02:18 10:09:19 admin telah login
 02:02:18 10:09:21 admin telah logout
 02:02:18 10:09:32 admin telah login
 02:02:18 10:09:44 admin telah logout
 02:02:18 10:09:48 admin telah login
-02:02:18 10:24:04  telah logout
-02:02:18 10:24:16  telah logout
-02:02:18 10:24:27  telah logout
 02:02:18 10:25:11 admin telah login
 02:02:18 10:25:12 admin telah logout
 02:02:18 10:25:17 admin2 telah login
@@ -99,4 +89,4 @@
 07:02:18 10:05:20 admin mengubah data pelayanan jasa dengan nomor jaringan 2018000004
 07:02:18 10:05:30 admin mendownload data pelayanan jasa
 07:02:18 10:06:21 admin mendownload data pelayanan jasa
-22:03:19 10:07:04 admin telah login
+07:02:18 10:11:15 admin telah login
