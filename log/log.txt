@@ -90,3 +90,4 @@
 07:02:18 10:05:30 admin mendownload data pelayanan jasa
 07:02:18 10:06:21 admin mendownload data pelayanan jasa
 07:02:18 10:11:15 admin telah login
+07:02:18 10:24:15 admin menambahkan data perusahaan Sekretariat Himaster
