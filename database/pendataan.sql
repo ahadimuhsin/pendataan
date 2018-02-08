@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 30, 2018 at 08:55 AM
+-- Generation Time: Feb 08, 2018 at 09:58 AM
 -- Server version: 10.1.22-MariaDB
 -- PHP Version: 7.1.4
 
@@ -39,7 +39,8 @@ CREATE TABLE `admin` (
 
 INSERT INTO `admin` (`username`, `password`) VALUES
 ('admin', '21232f297a57a5a743894a0e4a801fc3'),
-('admin2', 'c84258e9c39059a89ab77d846ddab909');
+('admin2', 'c84258e9c39059a89ab77d846ddab909'),
+('admin3', '32cacb2f994f6b42183a1300d9a3e8d6');
 
 -- --------------------------------------------------------
 
@@ -48,8 +49,8 @@ INSERT INTO `admin` (`username`, `password`) VALUES
 --
 
 CREATE TABLE `company` (
+  `no_company` int(11) NOT NULL,
   `npwp` text NOT NULL,
-  `no_company` int(100) NOT NULL,
   `company` varchar(100) NOT NULL,
   `parent_company` varchar(100) NOT NULL,
   `address` varchar(100) NOT NULL,
@@ -61,7 +62,8 @@ CREATE TABLE `company` (
   `mobile` text NOT NULL,
   `business_consultant` varchar(100) NOT NULL,
   `join_date` date NOT NULL,
-  `assignment` varchar(50) NOT NULL
+  `assignment` varchar(50) NOT NULL,
+  `username` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -84,7 +86,8 @@ CREATE TABLE `jasa` (
   `otc` int(11) NOT NULL,
   `mrc` int(11) NOT NULL,
   `type` varchar(30) NOT NULL,
-  `keterangan` varchar(100) DEFAULT NULL
+  `keterangan` varchar(100) DEFAULT NULL,
+  `username` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -101,14 +104,16 @@ ALTER TABLE `admin`
 -- Indexes for table `company`
 --
 ALTER TABLE `company`
-  ADD PRIMARY KEY (`no_company`);
+  ADD PRIMARY KEY (`no_company`),
+  ADD KEY `no_company` (`no_company`);
 
 --
 -- Indexes for table `jasa`
 --
 ALTER TABLE `jasa`
   ADD PRIMARY KEY (`no_jaringan`),
-  ADD KEY `idx_company` (`no_company`);
+  ADD KEY `idx_company` (`no_company`),
+  ADD KEY `no_jaringan` (`no_jaringan`);
 
 --
 -- AUTO_INCREMENT for dumped tables
@@ -118,12 +123,12 @@ ALTER TABLE `jasa`
 -- AUTO_INCREMENT for table `company`
 --
 ALTER TABLE `company`
-  MODIFY `no_company` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1;
+  MODIFY `no_company` int(11) NOT NULL AUTO_INCREMENT;
 --
 -- AUTO_INCREMENT for table `jasa`
 --
 ALTER TABLE `jasa`
-  MODIFY `no_jaringan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1;
+  MODIFY `no_jaringan` int(11) NOT NULL AUTO_INCREMENT;
 --
 -- Constraints for dumped tables
 --
