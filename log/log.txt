@@ -149,3 +149,7 @@
 08:02:18 09:01:12 admin menambahkan data perusahaan FSRD
 08:02:18 09:07:57 admin mengubah data perusahaan FSRD
 08:02:18 09:14:32 admin menambahkan data pelayanan jasa dengan nomor SPK/SO/Quote Number 82372/SO
+08:02:18 09:42:12 admin telah login
+08:02:18 09:54:23 admin2 telah login
+08:02:18 09:54:50 admin telah logout
+08:02:18 09:55:23 admin2 telah logout

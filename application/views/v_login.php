@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Login</title>
+    <title>Lintas Media Danawa</title>
     <LINK REL="SHORTCUT ICON" href="<?php base_url()?>assets/image/lmd.ico" />
 <style>
 body {

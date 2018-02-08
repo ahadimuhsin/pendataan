@@ -116,18 +116,18 @@
                             <table cellpadding="0" cellspacing="0" border="0" width="100%" class="table table-responsive table-bordered" id="example">
                                 <thead>
                                 <tr style="background-color: #2a9fd6">
-                        <th width="200px">Nomor Company</th>
-                        <th width="200px">NPWP</th>
+                        <th width="250px">Nomor Company</th>
+                        <th width="250px">NPWP</th>
                         <th width="200px">Company</th>
-                        <th width="200px">Parent Company</th>
+                        <th width="250px">Parent Company</th>
                         <th width="200px">Address</th>
                         <th width="200px">City</th>
-                        <th width="200px">Contact Person</th>
+                        <th width="250px">Contact Person</th>
                         <th width="200px">Title</th>
                         <th width="200px" id="tblemail">Email</th>
-                        <th width="200px" id="tblphone">Phone</th>
-                        <th width="200px" id="tblmobile">Mobile</th>
-                        <th width="200px" id="tblbusiness">Business Consultant</th>
+                        <th width="250px" id="tblphone">Phone</th>
+                        <th width="250px" id="tblmobile">Mobile</th>
+                        <th width="250px" id="tblbusiness">Business Consultant</th>
                         <th width="250px" id="tbljoin">Join Date (Y-M-D)</th>
                         <th width="200px" id="tblassignment">Assignment</th>
 

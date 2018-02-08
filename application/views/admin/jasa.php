@@ -117,15 +117,15 @@
             <table cellpadding="0" cellspacing="0" border="0" width="100%" class="table table-bordered table-responsive" id="example">
                 <thead>
                 <tr style="background-color: #2a9fd6">
-                    <th width="200px">No. Jaringan</th>
-                    <th width="200px">Nomor Company</th>
+                    <th width="250px">No. Jaringan</th>
+                    <th width="250px">Nomor Company</th>
                     <th width="200px">Company</th>
-                    <th width="200px">Parent Company</th>
-                    <th width="200px">Business Consultant</th>
+                    <th width="250px">Parent Company</th>
+                    <th width="250px">Business Consultant</th>
                     <th width="200px">Assignment</th>
-                    <th width="200px">Sub Services</th>
+                    <th width="250px">Sub Services</th>
                     <th width="200px">Services</th>
-                    <th width="200px">Product Family</th>
+                    <th width="250px">Product Family</th>
                     <th width="200px" id="tblmulai">Tanggal Mulai Kontrak (Y-M-D)</th>
                     <th width="200px" id="tblakhir">Tanggal Akhir Kontrak (Y-M-D)</th>
                     <th width="200px" id="tblspknumber">SPK/SO/Quote Number</th>
