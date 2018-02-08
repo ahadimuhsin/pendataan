@@ -37,7 +37,8 @@ class c_jasa extends CI_Controller
             'otc' => $this->input->post('otc'),
             'mrc' => $this->input->post('mrc'),
             'type' => $this->input->post('type'),
-            'keterangan' => $this->input->post('keterangan')
+            'keterangan' => $this->input->post('keterangan'),
+            'username' => $_SESSION['username']
         );
 
         $insert = $this->jasa_model->jasa_add($data);

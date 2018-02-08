@@ -52,7 +52,7 @@
         #salesforce_product,#salesforce_services,#microsoft_services,#cozytizen_services,#application_services,
         #sms_services,#tblmulai,#tblakhir,#tblspk,#tblspknumber,#tblspkterbit,#tblotc,#tblmrc,#tbltype,#tblketerangan,
         .startdate,.end_date,.spk_handover_date,.spk_date,.spk_number,.otc,
-        .mrc,.type,.keterangan{
+        .mrc,.type,.keterangan,#tblusername,.username{
             display: none;
         }
         @media print {
@@ -135,8 +135,8 @@
                     <th width="200px" id="tblmrc">MRC</th>
                     <th width="200px" id="tbltype">Type</th>
                     <th width="200px" id="tblketerangan">Keterangan</th>
-                    <th style="width:125px;" class="printoff">Action
-                        </p></th>
+                    <th width="150px" id="tblusername">Input By</th>
+                    <th style="width:125px;" class="printoff">Action</th>
                 </tr>
                 </thead>
                 <tbody>
@@ -160,6 +160,8 @@
                         <td style="color: black; background-color: whitesmoke" class="mrc "><?php echo $jasa->mrc;?></td>
                         <td style="color: black; background-color: whitesmoke" class="type"><?php echo $jasa->type;?></td>
                         <td style="color: black; background-color: whitesmoke" class="keterangan "><?php echo $jasa->keterangan;?></td>
+                        <td style="color: black; background-color: whitesmoke" class="username"><?php echo $jasa->username;?></td>
+
                         <td     style="color: black; background-color: whitesmoke">
                             <button class="btn btn-warning printoff" title="Edit" onclick="edit_jasa(<?php echo $jasa->no_jaringan;?>)"><i class="glyphicon glyphicon-edit"></i></button>
                             <button class="btn btn-danger printoff" title="Delete" onclick="delete_jasa(<?php echo $jasa->no_jaringan;?>)"><i class="glyphicon glyphicon-remove-sign"></i></button>
@@ -194,6 +196,8 @@
             $("#tblmrc").show();
             $("#tbltype").show();
             $("#tblketerangan").show();
+            $("#tblusername").show();
+            $(".username").show();
             $(".startdate").show();
             $(".end_date").show();
             $(".spk_number").show();
@@ -215,6 +219,8 @@
             $("#tblmrc").hide();
             $("#tbltype").hide();
             $("#tblketerangan").hide();
+            $("#tblusername").hide();
+            $(".username").hide();
             $(".startdate").hide();
             $(".end_date").hide();
             $(".spk_number").hide();

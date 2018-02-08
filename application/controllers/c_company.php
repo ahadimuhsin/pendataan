@@ -37,7 +37,8 @@ class c_company extends CI_Controller{
             'mobile' => $this->input->post('mobile'),
             'business_consultant' => $this->input->post('business_consultant'),
             'join_date' => $this->input->post('join_date'),
-            'assignment' => $this->input->post('assignment')
+            'assignment' => $this->input->post('assignment'),
+            'username' => $_SESSION['username']
         );
 
         $insert = $this->company_model->company_add($data);
@@ -77,7 +78,8 @@ class c_company extends CI_Controller{
                 'mobile' => $this->input->post('mobile'),
                 'business_consultant' => $this->input->post('business_consultant'),
                 'join_date' => $this->input->post('join_date'),
-                'assignment' => $this->input->post('assignment'),
+                'assignment' => $this->input->post('assignment')
+
             );
             $this->company_model->company_update(array('no_company' => $this->input->post('no_company')), $data);
             echo json_encode(array("status" => TRUE));

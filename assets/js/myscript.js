@@ -617,7 +617,7 @@ $(document).ready(function () {
             $("#cloud_server_services").hide();
             $("#cloud_server_product").hide();
             $("#managed_wifi_services").hide();
-            $("#managed_wifi_product").hide();
+            $("#managed_wifi_product    ").hide();
             $("#managed_mail__services").hide();
             $("#managed_mail_product").hide();
             $("#managed_radius_services").hide();

@@ -45,8 +45,8 @@
 
     <style>
         #tblbusiness,#tblemail,#tblassignment,
-        #tbljoin,#tblmobile,#tblphone,.isiassignment,.isibusiness,
-        .isidate, .isiemail, .isiphone,.isimobile{
+        #tbljoin,#tblmobile,#tblphone,#tblusername,.isiassignment,.isibusiness,
+        .isidate, .isiemail, .isiphone,.isimobile,.username{
             display: none;
         }
         .mymodal{
@@ -130,8 +130,9 @@
                         <th width="250px" id="tblbusiness">Business Consultant</th>
                         <th width="250px" id="tbljoin">Join Date (Y-M-D)</th>
                         <th width="200px" id="tblassignment">Assignment</th>
+                                    <th width="150px" id="tblusername">Input By</th>
 
-                        <th style="width:125px;" class="printoff">Action
+                                    <th style="width:125px;" class="printoff">Action
                             </p></th>
                     </tr>
                     </thead>
@@ -152,6 +153,8 @@
                             <td style="color: black; background-color: whitesmoke" class="isibusiness"><?php echo $company->business_consultant;?></td>
                             <td style="color: black; background-color: whitesmoke" class="isidate"><?php echo $company->join_date;?></td>
                             <td style="color: black; background-color: whitesmoke" class="isiassignment"><?php echo $company->assignment;?></td>
+                            <td style="color: black; background-color: whitesmoke" class="username"><?php echo $company->username;?></td>
+
                             <td class="printoff" style="color: black; background-color: whitesmoke">
                                 <button class="btn btn-warning printoff" title="Edit" onclick="edit_company(<?php echo $company->no_company;?>)"><i class="glyphicon glyphicon-edit"></i></button>
                                 <button class="btn btn-danger printoff" title="Delete" onclick="delete_company(<?php echo $company->no_company;?>)"><i class="glyphicon glyphicon-remove-sign"></i></button>
@@ -185,12 +188,14 @@
                 $("#tbljoin").show();
                 $("#tblmobile").show();
                 $("#tblbusiness").show();
+                $("#tblusername").show();
                 $(".isiassignment").show();
                 $(".isiemail").show();
                 $(".isiphone").show();
                 $(".isidate").show();
                 $(".isimobile").show();
                 $(".isibusiness").show();
+                $(".username").show();
                 x.value = "Hide Some Columns";
             }
             else {
@@ -200,6 +205,8 @@
                 $("#tbljoin").hide();
                 $("#tblmobile").hide();
                 $("#tblbusiness").hide();
+                $("#tblusername").hide();
+                $(".username").hide();
                 $(".isiassignment").hide();
                 $(".isiemail").hide();
                 $(".isiphone").hide();

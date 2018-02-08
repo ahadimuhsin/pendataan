@@ -153,3 +153,26 @@
 08:02:18 09:54:23 admin2 telah login
 08:02:18 09:54:50 admin telah logout
 08:02:18 09:55:23 admin2 telah logout
+08:02:18 10:26:13 admin telah login
+08:02:18 11:24:39 admin telah login
+08:02:18 14:34:34 admin telah login
+08:02:18 14:38:40 admin menghapus data perusahaan dengan nomor 2018003
+08:02:18 14:40:04 admin menambahkan data perusahaan FKIP
+08:02:18 14:43:50 admin telah logout
+08:02:18 14:44:44 admin telah login
+08:02:18 14:45:41 admin menambahkan data perusahaan FMIPA
+08:02:18 14:46:01 admin mengubah data perusahaan FMIPA
+08:02:18 14:46:11 admin mendownload data perusahaan
+08:02:18 14:46:17 admin mendownload data perusahaan
+08:02:18 14:46:48 admin menghapus data perusahaan dengan nomor 2018004
+08:02:18 14:48:39 admin menambahkan data pelayanan jasa dengan nomor SPK/SO/Quote Number 2312dsdqeqwe
+08:02:18 14:56:02 admin telah logout
+08:02:18 14:57:15 admin2 telah login
+08:02:18 14:58:05 admin2 telah logout
+08:02:18 14:58:12 admin3 telah login
+08:02:18 15:13:42  telah logout
+08:02:18 15:22:03 admin telah login
+08:02:18 15:25:35 admin menambahkan data perusahaan 324234
+08:02:18 15:26:18 admin mengubah data perusahaan 324234
+08:02:18 15:49:49 admin telah login
+08:02:18 15:55:19 admin menambahkan data pelayanan jasa dengan nomor SPK/SO/Quote Number 3424234324
