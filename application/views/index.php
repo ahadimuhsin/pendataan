@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lintas Media Danawa</title>
 <!--    Logo-->
-    <LINK REL="SHORTCUT ICON" href="<?php base_url()?>assets/image/lmd.ico" />
+    <link rel="icon" href="<?php base_url()?>assets/image/lmd.ico" type="image/gif" sizes="16x16" />
 
     <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>/assets/bootstrap/css/bootstrap.min.css" />
     <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>/assets/font-awesome/css/font-awesome.min.css" />
