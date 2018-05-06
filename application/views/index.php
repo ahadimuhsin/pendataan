@@ -24,17 +24,17 @@
 </style>
 <body >
 <header class="main-header">
-    <nav class="navbar navbar-static-top" role="navigation">
-        <!-- Sidebar toggle button-->
-        <a href="#" class="sidebar-toggle" data-toggle="offcanvas">
-
-        </a>
-        <div class="navbar-custom-menu">
-            <ul class="nav navbar-nav">
-
-            </ul>
-        </div>
-    </nav>
+<!--    <nav class="navbar navbar-static-top" role="navigation">-->
+<!--        <!-- Sidebar toggle button-->-->
+<!--        <a href="#" class="sidebar-toggle" data-toggle="offcanvas">-->
+<!---->
+<!--        </a>-->
+<!--        <div class="navbar-custom-menu">-->
+<!--            <ul class="nav navbar-nav">-->
+<!---->
+<!--            </ul>-->
+<!--        </div>-->
+<!--    </nav>-->
 </header>
     <div id="wrapper">
           <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation" >
